@@ -1,0 +1,9 @@
+whitelist_type: group
+whitelist:
+    human:
+      - hg38
+      - hg19
+    mouse:
+      - mm10
+      - mm9
+      - mm38
