@@ -7,3 +7,6 @@ whitelist:
       - mm10
       - mm9
       - mm38
+    zebrafish:
+      - danrer11
+      - danrer10
