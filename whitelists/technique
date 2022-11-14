@@ -1,6 +1,5 @@
 whitelist_type: plain
 whitelist:
-    - test
     - bulk RNA-seq
     - bulk RNA array
     - bulk ATAC-seq
