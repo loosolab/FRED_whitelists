@@ -7,7 +7,7 @@ import collections
 import importlib.util as ilu
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'metadata-organizer'))
-from src import utils
+import metadata-organizer.src.utils
 
 def test_whitelists():
     whitelist_path = os.path.join(os.path.dirname(__file__), '..', 'whitelists')
