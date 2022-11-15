@@ -6,10 +6,8 @@ import collections
 
 import importlib.util as ilu
 
-print(os.listdir('metadata-organizer'))
-spec = ilu.spec_from_file_location("utils", "metadata-organizer/src/utils.py")
-utils = ilu.module_from_spec(spec)
-spec.loader.exec_module(utils)
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'metadata-organizer'))
+from src import utils
 
 def test_whitelists():
     whitelist_path = os.path.join(os.path.dirname(__file__), '..', 'whitelists')
