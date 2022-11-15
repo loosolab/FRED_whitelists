@@ -6,7 +6,7 @@ import collections
 
 import importlib.util as ilu
 
-print(os.path.listdir('.'))
+print(os.listdir('.'))
 spec = ilu.spec_from_file_location("utils", os.path.join('metadata-organizer', 'src', 'utils.py'))
 utils = ilu.module_from_spec(spec)
 spec.loader.exec_module(utils)
