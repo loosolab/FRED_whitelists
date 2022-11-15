@@ -4,8 +4,6 @@ import os
 import sys
 import collections
 
-import importlib.util as ilu
-
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'metadata-organizer'))
 import src.utils as utils
 
