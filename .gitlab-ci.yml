@@ -24,6 +24,8 @@ convert_whitelists:
   stage: convert
   script:
     - misc/convert.py
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
     - git checkout 'convert_test'
     - git add misc/json
     - git commit -m 'convert to json'
