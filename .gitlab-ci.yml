@@ -24,6 +24,7 @@ test_whitelists:
 convert_whitelists:
   stage: convert
   before_script:
+    - git fetch
     - git checkout $BRANCH_NAME # checkout the test branch
     - cd $CI_PROJECT_DIR 
   script:
