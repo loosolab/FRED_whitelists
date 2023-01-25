@@ -24,7 +24,10 @@ convert_whitelists:
   stage: convert
   script:
     - misc/convert.py
+    - git status
     - git checkout 'convert_test'
+    - git status
     - git add misc/json
+    - git status
     - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
    
