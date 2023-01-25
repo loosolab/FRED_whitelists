@@ -26,7 +26,7 @@ convert_whitelists:
   before_script:
     - git fetch
     - git checkout $BRANCH_NAME # checkout the test branch
-    - cd $CI_PROJECT_DIR 
+    - git pull
   script:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
