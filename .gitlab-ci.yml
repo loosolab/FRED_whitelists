@@ -23,14 +23,6 @@ test_whitelists:
 
 convert_whitelists:
   stage: convert
-  before_script:
-    - git fetch
-    - git checkout $BRANCH_NAME # checkout the test branch
-    - git pull
   script:
     - misc/convert.py
-    - git config --global user.name "${BOT_NAME}"
-    - git config --global user.email "${BOT_EMAIL}"
-    - git add misc
-    - git commit -m "${COMMIT_MESSAGE} ${CI_RUNNER_ID}"
-    - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
+   
