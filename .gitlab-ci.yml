@@ -8,8 +8,14 @@ before_script:
 
 stages:          
   - test
+  - convert
 
 test_whitelists:
   stage: test
   script:
     - test/test_whitelists.py
+
+convert_whitelists:
+  stage: convert
+  script:
+    - misc/convert.py
