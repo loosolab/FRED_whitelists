@@ -25,4 +25,7 @@ convert_whitelists:
   stage: convert
   script:
     - misc/convert.py
+    - git checkout -b 'convert_test'
+    - git add misc/json
+    - git push
    
