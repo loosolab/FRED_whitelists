@@ -44,7 +44,6 @@ convert_whitelists:
 push_changes:
   stage: push_changes
   before_script:
-    - git fetch
     - git checkout $BRANCH_NAME # checkout the test branch
     - cd $CI_PROJECT_DIR 
   script:
