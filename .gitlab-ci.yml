@@ -24,7 +24,7 @@ test_whitelists:
 convert_whitelists:
   stage: convert
   before_script:
-    - git branch -d $BRANCH_NAME
+    - git branch -D $BRANCH_NAME
   script:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
