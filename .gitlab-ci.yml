@@ -14,7 +14,6 @@ before_script:
 stages:          
   - test
   - convert
-  - push_changes
 
 test_whitelists:
   stage: test
