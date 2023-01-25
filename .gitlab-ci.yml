@@ -8,21 +8,6 @@ variables:
   BOT_EMAIL: "gitlab-runner-bot@example.net" # Bot's email, not important
   COMMIT_MESSAGE: "Commit from runner "      # Part of the commit message
 
-.push: &push |
-  git status
-  lines=$(git status -s | wc -l)
-  if [ $lines -gt 0 ];then
-    echo "committing"
-    git config --global user.name "${BOT_NAME}"
-    git config --global user.email "${BOT_EMAIL}"
-    git add .
-    git commit -m "${COMMIT_MESSAGE} ${CI_RUNNER_ID}"
-    echo "git push -o ci.skip 'https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}' ${BRANCH_NAME}"
-    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
-  else
-    echo "no change, nothing to commit"
-  fi  
-
 before_script:
   - pip install -r requirements.txt
 
@@ -38,13 +23,13 @@ test_whitelists:
 
 convert_whitelists:
   stage: convert
-  script:
-    - misc/convert.py
-
-push_changes:
-  stage: push_changes
   before_script:
     - git checkout $BRANCH_NAME # checkout the test branch
     - cd $CI_PROJECT_DIR 
   script:
-    - *push
+    - misc/convert.py
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
+    - git add misc
+    - git commit -m "${COMMIT_MESSAGE} ${CI_RUNNER_ID}"
+    - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
