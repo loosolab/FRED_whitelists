@@ -2,7 +2,6 @@ image: python:3.8-buster
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  GIT_DEPTH: 1                               # Create a shallow copy
   BRANCH_NAME: "implement_json"              # Name of the branch to modify
   BOT_NAME: "GitLab Runner Bot"              # Bot's name that appears in the commit log
   BOT_EMAIL: "gitlab-runner-bot@example.net" # Bot's email, not important
@@ -29,6 +28,7 @@ before_script:
 stages:          
   - test
   - convert
+  - push_changes
 
 test_whitelists:
   stage: test
@@ -39,4 +39,13 @@ convert_whitelists:
   stage: convert
   script:
     - misc/convert.py
+
+push_changes:
+  stage: push_changes
+  before_script:
+    - apk add bash git          # add bash and git (probably not needed)
+    - git fetch
+    - git checkout $BRANCH_NAME # checkout the test branch
+    - cd $CI_PROJECT_DIR 
+  script:
     - *push
