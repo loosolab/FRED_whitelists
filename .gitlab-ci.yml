@@ -27,5 +27,5 @@ convert_whitelists:
     - misc/convert.py
     - git checkout 'convert_test'
     - git add misc/json
-    - git push --set-upstream origin convert_test
+    - git push -o ci.skip --set-upstream origin convert_test
    
