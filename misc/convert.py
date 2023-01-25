@@ -22,7 +22,7 @@ def convert_folder(folder_path, json_path):
                             os.path.join(folder_path, elem))
                         print(
                             f'convert file {os.path.join(folder_path, elem)}')
-                        json.dumps(read_file, open(os.path.join(json_path, elem), 'w'))
+                        json.dump(read_file, open(os.path.join(json_path, elem), 'w'))
                     except AttributeError:
                         pass
 
