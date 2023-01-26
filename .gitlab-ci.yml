@@ -31,6 +31,7 @@ convert_whitelists:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
     - git checkout -b $BRANCH_NAME
+    - git pull
     - git add misc/json
     - git commit -m 'convert whitelists'
     - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
