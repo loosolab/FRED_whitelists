@@ -3,25 +3,10 @@ image: python:3.8-buster
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
   GIT_DEPTH: 1  
-  BRANCH_NAME: "implement_json"              # Name of the branch to modify
+  BRANCH_NAME: "${CI_COMMIT_REF_NAME}_temp"              # Name of the branch to modify
   BOT_NAME: "GitLab Runner Bot"              # Bot's name that appears in the commit log
   BOT_EMAIL: "gitlab-runner-bot@example.net" # Bot's email, not important
   COMMIT_MESSAGE: "Commit from runner "      # Part of the commit message
-
-.push: &push |
-  git status
-  lines=$(git status -s | wc -l)
-  if [ $lines -gt 0 ];then
-    echo "committing"
-    git config --global user.name "${BOT_NAME}"
-    git config --global user.email "${BOT_EMAIL}"
-    git add .
-    git commit -m "${COMMIT_MESSAGE} ${CI_RUNNER_ID}"
-    echo "git push -o ci.skip 'https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}' ${BRANCH_NAME}"
-    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
-  else
-    echo "no change, nothing to commit"
-  fi  
 
 before_script:
   - pip install -r requirements.txt
@@ -29,7 +14,7 @@ before_script:
 stages:          
   - test
   - convert
-  - push_changes
+  - merge
 
 test_whitelists:
   stage: test
@@ -38,14 +23,26 @@ test_whitelists:
 
 convert_whitelists:
   stage: convert
+  before_script:
+    - pip install -r requirements.txt
+    - git branch -D $BRANCH_NAME
   script:
     - misc/convert.py
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
+    - git checkout -b $BRANCH_NAME
+    - git add misc/json
+    - git commit -m 'convert whitelists'
+    - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
 
-push_changes:
-  stage: push_changes
-  before_script:
-    - git fetch
-    - git checkout $BRANCH_NAME # checkout the test branch
-    - cd $CI_PROJECT_DIR 
+merge_branch:
+  stage: merge
   script:
-    - *push
+    - git fetch
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
+    - git checkout $CI_COMMIT_REF_NAME
+    - git merge --allow-unrelated-histories $BRANCH_NAME --strategy-option theirs
+    - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
+    - git branch -D $BRANCH_NAME
+   
