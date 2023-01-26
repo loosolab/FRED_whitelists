@@ -25,8 +25,8 @@ convert_whitelists:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout -b 'convert_test'
+    - git checkout -b $BRANCH_NAME
     - git add misc/json
-    - git commit -m 'convert to json'
+    - git commit -m $COMMIT_MESSAGE
     - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
    
