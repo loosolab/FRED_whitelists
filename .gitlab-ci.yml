@@ -23,9 +23,6 @@ test_whitelists:
 
 convert_whitelists:
   stage: convert
-  before_script:
-    - pip install -r requirements.txt
-    - git branch -D $BRANCH_NAME
   script:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
@@ -44,5 +41,6 @@ merge_branch:
     - git checkout $CI_COMMIT_REF_NAME
     - git merge --allow-unrelated-histories $BRANCH_NAME --strategy-option theirs
     - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
+    - git push origin --delete $BRANCH_NAME
     - git branch -D $BRANCH_NAME
    
