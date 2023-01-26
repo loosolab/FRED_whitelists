@@ -27,7 +27,6 @@ convert_whitelists:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - CURRENT = git rev-parse --abbrev-ref HEAD
     - git checkout -b $BRANCH_NAME
     - git fetch
     - git pull
