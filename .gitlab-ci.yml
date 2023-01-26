@@ -39,7 +39,7 @@ merge_branch:
   stage: merge
   script:
     - git fetch
-    - git pull "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
+    - git checkout $CI_COMMIT_REF_NAME
     - git status
     - git merge $BRANCH_NAME
     - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
