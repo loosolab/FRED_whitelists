@@ -14,7 +14,6 @@ before_script:
 stages:          
   - test
   - convert
-  - merge
 
 test_whitelists:
   stage: test
@@ -32,8 +31,4 @@ convert_whitelists:
     - git commit -m 'convert to json'
     - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
 
-merge_branch:
-  stage: merge
-  script:
-    - git status
    
