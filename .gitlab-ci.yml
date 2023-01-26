@@ -23,17 +23,24 @@ test_whitelists:
 
 convert_whitelists:
   stage: convert
+  before_script:
+    - pip install -r requirements.txt
+    - git branch -D $BRANCH_NAME
   script:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout 'convert_test'
+    - git checkout $BRANCH_NAME
     - git add misc/json
-    - git commit -m 'convert to json'
+    - git commit -m $COMMIT_MESSAGE
     - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
 
 merge_branch:
   stage: merge
   script:
+    - git fetch
     - git status
+    - git merge $BRANCH_NAME
+    - git push -o ci.skip
+    - git branch -D $BRANCH_NAME
    
