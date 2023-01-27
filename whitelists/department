@@ -13,7 +13,6 @@ whitelist:
     - AG-Poeling
     - AG-swatana
     - AG-Yuan
-    - AG Tecan
     - Abt-C
     - AG-Schaper
     - Abt-D
@@ -22,7 +21,6 @@ whitelist:
     - AG-spullam
     - AG-jkim
     - AG-nwettsc
-    - AG-Ponemah
     - Abt-J
     - Abt-K
     - Abt-L

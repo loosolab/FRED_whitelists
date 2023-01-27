@@ -1,4 +1,4 @@
 [submodule "metadata-organizer"]
 	path = metadata-organizer
-	url = git@gitlab.gwdg.de:loosolab/software/metadata-organizer.git
+	url = ../metadata-organizer.git
 	branch = main
