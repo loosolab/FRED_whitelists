@@ -11,17 +11,18 @@ variables:
 .push_convert: &push_convert |
   lines=$(git diff --cached | wc -l)
   echo $lines
-  if [$lines > 0]: then
+  if [$lines > 0]; then
     echo "commiting"
     git commit -m 'convert whitelists'
     echo "git push $BRANCH_NAME"
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
   else
     echo "nothing to commit"
+  fi
 
 .push_merge: &push_merge |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
-  if [$lines > 0]: then
+  if [$lines > 0]; then
     git checkout $CI_COMMIT_REF_NAME
     git merge --allow-unrelated-histories $BRANCH_NAME --strategy-option theirs
     echo "merge branches"
@@ -31,6 +32,7 @@ variables:
   else
     echo "nothing to commit"
     git branch -D $BRANCH_NAME
+  fi
 
 before_script:
   - pip install -r requirements.txt
