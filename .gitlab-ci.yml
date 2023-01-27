@@ -56,7 +56,7 @@ convert_whitelists:
     - git config --global user.email "${BOT_EMAIL}"
     - git checkout -b $BRANCH_NAME
     - git add misc/json
-    - git diff --cached --exit-code | wc -l    
+    - git diff --cached | wc -l    
     
 
 merge_branch:
