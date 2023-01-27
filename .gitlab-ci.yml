@@ -37,6 +37,7 @@ stages:
     git branch -D $BRANCH_NAME
   else
     echo "nothing to commit"
+    git branch -D $BRANCH_NAME
 
 test_whitelists:
   stage: test
@@ -45,6 +46,9 @@ test_whitelists:
 
 convert_whitelists:
   stage: convert
+  before_script:
+    - pip install -r requirements.txt
+    - git branch -D $BRANCH_NAME
   script:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
