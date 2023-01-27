@@ -18,14 +18,7 @@ stages:
 
 .push_convert: &push_convert |
   git diff --cached --exit-code
-  echo "committing"
-  git commit -m 'convert whitelists'
-  lines = $(git status -s | wc -l)
-  if [$lines -gt 0]: then
-    echo "git push $BRANCH_NAME"
-    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
-  else
-    echo "nothing to commit"
+  
 
 .push_merge: &push_merge |
   lines = $(git ls-remote --heads git@github.com:user/repo.git branch-name | wc -l)
