@@ -8,6 +8,31 @@ variables:
   BOT_EMAIL: "gitlab-runner-bot@example.net" # Bot's email, not important
   COMMIT_MESSAGE: "Commit from runner "      # Part of the commit message
 
+.push_convert: &push_convert |
+  lines=$(git diff --cached | wc -l)
+  if [ $lines > 0 ]; then
+    echo "commiting"
+    git commit -m 'convert whitelists'
+    echo "git push $BRANCH_NAME"
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
+  else
+    echo "nothing to commit"
+  fi
+
+.push_merge: &push_merge |
+  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
+  if [ $lines > 0 ]; then
+    git checkout $CI_COMMIT_REF_NAME
+    git merge --allow-unrelated-histories $BRANCH_NAME --strategy-option theirs
+    echo "merge branches"
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
+    git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
+    git branch -D $BRANCH_NAME
+  else
+    echo "nothing to commit"
+    git branch -D $BRANCH_NAME
+  fi
+
 before_script:
   - pip install -r requirements.txt
 
@@ -23,17 +48,14 @@ test_whitelists:
 
 convert_whitelists:
   stage: convert
-  before_script:
-    - pip install -r requirements.txt
-    - git branch -D $BRANCH_NAME
   script:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
     - git checkout -b $BRANCH_NAME
     - git add misc/json
-    - git commit -m 'convert whitelists'
-    - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
+    - *push_convert
+    
 
 merge_branch:
   stage: merge
@@ -41,9 +63,6 @@ merge_branch:
     - git fetch
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout $CI_COMMIT_REF_NAME
-    - git merge --allow-unrelated-histories $BRANCH_NAME --strategy-option theirs
-    - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
-    - git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
-    - git branch -D $BRANCH_NAME
+    - git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l
+    - *push_merge
    
