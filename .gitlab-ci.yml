@@ -64,5 +64,6 @@ merge_branch:
     - git fetch
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - git diff --cached --exit-code | wc -l    
     - *push_merge
    
