@@ -8,14 +8,6 @@ variables:
   BOT_EMAIL: "gitlab-runner-bot@example.net" # Bot's email, not important
   COMMIT_MESSAGE: "Commit from runner "      # Part of the commit message
 
-before_script:
-  - pip install -r requirements.txt
-
-stages:          
-  - test
-  - convert
-  - merge
-
 .push_convert: &push_convert |
   lines = $(git diff --cached --exit-code | wc -l)
   if [$lines -gt 0]: then
@@ -38,6 +30,14 @@ stages:
   else
     echo "nothing to commit"
     git branch -D $BRANCH_NAME
+
+before_script:
+  - pip install -r requirements.txt
+
+stages:          
+  - test
+  - convert
+  - merge
 
 test_whitelists:
   stage: test
