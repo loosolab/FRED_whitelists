@@ -16,6 +16,29 @@ stages:
   - convert
   - merge
 
+.push_convert: &push_convert |
+  git status
+  lines = $(git status -s | wc -l)
+  if [$lines -gt 0]: then
+    echo "committing"
+    git commit -m 'convert whitelists'
+    echo "git push $BRANCH_NAME"
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
+  else
+    echo "nothing to commit"
+
+.push_merge: &push_merge |
+  lines = $(git ls-remote --heads git@github.com:user/repo.git branch-name | wc -l)
+  if [$lines -gt 0]: then
+    git checkout $CI_COMMIT_REF_NAME
+    git merge --allow-unrelated-histories $BRANCH_NAME --strategy-option theirs
+    echo "merge branches"
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
+    git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
+    git branch -D $BRANCH_NAME
+  else
+    echo "nothing to commit"
+
 test_whitelists:
   stage: test
   script:
@@ -32,8 +55,7 @@ convert_whitelists:
     - git config --global user.email "${BOT_EMAIL}"
     - git checkout -b $BRANCH_NAME
     - git add misc/json
-    - git commit -m 'convert whitelists'
-    - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
+    - *push_convert
 
 merge_branch:
   stage: merge
@@ -41,9 +63,5 @@ merge_branch:
     - git fetch
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout $CI_COMMIT_REF_NAME
-    - git merge --allow-unrelated-histories $BRANCH_NAME --strategy-option theirs
-    - git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
-    - git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
-    - git branch -D $BRANCH_NAME
+    - *push_merge
    
