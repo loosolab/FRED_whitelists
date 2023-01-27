@@ -9,7 +9,7 @@ variables:
   COMMIT_MESSAGE: "Commit from runner "      # Part of the commit message
 
 .push_convert: &push_convert |
-  lines = $(git diff --cached --exit-code | wc -l)
+  lines=$(git diff --cached --exit-code | wc -l)
   if [$lines -gt 0]: then
    echo "commiting"
     git commit -m 'convert whitelists'
@@ -19,7 +19,7 @@ variables:
     echo "nothing to commit"
 
 .push_merge: &push_merge |
-  lines = $(git ls-remote --heads git@github.com:user/repo.git branch-name | wc -l)
+  lines=$(git ls-remote --heads git@github.com:user/repo.git branch-name | wc -l)
   if [$lines -gt 0]: then
     git checkout $CI_COMMIT_REF_NAME
     git merge --allow-unrelated-histories $BRANCH_NAME --strategy-option theirs
