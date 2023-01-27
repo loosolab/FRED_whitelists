@@ -10,7 +10,7 @@ variables:
 
 .push_convert: &push_convert |
   lines=$(git diff --cached | wc -l)
-  if [$lines > 0]; then
+  if [ $lines > 0]; then
     echo "commiting"
     git commit -m 'convert whitelists'
     echo "git push $BRANCH_NAME"
