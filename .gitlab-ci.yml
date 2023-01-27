@@ -2,6 +2,36 @@ image: python:3.8-buster
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
+  GIT_DEPTH: 1  
+  BRANCH_NAME: "${CI_COMMIT_REF_NAME}_temp"              # Name of the branch to modify
+  BOT_NAME: "GitLab Runner Bot"              # Bot's name that appears in the commit log
+  BOT_EMAIL: "gitlab-runner-bot@example.net" # Bot's email, not important
+  COMMIT_MESSAGE: "Commit from runner "      # Part of the commit message
+
+.push_convert: &push_convert |
+  lines=$(git diff --cached | wc -l)
+  if [ $lines -gt 0 ]; then
+    echo "commiting"
+    git commit -m 'convert whitelists'
+    echo "git push $BRANCH_NAME"
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
+  else
+    echo "nothing to commit"
+  fi
+
+.push_merge: &push_merge |
+  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
+  if [ $lines -gt 0 ]; then
+    git checkout $CI_COMMIT_REF_NAME
+    git merge --allow-unrelated-histories $BRANCH_NAME --strategy-option theirs
+    echo "merge branches"
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
+    git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
+    git branch -D $BRANCH_NAME
+  else
+    echo "nothing to commit"
+    git branch -D $BRANCH_NAME
+  fi
 
 before_script:
   - pip install -r requirements.txt
@@ -9,6 +39,7 @@ before_script:
 stages:          
   - test
   - convert
+  - merge
 
 test_whitelists:
   stage: test
@@ -19,3 +50,18 @@ convert_whitelists:
   stage: convert
   script:
     - misc/convert.py
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
+    - git checkout -b $BRANCH_NAME
+    - git add misc/json
+    - *push_convert
+    
+
+merge_branch:
+  stage: merge
+  script:
+    - git fetch
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
+    - *push_merge
+   

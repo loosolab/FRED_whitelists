@@ -3,7 +3,6 @@
 import os
 import sys
 import collections
-
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'metadata-organizer'))
 import src.utils as utils
 
