@@ -67,5 +67,6 @@ merge_branch:
     - git fetch
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l
     - *push_merge
    
