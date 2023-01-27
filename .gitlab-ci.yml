@@ -10,6 +10,7 @@ variables:
 
 .push_convert: &push_convert |
   lines=$(git diff --cached --exit-code | wc -l)
+  echo $lines
   if [$lines -gt 0]: then
    echo "commiting"
     git commit -m 'convert whitelists'
