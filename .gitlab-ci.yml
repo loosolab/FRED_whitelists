@@ -57,7 +57,7 @@ convert_whitelists:
     - git checkout -b $BRANCH_NAME
     - git add misc/json
     - git diff --cached --exit-code | wc -l    
-    - *push_convert
+    
 
 merge_branch:
   stage: merge
