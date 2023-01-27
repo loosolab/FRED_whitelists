@@ -17,6 +17,7 @@ stages:
   - merge
 
 .push_convert: &push_convert |
+  git diff --cached --exit-code
   echo "committing"
   git commit -m 'convert whitelists'
   lines = $(git status -s | wc -l)
