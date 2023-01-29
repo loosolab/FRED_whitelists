@@ -55,6 +55,8 @@ convert_whitelists:
     - git checkout -b $BRANCH_NAME
     - git add misc/json
     - *push_convert
+  except:
+    - main
     
 
 merge_branch:
@@ -64,4 +66,6 @@ merge_branch:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
     - *push_merge
+  except:
+    - main
    
