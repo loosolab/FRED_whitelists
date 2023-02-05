@@ -1,14 +1,18 @@
-whitelist_type: plain
+whitelist_type: group
 whitelist:
-    - seconds
-    - minutes
-    - hours
-    - days
-    - weeks
-    - months
-    - years
-    - ml
-    - l
-    - nl
-    - mol
+    time units:
+        - seconds
+        - minutes
+        - hours
+        - days
+        - weeks
+        - months
+        - years
+    quantity units:
+        - ml
+        - l
+        - nl
+        - mol
+    body_mass_index unit:
+        - kg/m2
 
