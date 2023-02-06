@@ -1,1 +1,1 @@
-{"whitelist_type": "group", "whitelist": {"time units": ["seconds", "minutes", "hours", "days", "weeks", "months", "years"], "quantity units": ["ml", "l", "nl", "mol"], "body_mass_index unit": ["kg/m2"]}}
+{"whitelist_type": "plain", "whitelist": ["seconds", "minutes", "hours", "days", "weeks", "months", "years", "ml", "l", "nl", "mol", "kg/m2"]}
