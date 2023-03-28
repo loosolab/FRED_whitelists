@@ -1,5 +1,6 @@
 whitelist_type: plain
 whitelist:
+    - public
     - Abt-A
     - AG-nerds
     - VL-AG-Looso
@@ -30,3 +31,11 @@ whitelist:
     - SFB1213
     - alleAbt
     - Abt-G
+    - AG-meinhardt
+    - AG-saverio
+    - AG-herold
+    - AG-reischauer
+    - AG-bibli
+    - AG-kaulich
+    - AG-michel
+    - AG-guenther
