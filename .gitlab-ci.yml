@@ -23,7 +23,7 @@ variables:
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
     git checkout $CI_COMMIT_REF_NAME
-    git merge --allow-unrelated-histories $BRANCH_NAME --strategy-option theirs
+    git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
     echo "merge branches"
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
