@@ -35,6 +35,7 @@ variables:
 
 before_script:
   - pip install -r requirements.txt
+  - git branch -D $BRANCH_NAME
 
 stages:          
   - test
