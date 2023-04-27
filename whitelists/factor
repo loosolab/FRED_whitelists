@@ -16,4 +16,5 @@ whitelist:
     - enrichment
     - body_mass_index
     - injury
+    - cellular_compartment
 
