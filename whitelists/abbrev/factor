@@ -13,3 +13,4 @@ whitelist:
     enrichment: enr
     bode_mass_index: bmi
     injury: inj
+    cellular_compartment: ccmp
