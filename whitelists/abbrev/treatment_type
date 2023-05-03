@@ -7,3 +7,6 @@ whitelist:
     Cardiotoxin: Crdtxn
     2-deoxyglucose: 2doxgl
     Saline: Sal
+    delta Cystein: dCys
+    Ferostatin: Frst
+    gain of function: gof
