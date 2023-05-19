@@ -49,6 +49,7 @@ test_whitelists:
 convert_whitelists:
   stage: convert
   script:
+    - git branch -D $BRANCH_NAME
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
