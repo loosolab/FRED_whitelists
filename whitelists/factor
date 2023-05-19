@@ -3,6 +3,8 @@ whitelist:
     genetic:
         - genetic_background
         - knockdown
+        - knockout
+        - overexpression
     enrichments:
         - enrichment
     treatments:
