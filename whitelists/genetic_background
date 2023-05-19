@@ -1,5 +1,5 @@
 whitelist_type: plain
 whitelist:
-    - low
-    - mid
-    - high
+    - Mut
+    - WT
+    

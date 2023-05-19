@@ -1,0 +1,4 @@
+whitelist_type: plain
+whitelist:
+    - static stress
+    - sheer stress
