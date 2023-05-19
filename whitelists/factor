@@ -1,13 +1,15 @@
 whitelist_type: group
 whitelist:
     genetic:
-        - genotype
+        - genetic_background
         - knockdown
+        - knockout
+        - overexpression
     enrichments:
         - enrichment
     treatments:
-        - treatment
-        - flow
+        - medical_treatment
+        - physical_treatment
         - injury
     biological factors:
         - tissue
