@@ -52,7 +52,7 @@ convert_whitelists:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout $BRANCH_NAME
+    - git checkout -b $BRANCH_NAME
     - git add misc/json
     - *push_convert
   except:
