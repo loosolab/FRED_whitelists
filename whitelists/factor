@@ -1,10 +1,9 @@
 whitelist_type: group
 whitelist:
     genetic:
+        - test
         - genetic_background
         - knockdown
-        - knockout
-        - overexpression
     enrichments:
         - enrichment
     treatments:
