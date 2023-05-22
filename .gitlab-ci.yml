@@ -27,7 +27,6 @@ variables:
     echo "merge branches"
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
-    git branch -D $BRANCH_NAME
   else
     echo "nothing to commit"
     git branch -D $BRANCH_NAME
@@ -52,7 +51,6 @@ convert_whitelists:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git branch -D $BRANCH_NAME
     - git checkout -b  $BRANCH_NAME
     - git add misc/json
     - *push_convert
