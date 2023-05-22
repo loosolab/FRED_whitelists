@@ -2,6 +2,7 @@ whitelist_type: abbrev
 whitelist:
     genetic_background: gnb
     gene_editing: ge
+    cell_line: cll
     tissue: tis
     cell_type: clt
     gender: gnd

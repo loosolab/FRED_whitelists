@@ -12,6 +12,7 @@ whitelist:
     biological factors:
         - tissue
         - cell_type
+        - cell_line
         - cellular_compartment
         - disease
         - gender

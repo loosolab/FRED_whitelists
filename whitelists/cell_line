@@ -1,0 +1,4 @@
+whitelist_type: plain
+whitelist:
+    - HAP1
+    - C2C12
