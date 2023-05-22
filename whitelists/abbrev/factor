@@ -1,11 +1,9 @@
 whitelist_type: abbrev
 whitelist:
     genetic_background: gnb
+    gene_editing: ge
     tissue: tis
     cell_type: clt
-    knockdown: kd
-    knockout: ko
-    overexpression: oe
     gender: gnd
     life_stage: lfs
     ethnicity: eth
