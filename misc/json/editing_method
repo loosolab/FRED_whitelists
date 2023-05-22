@@ -1,0 +1,1 @@
+{"whitelist_type": "group", "whitelist": {"all": ["WT"], "knockdown": ["siRNA", "morpholino"]}}
