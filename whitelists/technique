@@ -26,3 +26,5 @@ whitelist:
     - DRIP-seq
     - snRNA-seq
     - snATAC-seq
+    - GLORI-seq
+    - Quant-seq
