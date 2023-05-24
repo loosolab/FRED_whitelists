@@ -10,3 +10,4 @@ whitelist:
     chicken: genes/chicken
     drosophila: genes/drosophila
     yeast: genes/yeast
+    ascomycota: genes/ascomycota
