@@ -10,3 +10,4 @@ whitelist:
     chicken: abbrev/genes/chicken
     drosophila: abbrev/genes/drosophila
     yeast: abbrev/genes/yeast
+    ascomycota: abbrev/genes/ascomycota
