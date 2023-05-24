@@ -9,6 +9,7 @@ whitelist:
     Fibroblasts: Fbrb
     Macrophages: Mcrp
     Mast cells: MstCll
+    Muscle stem cells: MsSCll
     T-cells: TCll
     Plasma cells: PlCll
     Adipocyte: adpc
@@ -42,10 +43,12 @@ whitelist:
     Peripheral blood Neutrophils: PeriBlNtrph
     Peritubular cells: PeritblCll
     Podocytes: Podoct
+    Primary myoblasts: PrMyo
     Prostate basal glandular cells: PrstBGlCll
     Prostate glandular cells: PrstGlCll
     Proximal tubular cells: ProxTblCll
     Respiratory ciliated cells: RespCilCll
+    Satellite cells: SatCll
     Skeletal myocytes: SklMct
     Spermatids: Sprmtd
     Spleen Neutrophils: SplNtrph
