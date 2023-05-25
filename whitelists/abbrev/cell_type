@@ -21,6 +21,7 @@ whitelist:
     Beta cells: BetaCll
     Bone Marrow Neutrophils: BMNtrph
     Cardiomyocytes: Crdmct
+    Neonatal Cardiomyocytes: NeoCrdmct
     Ductal cells: DuctCll
     Eccrine sweat gland cells: EccSwGlCll
     Enteric glia cells: EntGliaCll
