@@ -1,1 +1,1 @@
-{"whitelist_type": "abbrev", "whitelist": {"morpholino": "mrph"}}
+{"whitelist_type": "abbrev", "whitelist": {"morpholino": "mrph", "CRISPR-Cas13": "CRC13", "CRISPR-Cas9": "CRC9"}}

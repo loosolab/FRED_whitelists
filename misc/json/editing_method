@@ -1,1 +1,1 @@
-{"whitelist_type": "group", "whitelist": {"all": ["WT"], "knockdown": ["siRNA", "morpholino"]}}
+{"whitelist_type": "group", "whitelist": {"all": ["WT"], "knockdown": ["siRNA", "morpholino", "CRISPR-Cas13"], "knockout": ["CRISPR-Cas9"]}}
