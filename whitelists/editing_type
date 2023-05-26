@@ -1,5 +1,6 @@
 whitelist_type: plain
 whitelist:
+    - WT
     - knockdown
     - knockout
     - overexpression
