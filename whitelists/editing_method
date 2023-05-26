@@ -5,3 +5,6 @@ whitelist:
     knockdown:
         - siRNA
         - morpholino
+        - CRISPR-Cas13
+    knockout:
+        - CRISPR-Cas9
