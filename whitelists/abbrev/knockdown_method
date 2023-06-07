@@ -1,4 +1,3 @@
 whitelist_type: abbrev
 whitelist:
-    caucasian: cau
-    asian: as
+    morpholino: mrph

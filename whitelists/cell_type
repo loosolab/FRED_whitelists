@@ -9,6 +9,7 @@ whitelist:
     - Fibroblasts
     - Macrophages
     - Mast cells
+    - Muscle stem cells
     - T-cells
     - Plasma cells
     - Adipocyte
@@ -36,16 +37,19 @@ whitelist:
     - Melanocytes
     - Mitotic cells
     - Neutrophils
+    - Neonatal Cardiomyocytes
     - NK-cells
     - Parafollicular cells
     - Peritoneal cavity Neutrophils
     - Peripheral blood Neutrophils
     - Peritubular cells
     - Podocytes
+    - Primary myoblasts
     - Prostate basal glandular cells
     - Prostate glandular cells
     - Proximal tubular cells
     - Respiratory ciliated cells
+    - Satellite cells
     - Skeletal myocytes
     - Spermatids
     - Spleen Neutrophils

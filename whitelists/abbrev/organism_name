@@ -10,3 +10,4 @@ whitelist:
     drosophila: drsph
     yeast: yeast
     caenorhabditis_elegans: cele
+    ascomycota: ascmc

@@ -11,3 +11,4 @@ whitelist:
     - drosophila 7215
     - yeast 4932
     - caenorhabditis_elegans 6239
+    - ascomycota 367110
