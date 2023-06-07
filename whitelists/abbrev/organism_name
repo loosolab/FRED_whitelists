@@ -9,3 +9,4 @@ whitelist:
     chicken: chick
     drosophila: drsph
     yeast: yeast
+    caenorhabditis_elegans: cele

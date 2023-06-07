@@ -10,4 +10,4 @@ whitelist:
     - chicken 9031
     - drosophila 7215
     - yeast 4932
-
+    - caenorhabditis_elegans 6239
