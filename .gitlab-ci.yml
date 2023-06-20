@@ -17,6 +17,7 @@ variables:
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
   else
     echo "nothing to commit"
+    git branch -D $BRANCH_NAME
   fi
 
 .push_merge: &push_merge |
@@ -51,7 +52,7 @@ convert_whitelists:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout -b  $BRANCH_NAME
+    - git checkout $BRANCH_NAME
     - git add misc/json
     - *push_convert
   except:
