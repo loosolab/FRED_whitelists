@@ -1,552 +1,552 @@
 whitelist_type: plain
 headers: gene_name ensembl_id
 double:
-    - si:dkey-58b18.10
-    - si:dkey-24l11.2
+    - sidkey58b1810
+    - sidkey24l112
     - elob
-    - galnt8a.1
+    - galnt8a1
     - acy1
-    - si:dkey-263j23.1
+    - sidkey263j231
     - znf1091
     - ces2b
-    - zgc:172128
+    - zgc172128
     - MFAP4
     - RNF14
     - tlr7
-    - si:ch73-92i20.1
+    - sich7392i201
     - rac1l
-    - si:dkey-21h14.12
-    - cyp2x10.2
+    - sidkey21h1412
+    - cyp2x102
     - fthl31
-    - si:dkeyp-2e4.3
-    - zgc:173575
+    - sidkeyp2e43
+    - zgc173575
     - mcf2b
-    - si:ch211-238e22.8
-    - cxcl11.6
-    - si:ch211-283g2.2
-    - si:dkey-5i16.5
+    - sich211238e228
+    - cxcl116
+    - sich211283g22
+    - sidkey5i165
     - znf1009
     - FAM107A
     - yeats2
-    - si:dkey-16p6.1
-    - zgc:113295
+    - sidkey16p61
+    - zgc113295
     - znf1099
-    - si:dkey-20i20.8
-    - h3f3b.1
-    - zgc:66024
-    - si:ch211-214c20.1
-    - si:dkey-28d5.14
+    - sidkey20i208
+    - h3f3b1
+    - zgc66024
+    - sich211214c201
+    - sidkey28d514
     - znf1021
     - znf1047
-    - zgc:113886
-    - si:dkey-65l23.2
-    - zgc:66473
-    - si:ch211-263k4.2
-    - si:dkey-58b18.5
-    - hbae1.3
+    - zgc113886
+    - sidkey65l232
+    - zgc66473
+    - sich211263k42
+    - sidkey58b185
+    - hbae13
     - celsr2
     - TMEM132C
     - phtf2
     - c1ql3b
-    - zgc:110045
-    - si:dkey-85a20.4
+    - zgc110045
+    - sidkey85a204
     - pard3ba
-    - si:dkey-21e2.12
+    - sidkey21e212
     - cacna2d4a
     - ch25hl3
     - znf1102
     - znf1116
     - impg2b
-    - zgc:173552
-    - dre-mir-2185-1
+    - zgc173552
+    - dremir21851
     - C20H6orf58
-    - si:ch73-103b2.1
+    - sich73103b21
     - dynlrb1
-    - si:dkey-51d8.3
+    - sidkey51d83
     - HTRA2
-    - zgc:110249
+    - zgc110249
     - znf977
     - znf1104
-    - si:dkeyp-68b7.7
-    - si:dkey-63j12.4
+    - sidkeyp68b77
+    - sidkey63j124
     - march7
     - vav3b
     - oscp1a
     - btr04
     - neo1b
     - nkd3
-    - si:dkey-259j3.5
+    - sidkey259j35
     - ctxn1
     - znf1011
-    - si:ch211-157j23.3
+    - sich211157j233
     - fthl27
     - gbgt1l3
     - slc27a1b
     - cpn1
-    - si:ch211-213a13.2
+    - sich211213a132
     - mettl7a
     - taar20b1
     - znf1144
-    - zgc:163040
+    - zgc163040
     - mlxipl
-    - zgc:153932
+    - zgc153932
     - baxa
     - pimr196
     - fbxo11a
     - robo2
-    - si:zfos-364h11.2
-    - zgc:174353
-    - apoa4b.2
-    - si:dkey-61p9.9
-    - si:dkey-182g1.2
+    - sizfos364h112
+    - zgc174353
+    - apoa4b2
+    - sidkey61p99
+    - sidkey182g12
     - COX5B
-    - si:dkey-16p6.4
-    - si:dkey-25o1.7
+    - sidkey16p64
+    - sidkey25o17
     - col19a1
-    - si:ch211-181d7.1
-    - si:dkey-27j5.10
+    - sich211181d71
+    - sidkey27j510
     - adgrg1
     - hbba1
     - cyp3c3
     - rock2b
     - znf1121
-    - zgc:174193
+    - zgc174193
     - C1H3orf70
-    - si:ch211-255f4.11
-    - si:dkey-238d18.7
-    - si:ch211-165a10.5
-    - si:dkey-156k2.4
-    - chia.6
-    - si:dkey-58f10.7
+    - sich211255f411
+    - sidkey238d187
+    - sich211165a105
+    - sidkey156k24
+    - chia6
+    - sidkey58f107
     - znf1174
     - btr21
-    - zgc:153659
-    - si:ch211-11p18.6
-    - zgc:171717
-    - or132-2
+    - zgc153659
+    - sich21111p186
+    - zgc171717
+    - or1322
     - atg16l2
     - sinhcafl
-    - si:ch211-237a4.2
+    - sich211237a42
     - pimr198
     - hook2
-    - si:dkey-269i1.4
-    - si:ch73-343l4.6
+    - sidkey269i14
+    - sich73343l46
     - hrc
     - olfcg1
-    - si:ch211-76m11.5
+    - sich21176m15
     - ccs
     - hmcn2
     - mcat
     - slc26a6
-    - zgc:174944
-    - si:ch211-256e16.11
+    - zgc174944
+    - sich211256e1611
     - megf8
     - mmp13a
-    - her4.2
+    - her42
     - appl2
     - kif5ba
     - mpp4l
     - pimr98
-    - si:dkey-15b23.3
-    - zgc:174222
+    - sidkey15b233
+    - zgc174222
     - col6a3
     - fgfr1bl
     - ptpro
-    - si:ch211-234c11.2
-    - si:dkey-27j5.6
-    - dre-mir-430a-16
+    - sich211234c112
+    - sidkey27j56
+    - dremir430a16
     - SLC4A5
-    - zgc:174354
+    - zgc174354
     - lrp1ba
     - gtf2a1l
     - ftr12
-    - trhde.2
-    - si:dkey-28k24.2
+    - trhde2
+    - sidkey28k242
     - ctslb
     - egln1b
-    - si:ch211-171l17.14
-    - si:dkey-11o15.7
+    - sich211171l1714
+    - sidkey11o157
     - ank1a
-    - dre-mir-430b-10
+    - dremir430b10
     - afp4
     - cyth1a
-    - si:dkeyp-4f2.3
+    - sidkeyp4f23
     - selp
-    - cela1.5
+    - cela15
     - tomm20a
     - znf1109
-    - si:ch211-76m11.8
-    - si:dkeyp-44b5.4
-    - si:dkeyp-82b4.6
+    - sich21176m118
+    - sidkeyp44b54
+    - sidkeyp82b46
     - srsf3a
-    - matr3l1.1
+    - matr3l11
     - znf985
-    - si:ch211-214k5.3
-    - si:dkey-4c15.8
-    - si:ch73-236c18.8
+    - sich211214k53
+    - sidkey4c158
+    - sich73236c188
     - arf4a
-    - si:ch211-170p16.1
+    - sich211170p161
     - ftr10
     - mical3a
-    - si:dkey-201l21.2
+    - sidkey201l212
     - actc1a
     - mtmr3
-    - gna15.3
+    - gna153
     - thsd1
     - palm2akap2
     - nos1apa
     - znf1154
-    - cxcr3.1
+    - cxcr31
     - grem1a
     - msrb1b
-    - si:ch211-200p22.4
-    - zgc:112234
+    - sich211200p224
+    - zgc112234
     - PDZD4
     - znf995
-    - si:ch211-197g15.6
-    - si:ch211-194e1.7
+    - sich211197g156
+    - sich211194e17
     - dnal1
     - cmklrl2
     - arhgap45b
     - dnah11
     - hdac8
     - slco5a1a
-    - si:dkey-222h21.2
-    - si:ch211-127b6.2
-    - si:dkey-51d8.1
-    - si:ch73-236c18.9
+    - sidkey222h212
+    - sich211127b62
+    - sidkey51d81
+    - sich73236c189
     - arf2b
-    - dre-mir-735
-    - dicp1.1
-    - si:dkey-265e15.2
-    - si:dkey-240n22.6
-    - si:busm1-105l16.2
+    - dremir735
+    - dicp11
+    - sidkey265e152
+    - sidkey240n226
+    - sibusm1105l162
     - igl4v8
     - hist1h2a10
     - top1mt
-    - si:ch73-256j6.4
-    - zgc:172079
+    - sich73256j64
+    - zgc172079
     - agbl4
-    - si:ch211-182p11.1
+    - sich211182p111
     - lnpa
     - soga3a
-    - si:dkey-199m13.7
+    - sidkey199m137
     - usp16
-    - si:ch73-338o16.4
-    - si:dkeyp-106c3.2
+    - sich73338o164
+    - sidkeyp106c32
     - ube2c
     - mmp15a
     - c6
-    - si:dkey-57k2.7
-    - si:dkeyp-67e1.6
+    - sidkey57k27
+    - sidkeyp67e16
     - tbc1d9
     - znf1118
-    - si:dkeyp-67a8.4
+    - sidkeyp67a84
     - vps50
-    - si:ch211-165f21.2
+    - sich211165f212
     - pimr152
     - znf1108
     - znf1078
     - CAPN1
-    - zgc:162509
-    - si:ch211-76m11.3
+    - zgc162509
+    - sich21176m113
     - pcdh2ab9
     - plxnb2a
     - crygm2d17
-    - si:dkey-82i20.2
+    - sidkey82i202
     - hist1h2a3
-    - zgc:163061
+    - zgc163061
     - slc37a4b
     - naa40
     - tmem107
     - TENM2
-    - dre-mir-430b-6
+    - dremir430b6
     - znf1183
     - znf1127
     - znf1146
-    - si:dkeyp-52c3.7
+    - sidkeyp52c37
     - C7H19orf12
-    - si:ch211-113a14.19
+    - sich211113a1419
     - pimr128
-    - zp3.2
+    - zp32
     - pdgfaa
     - ewsr1b
     - taar19o
     - znf980
     - MYADM
     - znf1115
-    - si:rp71-7l19.2
-    - si:dkey-77f5.11
+    - sirp717l192
+    - sidkey77f511
     - CHST12
     - pimr204
-    - si:dkey-13n23.3
-    - zgc:174356
+    - sidkey13n233
+    - zgc174356
     - kcnj11l
     - znf1124
-    - dre-mir-430b-18
-    - si:ch211-223g7.6
-    - si:ch73-236c18.2
-    - si:dkey-40c23.2
-    - zgc:91850
-    - si:ch211-66i15.5
-    - zgc:174698
+    - dremir430b18
+    - sich211223g76
+    - sich73236c182
+    - sidkey40c232
+    - zgc91850
+    - sich21166i155
+    - zgc174698
     - iqcb1
-    - si:dkey-256e7.5
-    - si:dkey-42l23.9
+    - sidkey256e75
+    - sidkey42l239
     - ccdc28a
     - klhl13
     - neto2b
     - crhr2
-    - trim35-7
+    - trim357
     - lyn
     - baz1a
     - pla1a
     - pou2f2a
-    - prf1.7
-    - si:dkeyp-44b5.5
-    - si:ch211-67f24.7
+    - prf17
+    - sidkeyp44b55
+    - sich21167f247
     - pimr49
-    - zgc:153921
+    - zgc153921
     - clul1
-    - dre-mir-430b-9
-    - si:dkey-11d20.1
+    - dremir430b9
+    - sidkey11d201
     - dlgap2b
-    - tas1r2.2
+    - tas1r22
     - pimr168
     - pimr97
-    - ighv1-4
-    - pigrl3.5
+    - ighv14
+    - pigrl35
     - stx10
-    - si:dkey-65b13.8
-    - pigrl2.3
-    - si:dkey-106c17.2
+    - sidkey65b138
+    - pigrl23
+    - sidkey106c172
     - ftr90
     - FUT9
     - ELAPOR2
     - taar20i
-    - si:dkey-31m5.5
-    - adgre5b.3
-    - si:ch211-163c2.1
+    - sidkey31m55
+    - adgre5b3
+    - sich211163c21
     - nadka
     - sptbn4b
     - tlr19
-    - or130-1
-    - si:dkeyp-4f2.1
-    - dre-mir-430a-4
-    - pon3.2
+    - or1301
+    - sidkeyp4f21
+    - dremir430a4
+    - pon32
     - adcyap1r1a
-    - si:dkey-234i14.13
+    - sidkey234i1413
     - TMEM275
     - chst12b
-    - rsf1b.1
-    - si:dkey-84o3.3
-    - si:ch73-266f23.1
-    - si:ch211-196f19.1
-    - ms4a17a.5
+    - rsf1b1
+    - sidkey84o33
+    - sich73266f231
+    - sich211196f191
+    - ms4a17a5
     - ino80e
-    - si:ch211-64i20.3
-    - si:ch211-156p11.1
+    - sich21164i203
+    - sich211156p111
     - ftr32
     - nlrc8
     - ptprt
-    - si:ch211-227e10.6
-    - si:ch211-113a14.22
+    - sich211227e106
+    - sich211113a1422
     - znf1023
     - VMAC
     - ftr97
     - pibf1
     - pcdh11
-    - si:dkey-56i24.1
+    - sidkey56i241
     - nadsyn1
     - dap1b
     - taar19n
-    - si:dkey-247i3.6
-    - si:dkey-61f9.1
-    - si:dkey-16p19.5
+    - sidkey247i36
+    - sidkey61f91
+    - sidkey16p195
     - ptprh
     - btr24
     - pimr205
     - hnrnpa0l
-    - si:dkey-190j3.2
-    - si:dkey-88n24.10
-    - zgc:175135
+    - sidkey190j32
+    - sidkey88n2410
+    - zgc175135
     - vap
     - pcdh2ab2
     - cyp2y3
     - NA
     - wdr21
-    - zgc:174355
+    - zgc174355
     - calm3a
-    - si:dkey-4e4.1
+    - sidkey4e41
     - gtf2h4
-    - zgc:173486
-    - zgc:193807
-    - zgc:194906
+    - zgc173486
+    - zgc193807
+    - zgc194906
     - flrt2
-    - si:ch211-22k7.9
-    - si:dkey-84h14.1
-    - sc:d0202
+    - sich21122k79
+    - sidkey84h141
+    - scd0202
     - znf1153
-    - si:ch73-55i23.1
+    - sich7355i231
     - rpl37
     - igl3v2
     - pimr89
     - sox4a
-    - zgc:171759
+    - zgc171759
     - pimr166
-    - si:ch211-208f21.3
+    - sich211208f213
     - baiap2b
     - ccdc136b
-    - si:dkey-222h21.10
-    - ighv4-3
-    - zgc:66156
+    - sidkey222h2110
+    - ighv43
+    - zgc66156
     - hp
     - ftr06
-    - si:ch211-215p11.1
+    - sich211215p111
     - slx4
-    - or121-1
-    - asb2a.1
+    - or1211
+    - asb2a1
     - ugt5b2
-    - si:ch73-160i9.3
+    - sich73160i93
     - pkd1l2b
-    - si:dkey-207m2.4
+    - sidkey207m24
     - ank3b
-    - si:ch211-157j23.2
-    - si:dkey-24p1.6
-    - myhz1.1
-    - zgc:173705
-    - si:ch73-212j7.3
-    - si:ch211-221n20.7
+    - sich211157j232
+    - sidkey24p16
+    - myhz11
+    - zgc173705
+    - sich73212j73
+    - sich211221n207
     - ptprsa
-    - si:dkey-147f3.8
+    - sidkey147f38
     - adamts15b
     - nitr1b
-    - si:dkey-4j21.2
+    - sidkey4j212
     - sult3st3
     - tube1
     - pimr160
-    - si:zfos-2330d3.7
+    - sizfos2330d37
     - znf1004
-    - si:ch73-256j6.2
-    - zgc:171435
+    - sich73256j62
+    - zgc171435
     - znf1137
-    - si:ch211-227e10.1
+    - sich211227e101
     - znf1157
-    - si:ch211-266c8.1
-    - si:dkeyp-20g2.3
+    - sich211266c81
+    - sidkeyp20g23
     - gstk4
-    - zgc:64065
+    - zgc64065
     - taar20o
-    - zgc:173545
+    - zgc173545
     - rimbp2
     - znf1089
     - evx1
     - ftr36
-    - si:dkey-21e2.8
-    - zgc:112966
+    - sidkey21e28
+    - zgc112966
     - ugt2a7
     - cyp2k6
     - pimr64
     - senp7a
-    - si:ch73-222f22.2
-    - si:ch211-207e19.2
-    - zgc:113102
+    - sich73222f222
+    - sich211207e192
+    - zgc113102
     - crp2
-    - si:dkey-73p2.3
-    - dhrs13b.1
+    - sidkey73p23
+    - dhrs13b1
     - znf740a
     - wnt8a
-    - tlr20.3
-    - si:dkey-30g5.1
-    - zgc:153759
+    - tlr203
+    - sidkey30g51
+    - zgc153759
     - cplx2
-    - dre-mir-430b-1
+    - dremir430b1
     - nitr6b
     - TESK1
-    - dre-mir-430c-1
+    - dremir430c1
     - hist1h2a11
-    - si:dkey-29j8.1
-    - si:dkey-3h2.4
-    - si:dkey-6f10.4
+    - sidkey29j81
+    - sidkey3h24
+    - sidkey6f104
     - znf993
     - pcdh20
-    - si:ch211-246m6.5
+    - sich211246m65
     - INSYN2A
-    - zgc:174180
+    - zgc174180
     - cacna1db
-    - si:dkey-1c7.2
+    - sidkey1c72
     - ANPEP
-    - si:dkeyp-93a5.2
-    - si:dkey-102c8.2
+    - sidkeyp93a52
+    - sidkey102c82
     - dlg4b
     - fgfbp1b
     - trpm2
-    - si:dkey-21e2.3
+    - sidkey21e23
     - hist1h4l
-    - si:ch211-238p8.35
-    - si:ch73-92e7.4
+    - sich211238p835
+    - sich7392e74
     - meis2a
-    - si:rp71-36a1.5
+    - sirp7136a15
     - pafah1b3
-    - si:dkey-28d5.11
+    - sidkey28d511
     - pimr58
-    - si:dkeyp-13d11.1
+    - sidkeyp13d111
     - LRRTM4
     - cct2
     - itln2
-    - si:ch211-162i8.4
+    - sich211162i84
     - znf1085
     - otulina
     - raf1a
     - rrm2
     - proca
-    - si:ch73-44m9.3
-    - zgc:162952
+    - sich7344m93
+    - zgc162952
     - znf974
     - clca1
-    - si:dkey-275b16.2
-    - si:dkey-73p2.2
+    - sidkey275b162
+    - sidkey73p22
     - ppp2r2ca
     - st7
     - parietopsin
     - znf1001
-    - si:rp71-79p20.2
+    - sirp7179p202
     - csmd3a
     - PTCHD3
     - ascl1b
-    - si:ch73-1f23.1
+    - sich731f231
     - znf1015
-    - si:ch211-208g1.1
+    - sich211208g11
     - znf1053
     - METTL21C
     - castor1
-    - si:ch73-134f24.1
+    - sich73134f241
     - znf1026
-    - si:dkey-13n15.2
+    - sidkey13n152
     - nr6a1a
-    - zgc:77486
+    - zgc77486
     - ebf3a
     - ccr2
     - ftr50
-    - si:dkeyp-27c8.1
-    - zgc:171424
-    - si:dkey-19a16.11
-    - si:dkey-222b8.1
+    - sidkeyp27c81
+    - zgc171424
+    - sidkey19a1611
+    - sidkey222b81
     - cdh23
     - fnbp1b
-    - si:dkeyp-98a7.3
-    - si:ch211-173a9.6
-    - si:dkeyp-7a3.1
-    - ogt.1
+    - sidkeyp98a73
+    - sich211173a96
+    - sidkeyp7a31
+    - ogt1
     - zak
     - ptch1
-    - si:ch211-282j17.10
+    - sich211282j1710
     - ano9a
-    - si:ch73-380l3.2
-    - si:dkey-238k10.3
+    - sich73380l32
+    - sidkey238k103
     - qdprb2
-    - si:dkey-27n6.1
-    - dre-mir-430a-2
+    - sidkey27n61
+    - dremir430a2
     - scg5
 whitelist:
     - slc35a5 ENSDARG00000000001
