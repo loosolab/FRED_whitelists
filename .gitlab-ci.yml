@@ -16,7 +16,6 @@ variables:
     echo "git push $BRANCH_NAME"
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
   else
-    git checkout ${CI_COMMIT_REF_NAME}
     echo "nothing to commit"
   fi
 
