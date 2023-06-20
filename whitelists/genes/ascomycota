@@ -1,10 +1,10 @@
 whitelist_type: plain
 double: 
-    - 'FungiU3'
+    - 'Fungi_U3'
     - 'U2'
     - 'U6'
     - 'NA'
-    - '5SrRNA'
+    - '5S_rRNA'
     - 'U1'
     - 'U4'
 headers: gene_name ensembl_id

@@ -8,7 +8,7 @@ double:
     - Entpd7
     - LOC100910953
     - Tmem14a
-    - YRNA
+    - Y_RNA
     - Knop1
     - Spag5
     - U12
@@ -32,7 +32,7 @@ double:
     - Calm2
     - Cttn
     - Crabp2
-    - 5SrRNA
+    - 5S_rRNA
     - Pcdha4
     - Rps19l2
     - Nfs1
@@ -56,7 +56,7 @@ double:
     - Foxb2
     - SNORA74
     - Cct8l1
-    - 58SrRNA
+    - 5_8S_rRNA
     - Gzmn
     - Vom1r29
     - LOC690468
@@ -169,9 +169,9 @@ double:
     - Gns
     - Ak6
     - Klk1
-    - NEWGENE621351
+    - NEWGENE_621351
     - Slc14a2
-    - RNasePnuc
+    - RNaseP_nuc
     - LOC691254
     - Agbl4
     - LOC103694079
