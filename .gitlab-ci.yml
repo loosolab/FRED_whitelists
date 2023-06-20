@@ -29,8 +29,6 @@ variables:
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
   else
     echo "nothing to commit"
-    git checkout ${CI_COMMIT_REF_NAME}
-    git branch -D $BRANCH_NAME
   fi
 
 before_script:
