@@ -21,6 +21,8 @@ whitelist:
     - Beta cells
     - Bone Marrow Neutrophils
     - Cardiomyocytes
+    - Atrial Cardiomyocytes
+    - Ventricular Cardiomyocytes
     - Ductal cells
     - Eccrine sweat gland cells
     - Enteric glia cells
