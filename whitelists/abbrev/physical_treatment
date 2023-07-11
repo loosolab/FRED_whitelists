@@ -2,3 +2,5 @@ whitelist_type: abbrev
 whitelist:
     static stress: ststr
     sheer stress: shstr
+    hypoxia: hyox
+    normoxia: nox

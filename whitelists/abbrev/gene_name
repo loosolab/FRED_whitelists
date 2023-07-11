@@ -11,3 +11,4 @@ whitelist:
     drosophila: abbrev/genes/drosophila
     yeast: abbrev/genes/yeast
     ascomycota: abbrev/genes/ascomycota
+    caenorhabditis_elegans: abbrev/genes/caenorhabditis_elegans

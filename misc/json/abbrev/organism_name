@@ -1,1 +1,1 @@
-{"whitelist_type": "abbrev", "whitelist": {"human": "hum", "mouse": "mouse", "zebrafish": "zbrf", "rat": "rat", "pig": "pig", "medaka": "mdka", "chicken": "chick", "drosophila": "drsph", "yeast": "yeast", "ascomycota": "ascmc"}}
+{"whitelist_type": "abbrev", "whitelist": {"human": "hum", "mouse": "mouse", "zebrafish": "zbrf", "rat": "rat", "pig": "pig", "medaka": "mdka", "chicken": "chick", "drosophila": "drsph", "yeast": "yeast", "caenorhabditis_elegans": "cele", "ascomycota": "ascmc"}}
