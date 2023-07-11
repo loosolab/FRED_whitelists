@@ -3,7 +3,7 @@ image: python:3.8-buster
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
   GIT_DEPTH: 1  
-  BRANCH_NAME: "${CI_COMMIT_REF_NAME}_temp5"              # Name of the branch to modify
+  BRANCH_NAME: "${CI_COMMIT_REF_NAME}_temp6"              # Name of the branch to modify
   BOT_NAME: "GitLab Runner Bot"              # Bot's name that appears in the commit log
   BOT_EMAIL: "gitlab-runner-bot@example.net" # Bot's email, not important
   COMMIT_MESSAGE: "Commit from runner "      # Part of the commit message
