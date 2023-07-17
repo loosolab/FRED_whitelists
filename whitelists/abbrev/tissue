@@ -34,6 +34,7 @@ whitelist:
     muscle Soleus: muSol
     muscle Tibialis: muTib
     omentum: omnt
+    organoids: org
     ovary: ovr
     pancreas: pncr
     peripheral blood: periBl

@@ -35,6 +35,7 @@ whitelist:
     - muscle Soleus
     - muscle Tibialis
     - omentum
+    - organoids
     - ovary   
     - pancreas
     - peripheral blood
