@@ -3,4 +3,3 @@ whitelist:
     - None
     - s3download
     - s3downloadfolder
-    - test
