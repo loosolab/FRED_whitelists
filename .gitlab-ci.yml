@@ -30,7 +30,6 @@ variables:
     git branch -D $BRANCH_NAME
   else
     echo "nothing to commit"
-    git branch -D $BRANCH_NAME
   fi
 
 before_script:
