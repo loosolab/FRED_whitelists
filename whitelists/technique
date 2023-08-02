@@ -28,3 +28,4 @@ whitelist:
     - snATAC-seq
     - GLORI-seq
     - Quant-seq
+    - DamID-seq
