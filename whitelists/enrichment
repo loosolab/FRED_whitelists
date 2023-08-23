@@ -12,9 +12,11 @@ whitelist:
         - H3K4me3
         - H3K9Ac
         - H3K9K14Ac
+        - H3K9me2
         - H3K9me3
         - H4K16Ac
         - H4K20me1
+        - H4K20me2
         - H4K5
         - H9K4me3
     proteins: gene
