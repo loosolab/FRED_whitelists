@@ -5,3 +5,5 @@ whitelist:
     - cardiotoxin injection
     - sham
     - amputation
+    - interleukin-1beta injection
+    - mechanical trauma
