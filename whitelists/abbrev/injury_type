@@ -5,3 +5,4 @@ whitelist:
     amputation: amp
     interleukin-1beta injection: il1b
     mechanical trauma: mech
+    resection: res
