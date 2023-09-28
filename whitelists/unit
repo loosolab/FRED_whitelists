@@ -10,5 +10,6 @@ whitelist:
     - ml
     - l
     - nl
+    - μM
     - mol
     - kg/m2

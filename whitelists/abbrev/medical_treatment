@@ -3,3 +3,4 @@ whitelist:
     treatment_type: tp
     treatment_status: sts
     treatment_duration: dur
+    treatment_amount: amt
