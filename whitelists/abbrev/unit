@@ -8,3 +8,4 @@ whitelist:
     months: mo
     years: y
     kg/m2: kgm2
+    μM: miM
