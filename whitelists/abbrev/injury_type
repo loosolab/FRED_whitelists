@@ -3,6 +3,6 @@ whitelist:
     cryoinjury: cryo
     cardiotoxin injection: ctx
     amputation: amp
-    interleukin-1beta injection: il1b
+    interleukin-1beta: il1b
     mechanical trauma: mech
     resection: res
