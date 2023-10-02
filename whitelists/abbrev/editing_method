@@ -3,4 +3,3 @@ whitelist:
     morpholino: mrph
     CRISPR-Cas13: CRC13
     CRISPR-Cas9: CRC9
-    siScramble: siScr
