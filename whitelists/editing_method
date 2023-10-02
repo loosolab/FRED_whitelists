@@ -2,6 +2,7 @@ whitelist_type: group
 whitelist:
     knockdown:
         - siRNA
+        - siScramble
         - morpholino
         - CRISPR-Cas13
     knockout:
