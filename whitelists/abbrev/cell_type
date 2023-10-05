@@ -43,6 +43,7 @@ whitelist:
     Neutrophils: Ntrph
     NK-cells: NKCll
     Parafollicular cells: ParafllCll
+    Pericytes: Perict
     Peritoneal cavity Neutrophils: PCNtrph
     Peripheral blood Neutrophils: PeriBlNtrph
     Peritubular cells: PeritblCll
