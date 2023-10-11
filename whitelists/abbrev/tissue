@@ -28,7 +28,7 @@ whitelist:
     lung upper lobe: lngUL
     lung lower lobe: lngLL
     muscle: mu
-    muscle EDL: muEDL
+    muscle extensor digitorum longus: muEDL
     muscle Gastrocnemius: muGstr
     muscle Plantaris: muPlt
     muscle Quadriceps: muQudr
