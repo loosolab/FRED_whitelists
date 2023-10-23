@@ -13,6 +13,7 @@ whitelist:
         - tissue
         - cell_type
         - cell_line
+        - strain
         - cellular_compartment
         - disease
         - gender
