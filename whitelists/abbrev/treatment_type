@@ -14,3 +14,5 @@ whitelist:
     XMU-MP-1: XmuMp1
     Stearoylcarnitine: C18Car
     Lipopolysaccharide: LPS
+    Interleukin-1beta: Il1b
+    Solvent: Slvt
