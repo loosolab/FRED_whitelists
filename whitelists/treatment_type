@@ -16,5 +16,6 @@ whitelist:
     - Lipopolysaccharide
     - Interleukin-1beta
     - Solvent
+    - SPiDER-βGal
 
 

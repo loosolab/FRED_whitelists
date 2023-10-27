@@ -17,3 +17,4 @@ whitelist:
     cellular_compartment: ccmp
     physical_treatment: ptrt
     strain: str
+    signal: sgl

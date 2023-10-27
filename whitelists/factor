@@ -23,6 +23,7 @@ whitelist:
         - body_mass_index
     other:
         - time_point
+        - signal
     
     
 
