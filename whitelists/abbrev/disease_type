@@ -1,6 +1,8 @@
 whitelist_type: abbrev
 whitelist:
     Lung cancer: LngCnc
+    Lung adenocarcinoma: LUAD
+    Small cell lung cancer: SCLC
     Asthma: Asth
     Pneumonia: pneum
     Pulmonary edema: PulmEd
