@@ -1,1 +1,1 @@
-{"whitelist_type": "plain", "whitelist": ["seconds", "minutes", "hours", "days", "weeks", "months", "years", "ml", "l", "nl", "\u03bcM", "mol", "kg/m2"]}
+{"whitelist_type": "plain", "whitelist": ["seconds", "minutes", "hours", "days", "weeks", "months", "years", "ml", "l", "nl", "\u03bcM", "mol", "kg/m2", "passages"]}
