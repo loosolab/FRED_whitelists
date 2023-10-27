@@ -1,4 +1,4 @@
-whitelist_type:abbrev
+whitelist_type: abbrev
 whitelist:
     stage I: I
     stage II: II
