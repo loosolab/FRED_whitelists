@@ -16,3 +16,4 @@ whitelist:
     injury: inj
     cellular_compartment: ccmp
     physical_treatment: ptrt
+    strain: str

@@ -29,3 +29,4 @@ whitelist:
     - GLORI-seq
     - Quant-seq
     - DamID-seq
+    - WGS

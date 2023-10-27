@@ -14,5 +14,7 @@ whitelist:
     - XMU-MP-1
     - Stearoylcarnitine
     - Lipopolysaccharide
+    - Interleukin-1beta
+    - Solvent
 
 

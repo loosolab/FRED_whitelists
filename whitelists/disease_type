@@ -2,6 +2,8 @@ whitelist_type: group
 whitelist:
     lung:
       - Lung cancer
+      - Lung adenocarcinoma 
+      - Small cell lung cancer
       - COPD
       - PH
       - PAH
