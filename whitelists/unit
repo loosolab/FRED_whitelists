@@ -11,6 +11,7 @@ whitelist:
     - l
     - nl
     - μM
+    - nM
     - mol
     - kg/m2
     - passages
