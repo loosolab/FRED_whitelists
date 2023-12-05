@@ -5,6 +5,7 @@ whitelist:
       - Lung adenocarcinoma 
       - Small cell lung cancer
       - COPD
+      - CTEPH
       - PH
       - PAH
       - Asthma
