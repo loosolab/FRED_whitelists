@@ -25,6 +25,6 @@ whitelist:
     Melanoma: Mln
     Gastrointestinal cancer: GstrCnC
     Cancer of unknown primary: CUP
-    Glioblastoma:Gliob
+    Glioblastoma: Gliob
     Brain metastasis: BrMts
 
