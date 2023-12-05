@@ -27,3 +27,9 @@ whitelist:
       - Breast cancer
       - Prostate cancer
       - Duchenne muscular dystrophy
+      - Urigenital cancer
+      - Melanoma
+      - Gastrointestinal cancer
+      - Cancer of unknown primary
+      - Glioblastoma
+      - Brain metastasis

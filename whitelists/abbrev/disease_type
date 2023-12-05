@@ -21,3 +21,10 @@ whitelist:
     Prostate cancer: PrstCnc
     Myocardial Infarction: MyoInf
     Duchenne muscular dystrophy: DMD
+    Urigenital cancer: UroCnc
+    Melanoma: Mln
+    Gastrointestinal cancer: GstrCnC
+    Cancer of unknown primary: CUP
+    Glioblastoma:Gliob
+    Brain metastasis: BrMts
+
