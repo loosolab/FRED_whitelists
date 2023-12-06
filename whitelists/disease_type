@@ -18,7 +18,7 @@ whitelist:
       - Covid
       - Influenca
     heart:
-      - Coronary heart disease CHD
+      - Coronary heart disease
       - Angina
       - Blood pressure
       - Heart failure

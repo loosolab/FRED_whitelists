@@ -12,7 +12,7 @@ whitelist:
     Pulmonary embolus: PulmEmb
     Covid: Cov
     Influenca: flu
-    Coronary heart disease CHD: CHD
+    Coronary heart disease: CHD
     Angina: Ang
     Blood pressure: BldPrs
     Heart failure: HrtFail
