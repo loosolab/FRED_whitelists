@@ -21,6 +21,7 @@ whitelist:
     B-cells: BCll
     Beta cells: BetaCll
     Bone Marrow Neutrophils: BMNtrph
+    Bronchial smooth muscle cells: BSMCs
     Cardiomyocytes: Crdmct
     Atrial Cardiomyocytes: ACrdmct
     Ventricular Cardiomyocytes: VCrdmct
@@ -52,6 +53,7 @@ whitelist:
     Prostate basal glandular cells: PrstBGlCll
     Prostate glandular cells: PrstGlCll
     Proximal tubular cells: ProxTblCll
+    Pulmonary arterial smooth muscle cells: PASMCs
     Respiratory ciliated cells: RespCilCll
     Satellite cells: SatCll
     Skeletal myocytes: SklMct

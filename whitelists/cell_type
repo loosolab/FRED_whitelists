@@ -21,6 +21,7 @@ whitelist:
     - B-cells
     - Beta cells
     - Bone Marrow Neutrophils
+    - Bronchial smooth muscle cells
     - Cardiomyocytes
     - Atrial Cardiomyocytes
     - Ventricular Cardiomyocytes
@@ -52,6 +53,7 @@ whitelist:
     - Prostate basal glandular cells
     - Prostate glandular cells
     - Proximal tubular cells
+    - Pulmonary arterial smooth muscle cells
     - Respiratory ciliated cells
     - Satellite cells
     - Skeletal myocytes
