@@ -5,6 +5,7 @@ whitelist:
     Endothelial cells umbilical vein: ECumb
     Endothelial cells pulmonary artery: ECpulmArt
     Endothelial cells dermal lymphatic: ECdermLym
+    Cardiac microvascular endothelial cells : CMECs
     Smooth muscle cells: SmMCll
     Fibroblasts: Fbrb
     Fibroblast-like synoviocytes: FLS

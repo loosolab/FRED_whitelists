@@ -5,6 +5,7 @@ whitelist:
     - Endothelial cells umbilical vein
     - Endothelial cells pulmonary artery
     - Endothelial cells dermal lymphatic
+    - Endothelial cells cardiac microvascular 
     - Smooth muscle cells
     - Fibroblasts
     - Fibroblast-like synoviocytes
