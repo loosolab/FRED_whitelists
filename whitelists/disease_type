@@ -5,6 +5,7 @@ whitelist:
       - Lung adenocarcinoma 
       - Small cell lung cancer
       - COPD
+      - CTEPH
       - PH
       - PAH
       - Asthma
@@ -17,7 +18,7 @@ whitelist:
       - Covid
       - Influenca
     heart:
-      - Coronary heart disease CHD
+      - Coronary heart disease
       - Angina
       - Blood pressure
       - Heart failure
@@ -27,3 +28,9 @@ whitelist:
       - Breast cancer
       - Prostate cancer
       - Duchenne muscular dystrophy
+      - Urigenital cancer
+      - Melanoma
+      - Gastrointestinal cancer
+      - Cancer of unknown primary
+      - Glioblastoma
+      - Brain metastasis

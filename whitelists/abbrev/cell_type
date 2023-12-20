@@ -5,6 +5,7 @@ whitelist:
     Endothelial cells umbilical vein: ECumb
     Endothelial cells pulmonary artery: ECpulmArt
     Endothelial cells dermal lymphatic: ECdermLym
+    Cardiac microvascular endothelial cells : CMECs
     Smooth muscle cells: SmMCll
     Fibroblasts: Fbrb
     Fibroblast-like synoviocytes: FLS
@@ -21,6 +22,7 @@ whitelist:
     B-cells: BCll
     Beta cells: BetaCll
     Bone Marrow Neutrophils: BMNtrph
+    Bronchial smooth muscle cells: BSMCs
     Cardiomyocytes: Crdmct
     Atrial Cardiomyocytes: ACrdmct
     Ventricular Cardiomyocytes: VCrdmct
@@ -52,6 +54,7 @@ whitelist:
     Prostate basal glandular cells: PrstBGlCll
     Prostate glandular cells: PrstGlCll
     Proximal tubular cells: ProxTblCll
+    Pulmonary arterial smooth muscle cells: PASMCs
     Respiratory ciliated cells: RespCilCll
     Satellite cells: SatCll
     Skeletal myocytes: SklMct

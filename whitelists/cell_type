@@ -5,6 +5,7 @@ whitelist:
     - Endothelial cells umbilical vein
     - Endothelial cells pulmonary artery
     - Endothelial cells dermal lymphatic
+    - Endothelial cells cardiac microvascular 
     - Smooth muscle cells
     - Fibroblasts
     - Fibroblast-like synoviocytes
@@ -21,6 +22,7 @@ whitelist:
     - B-cells
     - Beta cells
     - Bone Marrow Neutrophils
+    - Bronchial smooth muscle cells
     - Cardiomyocytes
     - Atrial Cardiomyocytes
     - Ventricular Cardiomyocytes
@@ -52,6 +54,7 @@ whitelist:
     - Prostate basal glandular cells
     - Prostate glandular cells
     - Proximal tubular cells
+    - Pulmonary arterial smooth muscle cells
     - Respiratory ciliated cells
     - Satellite cells
     - Skeletal myocytes
