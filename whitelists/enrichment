@@ -26,3 +26,4 @@ whitelist:
         - GFP
         - IgG
         - m6A
+        - Input
