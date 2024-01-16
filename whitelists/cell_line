@@ -1,6 +1,7 @@
 whitelist_type: plain
 whitelist:
     - HAP1
+    - HEK293T
     - C2C12
     - NIH3T3
     - B16F10
