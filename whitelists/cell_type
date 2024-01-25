@@ -6,6 +6,8 @@ whitelist:
     - Endothelial cells pulmonary artery
     - Endothelial cells dermal lymphatic
     - Cardiac microvascular endothelial cells  
+    - Cardiac neuron
+    - Cardiac transgene negative
     - Smooth muscle cells
     - Fibroblasts
     - Fibroblast-like synoviocytes
@@ -22,6 +24,7 @@ whitelist:
     - B-cells
     - Beta cells
     - Bone Marrow Neutrophils
+    - Brain neuron
     - Bronchial smooth muscle cells
     - Cardiomyocytes
     - Atrial Cardiomyocytes
@@ -42,6 +45,7 @@ whitelist:
     - Melanocytes
     - Mitotic cells
     - Neutrophils
+    - Neuron
     - Neonatal Cardiomyocytes
     - NK-cells
     - Parafollicular cells
