@@ -25,7 +25,7 @@ def get_auth_departments(domain, clientid, secret):
             all_found = True
         else:
             all_departments += new_departments['roles']
-
+        print(len(new_departments), all_found)
     sort_departments(all_departments)
 
 
