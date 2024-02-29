@@ -37,7 +37,7 @@ def sort_departments(depts):
     for elem in depts:
         if elem['description'].startswith('LDAP'):
             department_whitelist['intern'].append(elem['name'])
-        elif elem['description'].startswith('extern'):
+        elif elem['description'].startswith('ext'):
             location = elem['description'].split('_')[1]
             if location not in department_whitelist:
                 department_whitelist[location] = []
@@ -46,7 +46,7 @@ def sort_departments(depts):
 
 
 def write_to_whitelists(depts):
-    yaml_path = os.path.join(os.path.abspath(__file__), '..', '..',
+    yaml_path = os.path.join(os.path.abspath(__file__), '..', 
                              'whitelists', 'department')
     yaml_file = utils.read_in_yaml(yaml_path)
     yaml_file['whitelist'] = depts
