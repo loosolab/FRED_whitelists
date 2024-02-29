@@ -38,6 +38,13 @@ stages:
   - test
   - convert
   - merge
+  - update_department
+
+update_departments:
+  stage: update_department
+  script:
+    - 
+
 
 test_whitelists:
   stage: test
