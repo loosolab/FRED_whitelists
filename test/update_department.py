@@ -3,8 +3,9 @@
 from auth0.authentication import GetToken
 import auth0.management as amng
 import argparse
-import yaml
 import os
+import src.utils as utils
+
 
 
 def get_auth_departments(domain, clientid, secret):
@@ -25,7 +26,7 @@ def get_auth_departments(domain, clientid, secret):
             all_found = True
         else:
             all_departments += new_departments['roles']
-        print(len(new_departments), all_found)
+        i += 1
     sort_departments(all_departments)
 
 
@@ -43,15 +44,12 @@ def sort_departments(depts):
 
 
 def write_to_whitelists(depts):
-    yaml_file = os.path.join(os.path.abspath(__file__), '..', 'whitelists',
-                             'department')
-    with open(yaml_file) as file:
-        output = yaml.load(file, Loader=yaml.FullLoader)
+    yaml_path = os.path.join(os.path.abspath(__file__), '..', '..',
+                             'whitelists', 'department')
+    yaml_file = utils.read_in_yaml(yaml_path)
+    yaml_file['whitelist'] = depts
+    utils.save_as_yaml(yaml_file, yaml_path)
 
-    output['whitelist'] = depts
-
-    with open(yaml_file, 'w') as file:
-        yaml.dump(output, file, sort_keys=False)
 
 
 def main():
