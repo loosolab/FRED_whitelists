@@ -35,10 +35,18 @@ before_script:
   - pip install -r requirements.txt
 
 stages:          
+  - update_department
   - test
   - convert
   - merge
   
+
+update_departments:
+  stage: update_department
+  script:
+    - test/update_department.py -d "${MANAGEMENT_API_DOMAIN}" -id "${MANAGEMENT_API_CLIENTID}" -s "${MANAGEMENT_API_SECRET}"
+
+
 test_whitelists:
   stage: test
   script:
@@ -47,12 +55,10 @@ test_whitelists:
 convert_whitelists:
   stage: convert
   script:
-    - test/update_department.py -d "${MANAGEMENT_API_DOMAIN}" -id "${MANAGEMENT_API_CLIENTID}" -s "${MANAGEMENT_API_SECRET}"
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout $BRANCH_NAME
-    - git add whitelists/department
+    - git checkout -b $BRANCH_NAME
     - git add misc/json
     - *push_convert
   except:
