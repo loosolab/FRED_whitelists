@@ -59,6 +59,7 @@ whitelist:
     Prostate glandular cells: PrstGlCll
     Proximal tubular cells: ProxTblCll
     Pulmonary arterial smooth muscle cells: PASMCs
+    Pulmonary arterial adventitial fibroblasts: PAAFs
     Respiratory ciliated cells: RespCilCll
     Satellite cells: SatCll
     Skeletal myocytes: SklMct

@@ -15,6 +15,7 @@ whitelist:
     Stearoylcarnitine: C18Car
     Lipopolysaccharide: LPS
     Interleukin-1beta: Il1b
+    Interleukin-9: Il9
     Solvent: Slvt
     SPiDER-βGal: SPiDER
     C16 ceramide: C16cer
