@@ -46,7 +46,7 @@ def sort_departments(depts):
 
 
 def write_to_whitelists(depts):
-    yaml_path = os.path.join(os.path.abspath(__file__), '..', 
+    yaml_path = os.path.join(os.path.dirname(__file__), '..',
                              'whitelists', 'department')
     yaml_file = utils.read_in_yaml(yaml_path)
     yaml_file['whitelist'] = depts
