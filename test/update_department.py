@@ -61,7 +61,7 @@ def main():
     parser.add_argument('-s', '--secret', help='auth0 secret')
 
     args = parser.parse_args()
-    get_auth_departments(args.domain, args.clientid, args.secret)
+    get_auth_departments(args.domain, args.id, args.secret)
 
 
 if __name__ == "__main__":
