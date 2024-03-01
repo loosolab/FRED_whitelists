@@ -38,12 +38,14 @@ variables:
     git push origin --delete origin/$BRANCH_NAME
   else
     echo "no remote branch to delete"
+  fi
   lines=$(git branch | grep -w $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
     echo "remove local branch"
     git branch -d $BRANCH_NAME
   else
     echo "no local branch to delete"
+  fi
 
 before_script:
   - pip install -r requirements.txt
