@@ -32,6 +32,7 @@ variables:
 
 .remove_local: &remove_local |
   lines=$(git branch | grep -w $BRANCH_NAME | wc -l)
+  echo $lines
   if [ $lines -gt 0 ]; then
     echo "delete local branch"
     git branch -D $BRANCH_NAME
