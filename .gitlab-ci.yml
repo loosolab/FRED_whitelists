@@ -42,7 +42,14 @@ variables:
   
   
 .remove_remote: &remove_remote |
-  echo "remote"
+  lines=$(git branch -r)
+  echo $lines
+  if [ $(echo $lines | grep "origin/$BRANCH_NAME" | wc -l) -gt 0 ]; then
+    git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
+    echo "delete remote branch"
+  else
+    echo "No remote branch to delete"
+  fi
   
 
 before_script:
