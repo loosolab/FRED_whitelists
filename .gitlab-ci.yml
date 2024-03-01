@@ -98,7 +98,6 @@ merge_branch:
 remove_branch:
   stage: remove
   script:
-    - git fetch
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
     - *remove_local
