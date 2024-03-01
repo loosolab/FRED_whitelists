@@ -31,7 +31,7 @@ variables:
   fi
 
 .remove_local: &remove_local |
-  lines=$(git branch | grep -w $BRANCH_NAME)
+  lines=$(git branch)
   echo $lines
   
   
