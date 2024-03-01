@@ -95,7 +95,7 @@ remove_branch:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
     - echo $(git branch)
-    - echo $(git branch | grep -w $BRANCH_NAME | wc -l)
+    - echo $($(git branch | grep -w $BRANCH_NAME | wc -l) -gt 0)
     - *remove_local
     - *remove_remote
   except:
