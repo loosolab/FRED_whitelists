@@ -31,7 +31,6 @@ variables:
   fi
 
 .remove_local: &remove_local |
-  echo $(git branch)
   lines=$(git branch | grep -w $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
     echo "remove local branch"
@@ -95,6 +94,9 @@ merge_branch:
 remove_branch:
   stage: remove
   script:
+    - git fetch
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
     - *remove_local
     - *remove_remote
   except:
