@@ -32,6 +32,7 @@ variables:
 
 .remove_branches: &remove_branches |
   lines=$(git branch -r | grep -w "origin/$BRANCH_NAME" | wc -l)
+  echo $(git branch -r | grep -w "origin/$BRANCH_NAME")
   echo $lines
   if [ $lines -gt 0 ]; then
     echo "remove remote branch"
