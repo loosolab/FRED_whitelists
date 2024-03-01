@@ -94,7 +94,7 @@ remove_branch_pre:
   except:
     - main
   
-  remove_branch_post:
+remove_branch_post:
   stage: post_remove
   script:
     - git config --global user.name "${BOT_NAME}"
