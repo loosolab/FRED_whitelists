@@ -50,7 +50,6 @@ variables:
   
 
 before_script:
-  - pip install --upgrade pip
   - pip install -r requirements.txt
 
 stages:    
@@ -96,7 +95,7 @@ remove_branch:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
     - echo $(git branch)
-    - echo $($(git branch | grep -w $BRANCH_NAME | wc -l) -gt 0)
+    - echo $(git branch | grep -w $BRANCH_NAME | wc -l)
     - *remove_local
     - *remove_remote
   except:
