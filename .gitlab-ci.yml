@@ -32,7 +32,7 @@ variables:
 
 .remove_local: &remove_local |
   lines=$(git branch | grep -w $BRANCH_NAME | wc -l)
-  echo "local"
+  echo $lines
   
 .remove_remote: &remove_remote |
   echo "remote"
