@@ -32,7 +32,7 @@ variables:
 
 .remove_local: &remove_local |
   lines=$(git branch)
-  if [ $lines | grep $BRANCH_NAME ]; then
+  if [ $($lines | grep $BRANCH_NAME) ]; then
     echo $lines
   else
     echo "No local branch to delete"
