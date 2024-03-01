@@ -9,4 +9,3 @@ whitelist:
     - E0771
     - HUVEC
     - HUAEC
-    - test
