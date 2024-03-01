@@ -32,7 +32,6 @@ variables:
 
 .remove_local: &remove_local |
   lines=$(git branch)
-  echo $lines
   if [ $(echo $lines | grep $BRANCH_NAME | wc -l) -gt 0 ]; then
     git branch -D $BRANCH_NAME
     echo "delete local branch"
@@ -43,7 +42,6 @@ variables:
   
 .remove_remote: &remove_remote |
   lines=$(git branch -r)
-  echo $lines
   if [ $(echo $lines | grep "origin/$BRANCH_NAME" | wc -l) -gt 0 ]; then
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
     echo "delete remote branch"
