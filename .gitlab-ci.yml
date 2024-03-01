@@ -31,7 +31,7 @@ variables:
   fi
 
 .remove_local: &remove_local |
-  lines=$(git branch | grep -w $BRANCH_NAME | wc -l)
+  lines=$(git branch | grep -w "$BRANCH_NAME" | wc -l)
   if [ $lines -gt 0 ]; then
     echo "remove local branch"
     git branch -D $BRANCH_NAME
@@ -43,7 +43,7 @@ variables:
   lines=$(git branch -r | grep -w "origin/$BRANCH_NAME" | wc -l)
   if [ $lines -gt 0 ]; then
     echo "remove remote branch"
-    git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
+    git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete "$BRANCH_NAME"
   else
     echo "no remote branch to delete"
   fi
@@ -94,6 +94,7 @@ remove_branch:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - *remove_local
     - *remove_remote
   except:
     - main
