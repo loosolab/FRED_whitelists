@@ -84,10 +84,18 @@ merge_branch:
   except:
     - main
 
-remove_branch:
-  stage: 
-    - pre_remove
-    - post_remove
+remove_branch_pre:
+  stage: pre_remove
+  script:
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
+    - *remove_local
+    - *remove_remote
+  except:
+    - main
+  
+  remove_branch_post:
+  stage: post_remove
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
