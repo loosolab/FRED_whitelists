@@ -32,6 +32,7 @@ variables:
 
 .remove_branches: &remove_branches |
   lines=$(git branch -r | grep -w "origin/$BRANCH_NAME" | wc -l)
+  echo lines
   if [ $lines -gt 0 ]; then
     echo "remove remote branch"
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
