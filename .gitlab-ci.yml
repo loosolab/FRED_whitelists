@@ -52,6 +52,7 @@ convert_whitelists:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
     - git checkout -b $BRANCH_NAME
+    - git add whitelists/department
     - git add misc/json
     - *push_convert
   except:
