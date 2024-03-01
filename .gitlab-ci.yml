@@ -31,6 +31,7 @@ variables:
   fi
 
 .remove_local: &remove_local |
+  echo $(git branch)
   lines=$(git branch | grep -w $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
     echo "remove local branch"
