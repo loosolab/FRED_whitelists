@@ -88,3 +88,6 @@ merge_branch:
 remove_branch:
   stage: remove
   script:
+    - *remove_branches
+  except:
+    - main
