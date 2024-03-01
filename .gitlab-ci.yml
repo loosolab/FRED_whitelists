@@ -31,8 +31,7 @@ variables:
   fi
 
 .remove_local: &remove_local |
-  lines=$(git branch | grep -w $BRANCH_NAME | wc -l)
-  echo $lines
+  echo "local"
   
 .remove_remote: &remove_remote |
   echo "remote"
