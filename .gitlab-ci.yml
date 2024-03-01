@@ -34,7 +34,6 @@ variables:
   lines=$(git branch | grep -w $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
     echo "remove local branch"
-    git branch -D $BRANCH_NAME
   else
     echo "no local branch to delete"
   fi
@@ -94,8 +93,6 @@ remove_branch:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - echo $(git branch)
-    - echo $($(git branch | grep -w $BRANCH_NAME | wc -l) -gt 0)
     - *remove_local
     - *remove_remote
   except:
