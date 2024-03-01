@@ -3,10 +3,11 @@ image: python:3.8-buster
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
   GIT_DEPTH: 1  
-  BRANCH_NAME: "${CI_COMMIT_REF_NAME}_temp88"              # Name of the branch to modify
+  BRANCH_NAME: "${CI_COMMIT_REF_NAME}_temp"              # Name of the branch to modify
   BOT_NAME: "GitLab Runner Bot"              # Bot's name that appears in the commit log
   BOT_EMAIL: "gitlab-runner-bot@example.net" # Bot's email, not important
   COMMIT_MESSAGE: "Commit from runner "      # Part of the commit message
+
 
 .push_convert: &push_convert |
   lines=$(git diff --cached | wc -l)
@@ -19,6 +20,7 @@ variables:
     echo "nothing to commit"
   fi
 
+
 .push_merge: &push_merge |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
@@ -26,23 +28,48 @@ variables:
     git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
     echo "merge branches"
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
-    git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
   else
     echo "nothing to commit"
   fi
 
+
+.remove_local: &remove_local |
+  lines=$(git branch)
+  if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
+    git branch -D $BRANCH_NAME
+    echo "delete local branch"
+  else
+    echo "No local branch to delete"
+  fi
+  
+  
+.remove_remote: &remove_remote |
+  lines=$(git branch -r)
+  if [ $(echo $lines | grep -w "origin/$BRANCH_NAME" | wc -l) -gt 0 ]; then
+    git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
+    echo "delete remote branch"
+  else
+    echo "No remote branch to delete"
+  fi
+  
+
 before_script:
   - pip install -r requirements.txt
 
-stages:          
+
+stages:    
+  - pre_remove     
   - test
   - convert
   - merge
+  - post_remove
   
+
 test_whitelists:
   stage: test
   script:
     - test/test_whitelists.py
+
 
 convert_whitelists:
   stage: convert
@@ -52,10 +79,9 @@ convert_whitelists:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
     - git checkout -b $BRANCH_NAME
+    - git add whitelists/department
     - git add misc/json
     - *push_convert
-  except:
-    - main
     
 
 merge_branch:
@@ -65,6 +91,21 @@ merge_branch:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
     - *push_merge
-  except:
-    - main
-   
+
+
+remove_branch_pre:
+  stage: pre_remove
+  script:
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
+    - *remove_local
+    - *remove_remote
+  
+
+remove_branch_post:
+  stage: post_remove
+  script:
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
+    - *remove_local
+    - *remove_remote
