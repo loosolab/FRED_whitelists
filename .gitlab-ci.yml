@@ -48,11 +48,11 @@ before_script:
   - pip install -r requirements.txt
 
 stages:    
-  - remove     
+  - pre_remove     
   - test
   - convert
   - merge
-  - remove
+  - post_remove
   
 test_whitelists:
   stage: test
@@ -85,7 +85,9 @@ merge_branch:
     - main
 
 remove_branch:
-  stage: remove
+  stage: 
+    - pre_remove
+    - post_remove
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
