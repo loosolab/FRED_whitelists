@@ -5,6 +5,7 @@ whitelist:
         - H2BK20ac
         - H2BK23ac
         - H2BK46ac
+        - H3
         - H3K27ac
         - H3K27me3
         - H3K36me3
@@ -14,6 +15,7 @@ whitelist:
         - H3K9K14Ac
         - H3K9me2
         - H3K9me3
+        - H3K18ac
         - H4K16Ac
         - H4K20me1
         - H4K20me2
