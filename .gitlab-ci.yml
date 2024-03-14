@@ -125,9 +125,10 @@ remove_branch_post:
     - *remove_local
     - *remove_remote
 
-merge_public:
+merge_public_branch:
   stage: merge_public
-  only: main
+  only: 
+    - main
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
