@@ -34,7 +34,7 @@ variables:
 
 
 .remove_local: &remove_local |
-  branched=$(git branch)
+  branches=$(git branch)
   echo $branches
   if [ $(echo $branches | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
     git branch -D $BRANCH_NAME
