@@ -22,7 +22,7 @@ variables:
 
 
 .push_merge_public: &push_merge_public |
-  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
+  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public | wc -l)
   if [ $lines -gt 0 ]; then
     git checkout public
     git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
