@@ -27,10 +27,16 @@ variables:
     git checkout public
     git merge --allow-unrelated-histories origin/main --strategy-option theirs
     echo "merge branches"
-    private_files=$(cat ./private_files)
-    echo $private_files
-    all_files=$(find . -print)
-    echo $all_files
+    for FILENAME in $(cat private_files)
+      do  
+          for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
+              do
+                  echo remove $DELETE_FILE
+                  git rm $DELETE_FILE
+              done
+      done
+    git commit -m 'delete private files'
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
   else
     echo "nothing to commit"
   fi
