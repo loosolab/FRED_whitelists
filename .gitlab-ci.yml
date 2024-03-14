@@ -20,6 +20,19 @@ variables:
     echo "nothing to commit"
   fi
 
+.push_merge_public: &push_merge_public |
+  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
+  if [ $lines -gt 0 ]; then
+    git checkout public
+    git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
+    echo "merge branches"
+    private_files=$(cat private_files)
+    echo $private_files
+    all_files=$(ls -al)
+    echo $all_files
+  else
+    echo "nothing to commit"
+  fi
 
 .push_merge: &push_merge |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
@@ -63,6 +76,7 @@ stages:
   - convert
   - merge
   - post_remove
+  - merge_public
   
 
 test_whitelists:
@@ -109,3 +123,11 @@ remove_branch_post:
     - git config --global user.email "${BOT_EMAIL}"
     - *remove_local
     - *remove_remote
+
+merge_public:
+  stage: merge_public
+  only: main
+  script:
+    - git config --global user.name "${BOT_NAME}"
+    - git config --global user.email "${BOT_EMAIL}"
+    -
