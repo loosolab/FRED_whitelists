@@ -34,9 +34,9 @@ variables:
 
 
 .remove_local: &remove_local |
-  branches=$(git branch)
-  echo $branches
-  if [ $(echo $branches | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
+  lines=$(git for-each-ref --shell --format='%(refname:short)' refs/heads)
+  echo $lines
+  if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
     git branch -D $BRANCH_NAME
     echo "delete local branch"
   else
