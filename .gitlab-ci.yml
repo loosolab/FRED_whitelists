@@ -30,9 +30,7 @@ variables:
     echo $(find -print)
     for FILENAME in $(cat private_files)
       do  
-          echo $FILENAME
-          echo $(find -print | grep $FILENAME$)
-          for DELETE_FILE in $(find -print | grep $FILENAME$)
+          for DELETE_FILE in $(find -print | grep $(echo $FILE | tr -d '\r')$)
               do
                   echo $DELETE_FILE
               done
