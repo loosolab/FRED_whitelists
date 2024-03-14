@@ -20,6 +20,7 @@ variables:
     echo "nothing to commit"
   fi
 
+
 .push_merge_public: &push_merge_public |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
@@ -130,4 +131,4 @@ merge_public:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    -
+    - *push_merge_public
