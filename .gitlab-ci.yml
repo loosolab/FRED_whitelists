@@ -27,11 +27,12 @@ variables:
     git checkout public
     git merge --allow-unrelated-histories origin/main --strategy-option theirs
     echo "merge branches"
+    echo $(find -print)
     for FILENAME in $(cat private_files)
       do  
           echo $FILENAME
-          echo $(find . -print | grep $FILENAME$)
-          for DELETE_FILE in $(find . -print | grep $FILENAME$)
+          echo $(find -print | grep $FILENAME$)
+          for DELETE_FILE in $(find -print | grep $FILENAME$)
               do
                   echo $DELETE_FILE
               done
