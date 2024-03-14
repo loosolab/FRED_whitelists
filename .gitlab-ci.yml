@@ -35,7 +35,7 @@ variables:
                   git rm $DELETE_FILE
               done
       done
-    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" private
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
   else
     echo "nothing to commit"
   fi
