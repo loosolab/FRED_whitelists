@@ -25,6 +25,7 @@ variables:
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" main | wc -l)
   if [ $lines -gt 0 ]; then
     git checkout public
+    git pull
     git merge --allow-unrelated-histories origin/main --strategy-option theirs
     echo "merge branches"
     for FILENAME in $(cat private_files)
