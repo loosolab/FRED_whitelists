@@ -37,7 +37,6 @@ variables:
               done
       done
     git commit -m 'delete private files'
-    git add .
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public_temp
     lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public_temp | wc -l)
     if [ $lines -gt 0 ]; then
