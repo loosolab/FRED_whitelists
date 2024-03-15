@@ -24,9 +24,9 @@ variables:
 .push_merge_public: &push_merge_public |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" main | wc -l)
   if [ $lines -gt 0 ]; then
-    git checkout public
-    git pull
+    git checkout -b public_temp
     git merge --allow-unrelated-histories origin/main --strategy-option theirs
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public_temp
     echo "merge branches"
     for FILENAME in $(cat private_files)
       do  
@@ -37,7 +37,19 @@ variables:
               done
       done
     git commit -m 'delete private files'
-    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public_temp
+    lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public_temp | wc -l)
+    if [ $lines -gt 0 ]; then
+      git checkout public
+      git pull
+      git merge --allow-unrelated-histories origin/public_temp --strategy-option theirs
+      echo "merge branches"
+      git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
+      git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete public_temp
+    else
+      echo "nothing to commit"
+    fi
+    git branch -D public_temp
   else
     echo "nothing to commit"
   fi
