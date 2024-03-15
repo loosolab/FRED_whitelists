@@ -29,7 +29,6 @@ variables:
       do  
           for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
               do
-                  echo remove $DELETE_FILE
                   git rm $DELETE_FILE
               done
       done
@@ -80,8 +79,8 @@ stages:
   - test
   - convert
   - merge
-  - post_remove
   - merge_public
+  - post_remove
   
 
 test_whitelists:
