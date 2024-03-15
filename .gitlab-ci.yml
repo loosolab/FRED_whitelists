@@ -24,10 +24,7 @@ variables:
 .push_merge_public: &push_merge_public |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" main | wc -l)
   if [ $lines -gt 0 ]; then
-    git checkout origin/public
-    git pull
-    git merge --allow-unrelated-histories origin/main --strategy-option theirs
-    echo "merge branches"
+    git status    
     for FILENAME in $(cat private_files)
       do  
           for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
