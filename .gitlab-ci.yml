@@ -135,4 +135,5 @@ merge_public_branch:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - git checkout $BRANCH_NAME
     - *push_merge_public
