@@ -24,7 +24,7 @@ variables:
 .push_merge_public: &push_merge_public |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" main | wc -l)
   if [ $lines -gt 0 ]; then
-    git status    
+    git checkout $CI_COMMIT_REF_NAME
     for FILENAME in $(cat private_files)
       do  
           for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
@@ -135,5 +135,4 @@ merge_public_branch:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout $BRANCH_NAME
     - *push_merge_public
