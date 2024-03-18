@@ -12,3 +12,4 @@ whitelist:
     yeast: abbrev/genes/yeast
     ascomycota: abbrev/genes/ascomycota
     caenorhabditis_elegans: abbrev/genes/caenorhabditis_elegans
+    neurospora_crassa: abbrev/genes/neurospora_crassa
