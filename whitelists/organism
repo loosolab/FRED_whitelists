@@ -12,3 +12,4 @@ whitelist:
     - yeast 4932
     - caenorhabditis_elegans 6239
     - ascomycota 367110
+    - neurospora_crassa 5141

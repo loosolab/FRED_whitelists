@@ -11,3 +11,4 @@ whitelist:
     yeast: yeast
     caenorhabditis_elegans: cele
     ascomycota: ascmc
+    neurospora_crassa: nscra
