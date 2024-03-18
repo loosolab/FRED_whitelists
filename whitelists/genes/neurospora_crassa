@@ -1,4 +1,5 @@
 whitelist_type: plain
+headers: gene_name ensembl_id
 double:
     - 5S_rRNA
     - Fungi_U3
