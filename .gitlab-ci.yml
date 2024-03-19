@@ -53,7 +53,7 @@ variables:
 
 .remove_local: &remove_local |
   lines=$(git branch)
-  if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0]; then
+  if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
     git branch -D $BRANCH_NAME
     echo "delete local branch"
   else
