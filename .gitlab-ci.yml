@@ -117,7 +117,7 @@ remove_branch_pre:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git pull origin/$CI_COMMIT_REF_NAME
+    - git pull origin $CI_COMMIT_REF_NAME
     - *remove_local
     - *remove_remote
   
@@ -127,7 +127,7 @@ remove_branch_post:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git pull origin/$CI_COMMIT_REF_NAME
+    - git pull origin $CI_COMMIT_REF_NAME
     - *remove_local
     - *remove_remote
 
