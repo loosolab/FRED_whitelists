@@ -22,34 +22,25 @@ variables:
 
 
 .push_merge_public: &push_merge_public |
-  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" main | wc -l)
+  git checkout $BRANCH_NAME
+  for FILENAME in $(cat private_files)
+    do  
+      for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
+        do
+          git rm $DELETE_FILE
+        done
+    done
+  git commit -m 'delete private files'
+  git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
+  git checkout public
+  git pull
+  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
-    git checkout -b public_temp
-    git merge --allow-unrelated-histories origin/main --strategy-option theirs
-    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public_temp
+    git checkout public
+    git pull
+    git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
     echo "merge branches"
-    for FILENAME in $(cat private_files)
-      do  
-          for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
-              do
-                  echo remove $DELETE_FILE
-                  git rm $DELETE_FILE
-              done
-      done
-    git commit -m 'delete private files'
-    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public_temp
-    lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public_temp | wc -l)
-    if [ $lines -gt 0 ]; then
-      git checkout public
-      git pull
-      git merge --allow-unrelated-histories origin/public_temp --strategy-option theirs
-      echo "merge branches"
-      git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
-      git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete public_temp
-    else
-      echo "nothing to commit"
-    fi
-    git branch -D public_temp
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
   else
     echo "nothing to commit"
   fi
@@ -58,6 +49,7 @@ variables:
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
     git checkout $CI_COMMIT_REF_NAME
+    git pull
     git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
     echo "merge branches"
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
@@ -74,6 +66,14 @@ variables:
   else
     echo "No local branch to delete"
   fi
+  lines=$(git branch)
+  if [ $(echo $lines | grep -w main_temp | wc -l) -gt 0 ]; then
+    git branch -D main_temp
+    echo "delete local branch"
+  else
+    echo "No local main_temp branch to delete"
+  fi
+  
   
   
 .remove_remote: &remove_remote |
@@ -83,6 +83,13 @@ variables:
     echo "delete remote branch"
   else
     echo "No remote branch to delete"
+  fi
+  lines=$(git branch -r)
+  if [ $(echo $lines | grep -w "origin/main_temp" | wc -l) -gt 0 ]; then
+    git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete main_temp
+    echo "delete remote branch"
+  else
+    echo "No remote main_temp branch to delete"
   fi
   
 
@@ -95,8 +102,8 @@ stages:
   - test
   - convert
   - merge
-  - post_remove
   - merge_public
+  - post_remove
   
 
 test_whitelists:
@@ -132,6 +139,7 @@ remove_branch_pre:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - git pull origin $CI_COMMIT_REF_NAME
     - *remove_local
     - *remove_remote
   
@@ -141,6 +149,7 @@ remove_branch_post:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - git pull origin $CI_COMMIT_REF_NAME
     - *remove_local
     - *remove_remote
 
