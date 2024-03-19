@@ -143,8 +143,6 @@ remove_branch_pre:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout main
-    - git pull
     - *remove_local
     - *remove_remote
   
@@ -154,8 +152,6 @@ remove_branch_post:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout main
-    - git pull
     - *remove_local
     - *remove_remote
 
