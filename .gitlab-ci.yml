@@ -21,21 +21,33 @@ variables:
   fi
 
 
+.delete_private_files: &delete_private_files |
+  lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
+  if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
+    git checkout $BRANCH_NAME
+  else
+    git checkout -b $BRANCH_NAME
+  fi
+  for FILENAME in $(cat private_files)
+    do  
+      for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
+        do
+          git rm $DELETE_FILE
+        done
+    done
+  git commit -m 'delete private files'
+  echo "git push $BRANCH_NAME"
+  git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
+
+
 .push_merge_public: &push_merge_public |
-  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" main | wc -l)
+  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
+  echo $(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME)
   if [ $lines -gt 0 ]; then
     git checkout public
-    git merge --allow-unrelated-histories origin/main --strategy-option theirs
+    git pull
+    git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
     echo "merge branches"
-    for FILENAME in $(cat private_files)
-      do  
-          for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
-              do
-                  echo remove $DELETE_FILE
-                  git rm $DELETE_FILE
-              done
-      done
-    git commit -m 'delete private files'
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
   else
     echo "nothing to commit"
@@ -45,6 +57,7 @@ variables:
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
     git checkout $CI_COMMIT_REF_NAME
+    git pull
     git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
     echo "merge branches"
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
@@ -54,22 +67,41 @@ variables:
 
 
 .remove_local: &remove_local |
-  lines=$(git branch)
+  lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
+  echo $lines
   if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
     git branch -D $BRANCH_NAME
     echo "delete local branch"
   else
     echo "No local branch to delete"
   fi
+  lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
+  echo $lines
+  if [ $(echo $lines | grep -w main_temp | wc -l) -gt 0 ]; then
+    git branch -D main_temp
+    echo "delete local branch"
+  else
+    echo "No local main_temp branch to delete"
+  fi
+  
   
   
 .remove_remote: &remove_remote |
-  lines=$(git branch -r)
+  lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
+  echo $lines
   if [ $(echo $lines | grep -w "origin/$BRANCH_NAME" | wc -l) -gt 0 ]; then
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
     echo "delete remote branch"
   else
     echo "No remote branch to delete"
+  fi
+  lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
+  echo $lines
+  if [ $(echo $lines | grep -w "origin/main_temp" | wc -l) -gt 0 ]; then
+    git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete main_temp
+    echo "delete remote branch"
+  else
+    echo "No remote main_temp branch to delete"
   fi
   
 
@@ -82,8 +114,8 @@ stages:
   - test
   - convert
   - merge
-  - post_remove
   - merge_public
+  - post_remove
   
 
 test_whitelists:
@@ -94,6 +126,8 @@ test_whitelists:
 
 convert_whitelists:
   stage: convert
+  except:
+    - public
   script:
     - test/update_department.py -d "${MANAGEMENT_API_DOMAIN}" -id "${MANAGEMENT_API_CLIENTID}" -s "${MANAGEMENT_API_SECRET}"
     - misc/convert.py
@@ -107,6 +141,8 @@ convert_whitelists:
 
 merge_branch:
   stage: merge
+  except:
+    - public
   script:
     - git fetch
     - git config --global user.name "${BOT_NAME}"
@@ -119,6 +155,7 @@ remove_branch_pre:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - git fetch --all --prune
     - *remove_local
     - *remove_remote
   
@@ -128,6 +165,7 @@ remove_branch_post:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - git fetch --all --prune
     - *remove_local
     - *remove_remote
 
@@ -138,4 +176,5 @@ merge_public_branch:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - *delete_private_files
     - *push_merge_public
