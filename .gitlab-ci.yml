@@ -126,7 +126,6 @@ test_whitelists:
 convert_whitelists:
   stage: convert
   except:
-    - main
     - public
   script:
     - test/update_department.py -d "${MANAGEMENT_API_DOMAIN}" -id "${MANAGEMENT_API_CLIENTID}" -s "${MANAGEMENT_API_SECRET}"
@@ -142,7 +141,6 @@ convert_whitelists:
 merge_branch:
   stage: merge
   except:
-    - main
     - public
   script:
     - git fetch
