@@ -24,6 +24,8 @@ variables:
 .push_merge_public: &push_merge_public |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public | wc -l)
   if [ $lines -gt 0 ]; then
+    git checkout public
+    git pull
     git checkout $BRANCH_NAME
     for FILENAME in $(cat private_files)
       do  
@@ -33,7 +35,7 @@ variables:
               done
       done
     git commit -m 'delete private files'
-    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" origin/public
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
   else
     echo "nothing to commit"
   fi
