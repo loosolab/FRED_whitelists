@@ -31,10 +31,13 @@ variables:
         done
     done
   git commit -m 'delete private files'
+  echo "git push $BRANCH_NAME"
+  git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
 
 
 .push_merge_public: &push_merge_public |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
+  echo $(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME)
   if [ $lines -gt 0 ]; then
     git checkout public
     git pull
@@ -165,5 +168,4 @@ merge_public_branch:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
     - *delete_private_files
-    - *push_convert
     - *push_merge_public
