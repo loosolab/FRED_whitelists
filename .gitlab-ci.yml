@@ -33,7 +33,7 @@ variables:
               done
       done
     git commit -m 'delete private files'
-    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
+    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" origin/public
   else
     echo "nothing to commit"
   fi
