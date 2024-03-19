@@ -126,6 +126,8 @@ test_whitelists:
 
 convert_whitelists:
   stage: convert
+  except:
+    - public
   script:
     - test/update_department.py -d "${MANAGEMENT_API_DOMAIN}" -id "${MANAGEMENT_API_CLIENTID}" -s "${MANAGEMENT_API_SECRET}"
     - misc/convert.py
@@ -139,6 +141,8 @@ convert_whitelists:
 
 merge_branch:
   stage: merge
+  except:
+    - public
   script:
     - git fetch
     - git config --global user.name "${BOT_NAME}"
