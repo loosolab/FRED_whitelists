@@ -22,19 +22,24 @@ variables:
 
 
 .push_merge_public: &push_merge_public |
-  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public | wc -l)
+  git checkout $BRANCH_NAME
+  for FILENAME in $(cat private_files)
+    do  
+      for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
+        do
+          git rm $DELETE_FILE
+        done
+    done
+  git commit -m 'delete private files'
+  git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
+  git checkout public
+  git pull
+  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
     git checkout public
     git pull
-    git checkout $BRANCH_NAME
-    for FILENAME in $(cat private_files)
-      do  
-          for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
-              do
-                  git rm $DELETE_FILE
-              done
-      done
-    git commit -m 'delete private files'
+    git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
+    echo "merge branches"
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
   else
     echo "nothing to commit"
