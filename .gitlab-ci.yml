@@ -41,17 +41,12 @@ variables:
 
 
 .push_merge_public: &push_merge_public |
-  lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
-  echo $(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME)
-  if [ $lines -gt 0 ]; then
-    git checkout public
-    git pull
-    git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
-    echo "merge branches"
-    git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
-  else
-    echo "nothing to commit"
-  fi
+  git checkout public
+  git pull --allow-unrelated-histories --strategy-option theirs
+  git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
+  echo "merge branches"
+  git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
+  
 
 .push_merge: &push_merge |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
@@ -127,6 +122,7 @@ test_whitelists:
 convert_whitelists:
   stage: convert
   except:
+    - main
     - public
   script:
     - test/update_department.py -d "${MANAGEMENT_API_DOMAIN}" -id "${MANAGEMENT_API_CLIENTID}" -s "${MANAGEMENT_API_SECRET}"
@@ -142,6 +138,7 @@ convert_whitelists:
 merge_branch:
   stage: merge
   except:
+    - main
     - public
   script:
     - git fetch
