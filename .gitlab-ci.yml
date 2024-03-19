@@ -59,6 +59,7 @@ variables:
   else
     echo "No local branch to delete"
   fi
+  lines=$(git branch)
   if [ $(echo $lines | grep -w main_temp | wc -l) -gt 0 ]; then
     git branch -D main_temp
     echo "delete local branch"
@@ -76,6 +77,7 @@ variables:
   else
     echo "No remote branch to delete"
   fi
+  lines=$(git branch -r)
   if [ $(echo $lines | grep -w "origin/main_temp" | wc -l) -gt 0 ]; then
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete main_temp
     echo "delete remote branch"
