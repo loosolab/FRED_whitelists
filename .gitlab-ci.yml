@@ -42,6 +42,7 @@ variables:
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
   if [ $lines -gt 0 ]; then
     git checkout $CI_COMMIT_REF_NAME
+    git pull
     git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
     echo "merge branches"
     git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $CI_COMMIT_REF_NAME
@@ -116,8 +117,7 @@ remove_branch_pre:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout $CI_COMMIT_REF_NAME
-    - git pull
+    - git pull origin $CI_COMMIT_REF_NAME
     - *remove_local
     - *remove_remote
   
@@ -127,8 +127,7 @@ remove_branch_post:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git checkout $CI_COMMIT_REF_NAME
-    - git pull
+    - git pull origin $CI_COMMIT_REF_NAME
     - *remove_local
     - *remove_remote
 
