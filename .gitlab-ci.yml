@@ -42,6 +42,7 @@ variables:
 
 .push_merge_public: &push_merge_public |
   git checkout public
+  git pull --allow-unrelated-histories
   git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs
   echo "merge branches"
   git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" public
