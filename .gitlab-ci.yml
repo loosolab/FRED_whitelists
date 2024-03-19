@@ -60,6 +60,7 @@ variables:
 
 .remove_local: &remove_local |
   lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
+  echo $lines
   if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
     git branch -D $BRANCH_NAME
     echo "delete local branch"
@@ -67,6 +68,7 @@ variables:
     echo "No local branch to delete"
   fi
   lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
+  echo $lines
   if [ $(echo $lines | grep -w main_temp | wc -l) -gt 0 ]; then
     git branch -D main_temp
     echo "delete local branch"
@@ -78,6 +80,7 @@ variables:
   
 .remove_remote: &remove_remote |
   lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
+  echo $lines
   if [ $(echo $lines | grep -w "origin/$BRANCH_NAME" | wc -l) -gt 0 ]; then
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
     echo "delete remote branch"
@@ -85,6 +88,7 @@ variables:
     echo "No remote branch to delete"
   fi
   lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
+  echo $lines
   if [ $(echo $lines | grep -w "origin/main_temp" | wc -l) -gt 0 ]; then
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete main_temp
     echo "delete remote branch"
