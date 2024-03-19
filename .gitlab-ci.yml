@@ -21,8 +21,13 @@ variables:
   fi
 
 
-.push_merge_public: &push_merge_public |
-  git checkout $BRANCH_NAME
+.delete_private_files: &delete_private_files |
+  lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
+  if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
+    git checkout $BRANCH_NAME
+  else
+    git checkout -b $BRANCH_NAME
+  fi
   for FILENAME in $(cat private_files)
     do  
       for DELETE_FILE in $(find -print | grep $(echo $FILENAME | tr -d '\r')$)
@@ -31,10 +36,13 @@ variables:
         done
     done
   git commit -m 'delete private files'
+  echo "git push $BRANCH_NAME"
   git push -o ci.skip "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME
-  git checkout public
-  git pull
+
+
+.push_merge_public: &push_merge_public |
   lines=$(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME | wc -l)
+  echo $(git ls-remote --heads "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" $BRANCH_NAME)
   if [ $lines -gt 0 ]; then
     git checkout public
     git pull
@@ -59,14 +67,16 @@ variables:
 
 
 .remove_local: &remove_local |
-  lines=$(git branch)
+  lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
+  echo $lines
   if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
     git branch -D $BRANCH_NAME
     echo "delete local branch"
   else
     echo "No local branch to delete"
   fi
-  lines=$(git branch)
+  lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
+  echo $lines
   if [ $(echo $lines | grep -w main_temp | wc -l) -gt 0 ]; then
     git branch -D main_temp
     echo "delete local branch"
@@ -77,14 +87,16 @@ variables:
   
   
 .remove_remote: &remove_remote |
-  lines=$(git branch -r)
+  lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
+  echo $lines
   if [ $(echo $lines | grep -w "origin/$BRANCH_NAME" | wc -l) -gt 0 ]; then
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
     echo "delete remote branch"
   else
     echo "No remote branch to delete"
   fi
-  lines=$(git branch -r)
+  lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
+  echo $lines
   if [ $(echo $lines | grep -w "origin/main_temp" | wc -l) -gt 0 ]; then
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete main_temp
     echo "delete remote branch"
@@ -139,7 +151,7 @@ remove_branch_pre:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git pull origin $CI_COMMIT_REF_NAME
+    - git fetch --all --prune
     - *remove_local
     - *remove_remote
   
@@ -149,7 +161,7 @@ remove_branch_post:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git pull origin $CI_COMMIT_REF_NAME
+    - git fetch --all --prune
     - *remove_local
     - *remove_remote
 
@@ -160,4 +172,5 @@ merge_public_branch:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - *delete_private_files
     - *push_merge_public
