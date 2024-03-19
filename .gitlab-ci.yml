@@ -62,6 +62,7 @@ variables:
 
 
 .remove_local: &remove_local |
+  git fetch --all --prune
   lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
   echo $lines
   if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
@@ -70,6 +71,7 @@ variables:
   else
     echo "No local branch to delete"
   fi
+  git fetch --all --prune
   lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
   echo $lines
   if [ $(echo $lines | grep -w main_temp | wc -l) -gt 0 ]; then
@@ -82,6 +84,7 @@ variables:
   
   
 .remove_remote: &remove_remote |
+  git fetch --all --prune
   lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
   echo $lines
   if [ $(echo $lines | grep -w "origin/$BRANCH_NAME" | wc -l) -gt 0 ]; then
@@ -90,6 +93,7 @@ variables:
   else
     echo "No remote branch to delete"
   fi
+  git fetch --all --prune
   lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
   echo $lines
   if [ $(echo $lines | grep -w "origin/main_temp" | wc -l) -gt 0 ]; then
@@ -152,7 +156,6 @@ remove_branch_pre:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git fetch --all --prune
     - *remove_local
     - *remove_remote
   
@@ -162,7 +165,6 @@ remove_branch_post:
   script:
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
-    - git fetch --all --prune
     - *remove_local
     - *remove_remote
 
