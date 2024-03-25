@@ -18,3 +18,4 @@ whitelist:
     physical_treatment: ptrt
     strain: str
     signal: sgl
+    concentration: conc

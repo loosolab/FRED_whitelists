@@ -22,6 +22,7 @@ whitelist:
         - ethnicity
         - body_mass_index
     other:
+        - concentration
         - time_point
         - signal
     
