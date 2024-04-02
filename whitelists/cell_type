@@ -37,6 +37,8 @@ whitelist:
     - Gastric enteroendocrine cells
     - Gastric mucous cells
     - Hair cortex cells
+    - Hematopoietic LKS
+    - Hematopoietic Multipotent Progenitors
     - Hepatocytes
     - Keratinocyte (granular)
     - Keratinocyte (other)

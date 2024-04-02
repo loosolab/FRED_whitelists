@@ -38,6 +38,8 @@ whitelist:
     Gastric enteroendocrine cells: GstrEntendCll
     Gastric mucous cells: GstrMucoCll
     Hair cortex cells: HairCrtxCll
+    Hematopoietic LKS: HemLKS
+    Hematopoietic Multipotent Progenitors: HemMPP
     Hepatocytes: Hptct
     Keratinocyte (granular): granKrtnct
     Keratinocyte (other): othKrtnct
