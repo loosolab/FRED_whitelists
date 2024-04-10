@@ -23,7 +23,7 @@ jobs:
     - name: remove files
       run: for FILE in $(ls); do if [ -d "${FILE}" ]; then git rm -r $FILE; elif [ -f "${FILE}" ]; then git rm $FILE; fi; done
     - name: push dev
-      run: git push
+      run: git push --set-upstream origin dev
     - name: clone public branch
       run: git remote add -t public other-repo https://oauth2:{{MIRROR_TOKEN}}@gitlab.gwdg.de/loosolab/software/metadata_whitelists.git
     - name: update
@@ -31,13 +31,13 @@ jobs:
     - name: merge
       run: git merge --allow-unrelated-histories --strategy-option=theirs other-repo/public
     - name: push
-      run: git push
+      run: git push --set-upstream origin dev
     - name: checkout main
       run: git checkout main
     - name: merge main
       run: git merge --allow-unrelated-histories --strategy-option=theirs origin/dev
     - name: push main
-      run: git push
+      run: git push --set-upstream origin main
     - name: fetch
       run: git fetch --all --prune
     - name: get heads
