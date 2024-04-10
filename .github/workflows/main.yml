@@ -23,7 +23,7 @@ jobs:
     - name: update
       run: git remote update
     - name: remove files
-      run: for FILE in $(ls); do if [ -d "${FILE}" ]; then rm -r -f $FILE; elif [ -f "${FILE}" ]; then rm -f $FILE; fi; done
+      run: for FILE in $(ls); do if [ -d "${FILE}" ]; then git rm -r $FILE; elif [ -f "${FILE}" ]; then git rm $FILE; fi; done
     - name: merge
       run: git merge --allow-unrelated-histories --strategy-option theirs other-repo/public
     - name: push
