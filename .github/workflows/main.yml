@@ -25,6 +25,6 @@ jobs:
     - name: remove files
       run: for FILE in $(ls); do if [ -d "${FILE}" ]; then git rm -r $FILE; elif [ -f "${FILE}" ]; then git rm $FILE; fi; done
     - name: merge
-      run: git merge --allow-unrelated-histories --strategy-option theirs other-repo/public
+      run: git merge --allow-unrelated-histories --strategy-option=theirs other-repo/public
     - name: push
       run: git push
