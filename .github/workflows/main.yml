@@ -30,10 +30,6 @@ jobs:
       run: git remote add -t public other-repo https://oauth2:{{MIRROR_TOKEN}}@gitlab.gwdg.de/loosolab/software/metadata_whitelists.git
     - name: update
       run: git remote update
-    - name: checkout dev
-      run: git checkout dev
-    - name: pull
-      run: git pull origin dev
     - name: merge
       run: git merge --allow-unrelated-histories --strategy-option=theirs other-repo/public
     - name: push
