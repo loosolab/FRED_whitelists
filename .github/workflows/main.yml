@@ -22,8 +22,6 @@ jobs:
       run: git config pull.rebase true
     - name: checkout dev
       run: git checkout -b dev
-    - name: pull
-      run: git pull origin dev
     - name: remove files
       run: for FILE in $(ls); do if [ -d "${FILE}" ]; then git rm -r $FILE; elif [ -f "${FILE}" ]; then git rm $FILE; fi; done
     - name: push dev
@@ -39,7 +37,7 @@ jobs:
     - name: merge
       run: git merge --allow-unrelated-histories --strategy-option=theirs other-repo/public
     - name: push
-      run: git push --set-upstream origin dev
+      run: git push 
     - name: checkout main
       run: git checkout main
     - name: merge main
