@@ -23,7 +23,7 @@ jobs:
     - name: remove files
       run: for FILE in $(ls); do if [ -d "${FILE}" ]; then git rm -r $FILE; elif [ -f "${FILE}" ]; then git rm $FILE; fi; done
     - name: push dev
-      run: git push oringin/dev
+      run: git push origin/dev
     - name: clone public branch
       run: git remote add -t public other-repo https://oauth2:{{MIRROR_TOKEN}}@gitlab.gwdg.de/loosolab/software/metadata_whitelists.git
     - name: update
