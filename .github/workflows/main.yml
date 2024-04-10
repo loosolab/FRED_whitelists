@@ -12,6 +12,18 @@ jobs:
   mirror:
     runs-on: ubuntu-latest
     steps:
+    - name: fetch
+      run: git fetch --all --prune
+    - name: get heads
+      run: lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
+    - name: remove local
+      run: if [ $(echo $lines | grep -w dev | wc -l) -gt 0 ]; then git branch -D dev; echo "delete local branch"; else echo "No local dev branch to delete"; fi
+    - name: fetch
+      run: git fetch --all --prune
+    - name: get remotes
+      run: lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
+    - name: remove remote
+      run: if [ $(echo $lines | grep -w dev | wc -l) -gt 0 ]; then git push origin --delete dev; echo "delete local branch"; else echo "No local dev branch to delete"; fi
     - name: checkout
       uses: "actions/checkout@v4.1.2"
     - name: set email
