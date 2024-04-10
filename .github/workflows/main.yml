@@ -24,6 +24,8 @@ jobs:
       run: git checkout -b dev
     - name: remove files
       run: for FILE in $(ls); do if [ -d "${FILE}" ]; then git rm -r $FILE; elif [ -f "${FILE}" ]; then git rm $FILE; fi; done
+    - name: commit
+      run: git commit -m 'remove files'
     - name: push dev
       run: git push --set-upstream origin dev
     - name: clone public branch
