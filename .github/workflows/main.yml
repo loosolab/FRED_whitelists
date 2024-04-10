@@ -20,6 +20,8 @@ jobs:
       run: git config --global user.name "Github Action"
     - name: checkout dev
       run: git checkout -b dev
+    - name: pull
+      run: git pull
     - name: remove files
       run: for FILE in $(ls); do if [ -d "${FILE}" ]; then git rm -r $FILE; elif [ -f "${FILE}" ]; then git rm $FILE; fi; done
     - name: push dev
