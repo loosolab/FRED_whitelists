@@ -39,7 +39,9 @@ jobs:
     - name: checkout main
       run: git checkout main
     - name: merge main
-      run: git merge --allow-unrelated-histories --strategy-option=theirs origin/dev && git branch -d origin/dev
+      run: git merge --allow-unrelated-histories --strategy-option=theirs origin/dev
     - name: push main
       run: git push --set-upstream origin main
+    - name: remove dev
+      run: git push origin --delete dev
 
