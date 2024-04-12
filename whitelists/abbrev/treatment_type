@@ -1,0 +1,12 @@
+whitelist_type: abbrev
+whitelist:
+    Placebo: Plc
+    Medication: Med
+    Puromycin: Prmc
+    Gemcitabine: Gctb
+    Cardiotoxin: Crdtxn
+    2-deoxyglucose: 2doxgl
+    Saline: Sal
+    delta Cystein: dCys
+    Ferostatin: Frst
+    gain of function: gof
