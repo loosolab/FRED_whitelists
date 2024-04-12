@@ -10,6 +10,7 @@ whitelist:
     breast: brst
     calvaria: clv
     caudal fin: cf
+    cartilage: crtl
     cervix: crvx
     chorionic villus: chorVil
     colon: col
@@ -20,6 +21,7 @@ whitelist:
     fetal gonad: fetGnd
     gallbladder: gllbl
     heart: hrt
+    heart septum: hrtSep
     intestine: int
     kidney: kdny
     liver: lvr
@@ -27,13 +29,14 @@ whitelist:
     lung upper lobe: lngUL
     lung lower lobe: lngLL
     muscle: mu
-    muscle EDL: muEDL
+    muscle extensor digitorum longus: muEDL
     muscle Gastrocnemius: muGstr
     muscle Plantaris: muPlt
     muscle Quadriceps: muQudr
     muscle Soleus: muSol
     muscle Tibialis: muTib
     omentum: omnt
+    organoids: org
     ovary: ovr
     pancreas: pncr
     peripheral blood: periBl
@@ -56,3 +59,4 @@ whitelist:
     tongue: tng
     ureter: urt
     uterus: utr
+    ventricle: ven

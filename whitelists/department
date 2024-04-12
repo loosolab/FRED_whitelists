@@ -1,4 +1,4 @@
-whitelist_type: plain
+whitelist_type: group
 whitelist:
   intern:
   - public

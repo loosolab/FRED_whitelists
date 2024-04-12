@@ -3,3 +3,7 @@ whitelist:
     - early
     - mid
     - late
+    - stage I
+    - stage II
+    - stage III
+    - stage IV

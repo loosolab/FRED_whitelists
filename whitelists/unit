@@ -10,5 +10,9 @@ whitelist:
     - ml
     - l
     - nl
+    - μM
+    - nM
     - mol
     - kg/m2
+    - passages
+    - ng/μl

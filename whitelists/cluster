@@ -5,4 +5,4 @@ whitelist:
     - BN_public
     - GWDG
     - GWDGmanagt
-    - test
+    - BN_public

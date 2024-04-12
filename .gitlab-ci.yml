@@ -3,7 +3,7 @@ image: python:3.8-buster
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
   GIT_DEPTH: 1  
-  BRANCH_NAME: "${CI_COMMIT_REF_NAME}_temp"              # Name of the branch to modify
+  BRANCH_NAME: "${CI_COMMIT_REF_NAME}_temp3"              # Name of the branch to modify
   BOT_NAME: "GitLab Runner Bot"              # Bot's name that appears in the commit log
   BOT_EMAIL: "gitlab-runner-bot@example.net" # Bot's email, not important
   COMMIT_MESSAGE: "Commit from runner "      # Part of the commit message
@@ -62,8 +62,12 @@ variables:
 
 
 .remove_local: &remove_local |
+<<<<<<< HEAD
   git fetch --all --prune
   lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
+=======
+  lines=$(git for-each-ref --shell --format='%(refname:short)' refs/heads)
+>>>>>>> origin/add_concentration
   echo $lines
   if [ $(echo $lines | grep -w $BRANCH_NAME | wc -l) -gt 0 ]; then
     git branch -D $BRANCH_NAME
@@ -71,6 +75,7 @@ variables:
   else
     echo "No local branch to delete"
   fi
+<<<<<<< HEAD
   git fetch --all --prune
   lines=$(git for-each-ref refs/heads/ --format='%(refname:short)')
   echo $lines
@@ -86,12 +91,19 @@ variables:
 .remove_remote: &remove_remote |
   git fetch --all --prune
   lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
+=======
+  
+  
+.remove_remote: &remove_remote |
+  lines=$(git for-each-ref --shell --format='%(refname:short)' refs/remotes/)
+>>>>>>> origin/add_concentration
   echo $lines
   if [ $(echo $lines | grep -w "origin/$BRANCH_NAME" | wc -l) -gt 0 ]; then
     git push "https://whatever:${GIT_PUSH_TOKEN}@${CI_REPOSITORY_URL#*@}" --delete $BRANCH_NAME
     echo "delete remote branch"
   else
     echo "No remote branch to delete"
+<<<<<<< HEAD
   fi
   git fetch --all --prune
   lines=$(git for-each-ref refs/remotes/ --format='%(refname:short)')
@@ -101,6 +113,8 @@ variables:
     echo "delete remote branch"
   else
     echo "No remote main_temp branch to delete"
+=======
+>>>>>>> origin/add_concentration
   fi
   
 
@@ -113,7 +127,10 @@ stages:
   - test
   - convert
   - merge
+<<<<<<< HEAD
   - merge_public
+=======
+>>>>>>> origin/add_concentration
   - post_remove
   
 
@@ -165,6 +182,7 @@ remove_branch_post:
     - git config --global user.email "${BOT_EMAIL}"
     - *remove_local
     - *remove_remote
+<<<<<<< HEAD
 
 merge_public_branch:
   stage: merge_public
@@ -175,3 +193,5 @@ merge_public_branch:
     - git config --global user.email "${BOT_EMAIL}"
     - *delete_private_files
     - *push_merge_public
+=======
+>>>>>>> origin/add_concentration
