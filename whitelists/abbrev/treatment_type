@@ -9,4 +9,14 @@ whitelist:
     Saline: Sal
     delta Cystein: dCys
     Ferostatin: Frst
-    gain of function: gof
+    recombinant protein: rcpr
+    Dimethylsulfoxid: DMSO
+    XMU-MP-1: XmuMp1
+    Stearoylcarnitine: C18Car
+    Lipopolysaccharide: LPS
+    Interleukin-1beta: Il1b
+    Interleukin-9: Il9
+    Solvent: Slvt
+    SPiDER-βGal: SPiDER
+    C16 ceramide: C16cer
+    Insulin: Ins

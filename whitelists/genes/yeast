@@ -1,5 +1,7 @@
 whitelist_type: plain
 headers: gene_name ensembl_id
+double:
+    - NA
 whitelist:
     - NA ETS1-1
     - NA ETS1-2

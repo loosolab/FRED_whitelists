@@ -1,1 +1,1 @@
-{"whitelist_type": "abbrev", "whitelist": {"disease_type": "tp", "disease_status": "sts", "disease_stage": "stg"}}
+{"whitelist_type": "abbrev", "whitelist": {"disease_type": "tp", "disease_status": "sts", "disease_stage": "stg", "disease_risk": "rsk"}}

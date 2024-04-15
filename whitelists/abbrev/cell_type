@@ -5,10 +5,13 @@ whitelist:
     Endothelial cells umbilical vein: ECumb
     Endothelial cells pulmonary artery: ECpulmArt
     Endothelial cells dermal lymphatic: ECdermLym
+    Cardiac microvascular endothelial cells : CMECs
     Smooth muscle cells: SmMCll
     Fibroblasts: Fbrb
+    Fibroblast-like synoviocytes: FLS
     Macrophages: Mcrp
     Mast cells: MstCll
+    Muscle stem cells: MsSCll
     T-cells: TCll
     Plasma cells: PlCll
     Adipocyte: adpc
@@ -19,7 +22,14 @@ whitelist:
     B-cells: BCll
     Beta cells: BetaCll
     Bone Marrow Neutrophils: BMNtrph
+    Bronchial smooth muscle cells: BSMCs
+    Brain neuron: BrNeu
     Cardiomyocytes: Crdmct
+    Cardiac neuron: CaNeu
+    Cardiac transgene negative: CaTN
+    Atrial Cardiomyocytes: ACrdmct
+    Ventricular Cardiomyocytes: VCrdmct
+    Neonatal Cardiomyocytes: NeoCrdmct
     Ductal cells: DuctCll
     Eccrine sweat gland cells: EccSwGlCll
     Enteric glia cells: EntGliaCll
@@ -28,6 +38,8 @@ whitelist:
     Gastric enteroendocrine cells: GstrEntendCll
     Gastric mucous cells: GstrMucoCll
     Hair cortex cells: HairCrtxCll
+    Hematopoietic LKS: HemLKS
+    Hematopoietic Multipotent Progenitors: HemMPP
     Hepatocytes: Hptct
     Keratinocyte (granular): granKrtnct
     Keratinocyte (other): othKrtnct
@@ -36,16 +48,22 @@ whitelist:
     Melanocytes: Melanoct
     Mitotic cells: MitoCll
     Neutrophils: Ntrph
+    Neuron: Neu
     NK-cells: NKCll
     Parafollicular cells: ParafllCll
+    Pericytes: Perict
     Peritoneal cavity Neutrophils: PCNtrph
     Peripheral blood Neutrophils: PeriBlNtrph
     Peritubular cells: PeritblCll
     Podocytes: Podoct
+    Primary myoblasts: PrMyo
     Prostate basal glandular cells: PrstBGlCll
     Prostate glandular cells: PrstGlCll
     Proximal tubular cells: ProxTblCll
+    Pulmonary arterial smooth muscle cells: PASMCs
+    Pulmonary arterial adventitial fibroblasts: PAAFs
     Respiratory ciliated cells: RespCilCll
+    Satellite cells: SatCll
     Skeletal myocytes: SklMct
     Spermatids: Sprmtd
     Spleen Neutrophils: SplNtrph
