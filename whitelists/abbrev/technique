@@ -1,0 +1,29 @@
+whitelist_type: abbrev
+whitelist:
+    bulk RNA-seq: bulkRNA
+    bulk RNA array: bulkRNAarray
+    bulk ATAC-seq: bulkATAC
+    bulk ChIP-seq: bulkCHIP
+    sc RNA-seq: scRNA
+    sc ATAC-seq: scATAC
+    ACT-seq: ACT
+    HiC-seq: HiC
+    MNase-seq: MNase
+    DART-seq: DART
+    HyperTribe-seq: HyperTribe
+    CAGE-seq: CAGE
+    Ribo-seq: Ribo
+    Cut&Run: CutnRun
+    Methylation array: MethArray
+    Bisulfit-seq: Bisulfit
+    PRO-seq: PRO
+    MeDIP-seq: MeDIP
+    RIP-seq: RIP
+    Cut&Tag: CutnTag
+    ChiRP-seq: CHiRP
+    DRIP-seq: DRIP
+    snRNA-seq: snRNA
+    snATAC-seq: snATAC
+    GLORI-seq: GLORI
+    Quant-seq: Quant
+    DamID-seq: DamID

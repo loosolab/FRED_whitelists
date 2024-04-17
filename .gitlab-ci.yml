@@ -132,6 +132,7 @@ convert_whitelists:
     - misc/convert.py
     - git config --global user.name "${BOT_NAME}"
     - git config --global user.email "${BOT_EMAIL}"
+    - git fetch --all --prune
     - git checkout -b $BRANCH_NAME
     - git add whitelists/department
     - git add misc/json
@@ -165,6 +166,7 @@ remove_branch_post:
     - git config --global user.email "${BOT_EMAIL}"
     - *remove_local
     - *remove_remote
+
 
 merge_public_branch:
   stage: merge_public
