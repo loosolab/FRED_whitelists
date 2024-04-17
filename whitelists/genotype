@@ -2,3 +2,4 @@ whitelist_type: plain
 whitelist:
     - Mut
     - WT
+    - mdx

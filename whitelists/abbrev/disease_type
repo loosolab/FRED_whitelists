@@ -1,6 +1,8 @@
 whitelist_type: abbrev
 whitelist:
     Lung cancer: LngCnc
+    Lung adenocarcinoma: LUAD
+    Small cell lung cancer: SCLC
     Asthma: Asth
     Pneumonia: pneum
     Pulmonary edema: PulmEd
@@ -10,7 +12,7 @@ whitelist:
     Pulmonary embolus: PulmEmb
     Covid: Cov
     Influenca: flu
-    Coronary heart disease CHD: CHD
+    Coronary heart disease: CHD
     Angina: Ang
     Blood pressure: BldPrs
     Heart failure: HrtFail
@@ -19,3 +21,10 @@ whitelist:
     Prostate cancer: PrstCnc
     Myocardial Infarction: MyoInf
     Duchenne muscular dystrophy: DMD
+    Urigenital cancer: UroCnc
+    Melanoma: Mln
+    Gastrointestinal cancer: GstrCnC
+    Cancer of unknown primary: CUP
+    Glioblastoma: Gliob
+    Brain metastasis: BrMts
+

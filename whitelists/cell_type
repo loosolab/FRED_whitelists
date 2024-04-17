@@ -5,10 +5,15 @@ whitelist:
     - Endothelial cells umbilical vein
     - Endothelial cells pulmonary artery
     - Endothelial cells dermal lymphatic
+    - Cardiac microvascular endothelial cells  
+    - Cardiac neuron
+    - Cardiac transgene negative
     - Smooth muscle cells
     - Fibroblasts
+    - Fibroblast-like synoviocytes
     - Macrophages
     - Mast cells
+    - Muscle stem cells
     - T-cells
     - Plasma cells
     - Adipocyte
@@ -19,7 +24,11 @@ whitelist:
     - B-cells
     - Beta cells
     - Bone Marrow Neutrophils
+    - Brain neuron
+    - Bronchial smooth muscle cells
     - Cardiomyocytes
+    - Atrial Cardiomyocytes
+    - Ventricular Cardiomyocytes
     - Ductal cells
     - Eccrine sweat gland cells
     - Enteric glia cells
@@ -28,6 +37,8 @@ whitelist:
     - Gastric enteroendocrine cells
     - Gastric mucous cells
     - Hair cortex cells
+    - Hematopoietic LKS
+    - Hematopoietic Multipotent Progenitors
     - Hepatocytes
     - Keratinocyte (granular)
     - Keratinocyte (other)
@@ -36,16 +47,23 @@ whitelist:
     - Melanocytes
     - Mitotic cells
     - Neutrophils
+    - Neuron
+    - Neonatal Cardiomyocytes
     - NK-cells
     - Parafollicular cells
+    - Pericytes
     - Peritoneal cavity Neutrophils
     - Peripheral blood Neutrophils
     - Peritubular cells
     - Podocytes
+    - Primary myoblasts
     - Prostate basal glandular cells
     - Prostate glandular cells
     - Proximal tubular cells
+    - Pulmonary arterial smooth muscle cells
+    - Pulmonary arterial adventitial fibroblasts
     - Respiratory ciliated cells
+    - Satellite cells
     - Skeletal myocytes
     - Spermatids
     - Spleen Neutrophils
