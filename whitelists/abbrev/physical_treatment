@@ -4,3 +4,4 @@ whitelist:
     shear stress: shstr
     hypoxia: hox
     normoxia: nox
+    revovery: rec
