@@ -10,3 +10,4 @@ whitelist:
     - HUVEC
     - HUAEC
     - iPS
+    - H1299
