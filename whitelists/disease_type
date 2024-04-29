@@ -25,6 +25,7 @@ whitelist:
       - Bypass surgery
       - Myocardial Infarction
     other:
+      - Atherosclerosis
       - Breast cancer
       - Prostate cancer
       - Duchenne muscular dystrophy
