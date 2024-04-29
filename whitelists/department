@@ -13,6 +13,7 @@ whitelist:
   - Abt-M
   - Abt-N
   - Abt-O
+  - AG-aianni
   - AG-aschnei
   - AG-DeepSeq
   - AG-EDV
@@ -117,3 +118,5 @@ whitelist:
   - AG-yogeswaran
   BE:
   - AG-birchmeier
+  MS:
+  - AG-gunawan
