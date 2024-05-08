@@ -41,6 +41,7 @@ whitelist:
     Hematopoietic LKS: HemLKS
     Hematopoietic Multipotent Progenitors: HemMPP
     Hepatocytes: Hptct
+    Induced Pluripotent Stem Cells: iPSCs
     Keratinocyte (granular): granKrtnct
     Keratinocyte (other): othKrtnct
     Langerhans cells: LnghnsCll
@@ -67,5 +68,7 @@ whitelist:
     Skeletal myocytes: SklMct
     Spermatids: Sprmtd
     Spleen Neutrophils: SplNtrph
-
+    Endoderm: Endo
+    Mesoderm: Meso
+    Ectoderm: Ecto
     ASC TERT1: AscTert1
