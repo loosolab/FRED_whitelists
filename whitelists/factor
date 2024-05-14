@@ -20,6 +20,7 @@ whitelist:
         - life_stage
         - age
         - ethnicity
+        - body_type
         - body_mass_index
     other:
         - concentration
