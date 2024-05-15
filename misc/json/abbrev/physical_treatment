@@ -1,1 +1,1 @@
-{"whitelist_type": "abbrev", "whitelist": {"static stress": "ststr", "shear stress": "shstr", "hypoxia": "hox", "normoxia": "nox", "revovery": "rec", "high fat diet": "hfd"}}
+{"whitelist_type": "abbrev", "whitelist": {"static stress": "ststr", "shear stress": "shstr", "hypoxia": "hox", "normoxia": "nox", "revovery": "rec", "high fat diet": "hfd", "normal chow diet": "ncd"}}
