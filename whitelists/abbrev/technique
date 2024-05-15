@@ -27,3 +27,4 @@ whitelist:
     GLORI-seq: GLORI
     Quant-seq: Quant
     DamID-seq: DamID
+    ChAR-seq: ChAR
