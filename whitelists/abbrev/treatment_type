@@ -22,3 +22,6 @@ whitelist:
     Insulin: Ins
     Actinomycin-D: ActD
     Trichostatin A: TSA
+    11,12-DHET: DHET
+    12,13-DiHOME: DiHOME
+    19,20-DiHDPA: DiHDPA
