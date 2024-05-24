@@ -1,6 +1,8 @@
 whitelist_type: plain
 whitelist:
     - adipose tissue
+    - adipose tissue subcutaneous
+    - adipose tissue visceral
     - adrenal gland
     - artery
     - bladder

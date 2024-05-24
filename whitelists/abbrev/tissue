@@ -1,6 +1,8 @@
 whitelist_type: abbrev
 whitelist:
     adipose tissue: adti
+    adipose tissue subcutaneous: adtisub
+    adipose tissue visceral: adtivis
     adrenal gland: adgl
     artery: art
     bladder: bldr
