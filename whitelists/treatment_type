@@ -27,5 +27,7 @@ whitelist:
     - 11,12-DHET
     - 12,13-DiHOME
     - 19,20-DiHDPA
+    - Prostaglandin E2
+    - Resolvin D5
 
 
