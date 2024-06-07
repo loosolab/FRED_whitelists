@@ -1,0 +1,10 @@
+whitelist_type: group
+whitelist:
+    knockdown:
+        - siRNA
+        - morpholino
+        - CRISPR-Cas13
+    knockout:
+        - CRISPR-Cas9
+    overexpression:
+        - Adenovirus
