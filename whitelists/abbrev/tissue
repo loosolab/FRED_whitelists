@@ -24,6 +24,9 @@ whitelist:
     gallbladder: gllbl
     heart: hrt
     heart septum: hrtSep
+    heart atrium: hrtAtr
+    heart remote zone: hrtRz
+    heart infarct zone: hrtIz
     intestine: int
     kidney: kdny
     liver: lvr
