@@ -23,6 +23,7 @@ whitelist:
     Duchenne muscular dystrophy: DMD
     Urigenital cancer: UroCnc
     Melanoma: Mln
+    Neointima: NeoIn
     Gastrointestinal cancer: GstrCnC
     Cancer of unknown primary: CUP
     Glioblastoma: Gliob

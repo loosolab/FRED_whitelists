@@ -25,6 +25,9 @@ whitelist:
     - gallbladder
     - heart
     - heart septum
+    - heart atrium
+    - heart remote zone
+    - heart infarct zone
     - intestine
     - kidney    
     - liver
@@ -64,3 +67,4 @@ whitelist:
     - ureter
     - uterus
     - ventricle
+

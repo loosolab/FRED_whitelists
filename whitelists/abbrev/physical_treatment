@@ -5,3 +5,5 @@ whitelist:
     hypoxia: hox
     normoxia: nox
     revovery: rec
+    high fat diet: hfd
+    normal chow diet: ncd

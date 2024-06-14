@@ -13,6 +13,7 @@ whitelist:
     time_point: tmp
     enrichment: enr
     bode_mass_index: bmi
+    body_type: bt
     injury: inj
     cellular_compartment: ccmp
     physical_treatment: ptrt

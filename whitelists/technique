@@ -30,3 +30,4 @@ whitelist:
     - Quant-seq
     - DamID-seq
     - WGS
+    - ChAR-seq
