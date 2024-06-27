@@ -1,6 +1,0 @@
-whitelist_type: abbrev
-whitelist:
-    editing_method: mth
-    editing_type: tp
-    mutation: mut
-    modification: mod
