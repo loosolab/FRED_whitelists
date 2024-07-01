@@ -121,3 +121,5 @@ whitelist:
   - AG-birchmeier
   MS:
   - AG-gunawan
+  HAL:
+  - AG-sedding
