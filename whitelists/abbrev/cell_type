@@ -1,40 +1,36 @@
 whitelist_type: abbrev
 whitelist:
-    Embryonic stem cells: ESC
-    Endothelial cells: EC
-    Endothelial cells umbilical vein: ECumb
-    Endothelial cells pulmonary artery: ECpulmArt
-    Endothelial cells dermal lymphatic: ECdermLym
-    Cardiac microvascular endothelial cells : CMECs
-    Smooth muscle cells: SmMCll
-    Fibroblasts: Fbrb
-    Fibroblast-like synoviocytes: FLS
-    Macrophages: Mcrp
-    Mast cells: MstCll
-    Muscle stem cells: MsSCll
-    T-cells: TCll
-    Plasma cells: PlCll
     Adipocyte: adpc
     Alpha cells: AlphaCll
     Alveolar cells type 1: AlvCll1
     Alveolar cells type 2: AlvCll2
     Ascending Loop of Henle cells: AscLHCll
+    ASC TERT1: AscTert1
+    Atrial Cardiomyocytes: ACrdmct
     B-cells: BCll
     Beta cells: BetaCll
     Bone Marrow Neutrophils: BMNtrph
     Bronchial smooth muscle cells: BSMCs
     Brain neuron: BrNeu
-    Cardiomyocytes: Crdmct
+    Cardiac microvascular endothelial cells : CMECs
     Cardiac neuron: CaNeu
     Cardiac transgene negative: CaTN
-    Atrial Cardiomyocytes: ACrdmct
-    Ventricular Cardiomyocytes: VCrdmct
-    Neonatal Cardiomyocytes: NeoCrdmct
+    Cardiomyocytes: Crdmct
+    Dendritic cells: DndrClls
     Ductal cells: DuctCll
     Eccrine sweat gland cells: EccSwGlCll
+    Ectoderm: Ecto
+    Embryonic stem cells: ESC
+    Endoderm: Endo
+    Endothelial cells: EC
+    Endothelial cells umbilical vein: ECumb
+    Endothelial cells pulmonary artery: ECpulmArt
+    Endothelial cells dermal lymphatic: ECdermLym
     Enteric glia cells: EntGliaCll
     Erythroid cells: EryCll
     Exocrine glandular cells: ExoGlCll
+    Fibroblasts: Fbrb
+    Fibroblast-like synoviocytes: FLS
     Gastric enteroendocrine cells: GstrEntendCll
     Gastric mucous cells: GstrMucoCll
     Hair cortex cells: HairCrtxCll
@@ -42,12 +38,18 @@ whitelist:
     Hematopoietic Multipotent Progenitors: HemMPP
     Hepatocytes: Hptct
     Induced Pluripotent Stem Cells: iPSCs
+    Innate lymphoid cells: ILCs
     Keratinocyte (granular): granKrtnct
     Keratinocyte (other): othKrtnct
     Langerhans cells: LnghnsCll
     Liver Neutrophils: LvrNtrph
+    Macrophages: Mcrp
+    Mast cells: MstCll
     Melanocytes: Melanoct
+    Mesoderm: Meso
     Mitotic cells: MitoCll
+    Muscle stem cells: MsSCll
+    Neonatal Cardiomyocytes: NeoCrdmct
     Neutrophils: Ntrph
     Neuron: Neu
     NK-cells: NKCll
@@ -56,6 +58,7 @@ whitelist:
     Peritoneal cavity Neutrophils: PCNtrph
     Peripheral blood Neutrophils: PeriBlNtrph
     Peritubular cells: PeritblCll
+    Plasma cells: PlCll
     Podocytes: Podoct
     Primary myoblasts: PrMyo
     Prostate basal glandular cells: PrstBGlCll
@@ -65,10 +68,9 @@ whitelist:
     Pulmonary arterial adventitial fibroblasts: PAAFs
     Respiratory ciliated cells: RespCilCll
     Satellite cells: SatCll
-    Skeletal myocytes: SklMct
+    Skeletal myocytes: SklMct 
+    Smooth muscle cells: SmMCll
     Spermatids: Sprmtd
     Spleen Neutrophils: SplNtrph
-    Endoderm: Endo
-    Mesoderm: Meso
-    Ectoderm: Ecto
-    ASC TERT1: AscTert1
+    T-cells: TCll
+    Ventricular Cardiomyocytes: VCrdmct   
