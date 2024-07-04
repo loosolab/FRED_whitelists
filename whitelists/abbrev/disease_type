@@ -1,33 +1,34 @@
 whitelist_type: abbrev
 whitelist:
-    Lung cancer: LngCnc
-    Lung adenocarcinoma: LUAD
-    Small cell lung cancer: SCLC
-    Asthma: Asth
-    Pneumonia: pneum
-    Pulmonary edema: PulmEd
-    Pulmonary fibrosis: PulFib
-    Bronchitis: brnch
-    Pneumothorax: pnmthrx
-    Pulmonary embolus: PulmEmb
-    Covid: Cov
-    Influenca: flu
-    Coronary heart disease: CHD
     Angina: Ang
-    Blood pressure: BldPrs
-    Heart failure: HrtFail
-    Bypass surgery: BypSrg
-    Breast cancer: BrstCnc
-    Prostate cancer: PrstCnc
-    Myocardial Infarction: MyoInf
-    Duchenne muscular dystrophy: DMD
-    Urigenital cancer: UroCnc
-    Melanoma: Mln
-    Neointima: NeoIn
-    Gastrointestinal cancer: GstrCnC
-    Cancer of unknown primary: CUP
-    Glioblastoma: Gliob
-    Brain metastasis: BrMts
+    Asthma: Asth
     Atherosclerosis: ArtScl
+    Blood pressure: BldPrs
+    Brain metastasis: BrMts
+    Breast cancer: BrstCnc
+    Bronchitis: brnch
+    Bypass surgery: BypSrg
+    Cancer of unknown primary: CUP
+    Coronary heart disease: CHD
+    Covid: Cov
+    Diabetes Type I: DbtI
+    Diabetes Type II: DbtII
+    Duchenne muscular dystrophy: DMD
     Epidermolysis bullosa acquisita: EBA
-
+    Gastrointestinal cancer: GstrCnC
+    Glioblastoma: Gliob
+    Heart failure: HrtFail
+    Influenca: flu
+    Lung adenocarcinoma: LUAD
+    Lung cancer: LngCnc
+    Melanoma: Mln
+    Myocardial Infarction: MyoInf
+    Neointima: NeoIn
+    Pneumonia: pneum
+    Pneumothorax: pnmthrx
+    Prostate cancer: PrstCnc
+    Pulmonary edema: PulmEd
+    Pulmonary embolus: PulmEmb
+    Pulmonary fibrosis: PulFib
+    Small cell lung cancer: SCLC
+    Urigenital cancer: UroCnc
