@@ -28,3 +28,4 @@ whitelist:
     Quant-seq: Quant
     DamID-seq: DamID
     ChAR-seq: ChAR
+    Mass Spectrometry: MassSpec
