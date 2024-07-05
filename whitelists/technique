@@ -31,3 +31,4 @@ whitelist:
     - DamID-seq
     - WGS
     - ChAR-seq
+    - Mass Spectrometry
