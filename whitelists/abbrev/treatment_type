@@ -21,6 +21,7 @@ whitelist:
     Medication: Med
     Prostaglandin E2: PGE2
     Puromycin: Prmc
+    Pyruvate: Pyr
     recombinant protein: rcpr
     Resolvin D5: RvD5
     Saline: Sal
