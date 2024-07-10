@@ -8,6 +8,7 @@ whitelist:
     - sc ATAC-seq
     - ACT-seq
     - HiC-seq
+    - MapR
     - MNase-seq
     - DART-seq
     - HyperTribe-seq
