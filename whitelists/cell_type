@@ -17,6 +17,7 @@ whitelist:
     - Cardiac neuron
     - Cardiac transgene negative
     - Cardiomyocytes
+    - Cytotoxic T cells
     - Dendritic cells
     - Ductal cells
     - Eccrine sweat gland cells

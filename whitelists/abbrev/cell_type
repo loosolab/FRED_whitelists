@@ -16,6 +16,7 @@ whitelist:
     Cardiac neuron: CaNeu
     Cardiac transgene negative: CaTN
     Cardiomyocytes: Crdmct
+    Cytotoxic T cells: CTLs
     Dendritic cells: DndrClls
     Ductal cells: DuctCll
     Eccrine sweat gland cells: EccSwGlCll
