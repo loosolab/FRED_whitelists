@@ -31,3 +31,4 @@ whitelist:
         - IgG
         - m6A
         - Input
+        - Ribosome
