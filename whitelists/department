@@ -121,5 +121,7 @@ whitelist:
   - AG-birchmeier
   MS:
   - AG-gunawan
+  US-MI-AA:
+  - AG-perezmillan
   HAL:
   - AG-sedding
