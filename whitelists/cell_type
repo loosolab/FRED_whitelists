@@ -6,6 +6,7 @@ whitelist:
     - Alveolar cells type 1
     - Alveolar cells type 2
     - ASC TERT1
+    - Arterial smooth muscle cells
     - Ascending Loop of Henle cells
     - Atrial Cardiomyocytes
     - B-cells
@@ -61,6 +62,7 @@ whitelist:
     - Neuron
     - Neonatal Cardiomyocytes
     - NK-cells
+    - Non-vascular smooth muscle cells
     - Parafollicular cells
     - Pericytes
     - Peritoneal cavity Neutrophils

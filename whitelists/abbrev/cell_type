@@ -5,6 +5,7 @@ whitelist:
     Alveolar cells type 1: AlvCll1
     Alveolar cells type 2: AlvCll2
     Ascending Loop of Henle cells: AscLHCll
+    Arterial smooth muscle cells: ASMCs
     ASC TERT1: AscTert1
     Atrial Cardiomyocytes: ACrdmct
     B-cells: BCll
@@ -54,6 +55,7 @@ whitelist:
     Neutrophils: Ntrph
     Neuron: Neu
     NK-cells: NKCll
+    Non-vascular smooth muscle cells: NVSMCs
     Parafollicular cells: ParafllCll
     Pericytes: Perict
     Peritoneal cavity Neutrophils: PCNtrph
