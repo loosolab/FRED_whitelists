@@ -7,6 +7,8 @@ whitelist:
     - Actinomycin-D
     - Antisense oligonucleotide
     - Antisense oligonucleotide non-targeting
+    - Blebbistatin
+    - Bovine Serum Albumine
     - C16 ceramide
     - Cardiotoxin
     - delta Cystein
@@ -16,7 +18,10 @@ whitelist:
     - Insulin
     - Interleukin-1beta
     - Interleukin-9
+    - Jasplakinolide
+    - Latrunculin
     - Lipopolysaccharide
+    - Lipoprotein A
     - Medication
     - Placebo
     - Prostaglandin E2
