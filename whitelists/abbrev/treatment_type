@@ -7,6 +7,8 @@ whitelist:
     Actinomycin-D: ActD
     Antisense oligonucleotide: ASO
     Antisense oligonucleotide non-targeting: nonASO
+    Blebbistatin: BlSt
+    Bovine Serum Albumine: BSA
     C16 ceramide: C16cer
     Cardiotoxin: Crdtxn
     Placebo: Plc
@@ -17,7 +19,10 @@ whitelist:
     Insulin: Ins
     Interleukin-1beta: Il1b
     Interleukin-9: Il9
+    Jasplakinolide: Jspl
+    Latrunculin: Latr
     Lipopolysaccharide: LPS
+    Lipoprotein A: LPA
     Medication: Med
     Prostaglandin E2: PGE2
     Puromycin: Prmc
