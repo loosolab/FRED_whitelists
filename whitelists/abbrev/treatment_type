@@ -21,6 +21,7 @@ whitelist:
     Interleukin-9: Il9
     Jasplakinolide: Jspl
     Latrunculin: Latr
+    LIGHT / TNFSF14: LIGHT
     Lipopolysaccharide: LPS
     Lipoprotein A: LPA
     Medication: Med
