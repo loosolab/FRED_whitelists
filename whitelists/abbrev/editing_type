@@ -1,0 +1,6 @@
+whitelist_type: abbrev
+whitelist:
+    overexpression: oe
+    knockdown: kd
+    knockout: ko
+    
