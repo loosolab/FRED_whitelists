@@ -16,3 +16,4 @@ whitelist:
     - kg/m2
     - passages
     - ng/μl
+    - '%'

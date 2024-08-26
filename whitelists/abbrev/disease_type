@@ -18,6 +18,7 @@ whitelist:
     Gastrointestinal cancer: GstrCnC
     Glioblastoma: Gliob
     Heart failure: HrtFail
+    Heart Failure with preserved Ejection Fraction: HFpEF
     Influenca: flu
     Lung adenocarcinoma: LUAD
     Lung cancer: LngCnc

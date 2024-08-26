@@ -23,6 +23,7 @@ whitelist:
       - Bypass surgery
       - Coronary heart disease
       - Heart failure
+      - Heart Failure with preserved Ejection Fraction
       - Myocardial Infarction
     other:
       - Atherosclerosis

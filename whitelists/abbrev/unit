@@ -11,3 +11,4 @@ whitelist:
     μM: miM
     passages: psg
     ng/μl: ngmyL
+    '%': pct
