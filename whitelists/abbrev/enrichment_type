@@ -3,3 +3,4 @@ whitelist:
     gene_name: gn
     ensembl_id: embl
     Ribosome: Ribo
+    HA tag: HA

@@ -31,4 +31,5 @@ whitelist:
         - IgG
         - m6A
         - Input
+        - HA tag
         - Ribosome
