@@ -36,6 +36,7 @@ whitelist:
   - VL-AG-Looso
   FR:
   - AG-abplanalp
+  - AG-ackerpalmer
   - AG-assmus
   - AG-bibli
   - AG-boon
@@ -71,6 +72,7 @@ whitelist:
   - AG-schroeder
   - AG-segarra
   - AG-siragusa
+  - AG-speer
   - AG-stolz
   - AG-walther
   - AG-weigert
@@ -78,12 +80,12 @@ whitelist:
   - AG-zeiher
   GI:
   - AG-acker
-  - AG-ackerpalmer
   - AG-adnot
   - AG-agha
   - AG-aguenther
   - AG-alcazar
   - AG-bartkuhn
+  - AG-baumgartvogt
   - AG-bellusci
   - AG-bindereif
   - AG-ghofrani
@@ -121,6 +123,8 @@ whitelist:
   - AG-birchmeier
   MS:
   - AG-gunawan
+  MZ:
+  - AG-kschaefer
   US-MI-AA:
   - AG-perezmillan
   HAL:
