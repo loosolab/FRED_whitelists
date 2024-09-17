@@ -16,6 +16,7 @@ whitelist:
     - Bronchial smooth muscle cells
     - Cardiac microvascular endothelial cells  
     - Cardiac neuron
+    - Cardiac non-cardiomyocytes
     - Cardiac transgene negative
     - Cardiomyocytes
     - Cytotoxic T cells
