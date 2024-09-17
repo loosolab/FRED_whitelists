@@ -15,6 +15,7 @@ whitelist:
     Brain neuron: BrNeu
     Cardiac microvascular endothelial cells : CMECs
     Cardiac neuron: CaNeu
+    Cardiac non-cardiomyocytes: nonCMs
     Cardiac transgene negative: CaTN
     Cardiomyocytes: Crdmct
     Cytotoxic T cells: CTLs
