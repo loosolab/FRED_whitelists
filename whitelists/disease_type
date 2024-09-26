@@ -22,8 +22,10 @@ whitelist:
       - Blood pressure
       - Bypass surgery
       - Coronary heart disease
+      - Dilated cardiomyopathy
       - Heart failure
       - Heart Failure with preserved Ejection Fraction
+      - Hypertrophic cardiomyopathy
       - Myocardial Infarction
     other:
       - Atherosclerosis
