@@ -13,12 +13,14 @@ whitelist:
     Covid: Cov
     Diabetes Type I: DbtI
     Diabetes Type II: DbtII
+    Dilated cardiomyopathy: DCM
     Duchenne muscular dystrophy: DMD
     Epidermolysis bullosa acquisita: EBA
     Gastrointestinal cancer: GstrCnC
     Glioblastoma: Gliob
     Heart failure: HrtFail
     Heart Failure with preserved Ejection Fraction: HFpEF
+    Hypertrophic cardiomyopathy: HCM
     Influenca: flu
     Lung adenocarcinoma: LUAD
     Lung cancer: LngCnc
