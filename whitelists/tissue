@@ -31,6 +31,7 @@ whitelist:
     - intestine
     - kidney    
     - liver
+    - left ventricle
     - lung
     - lung upper lobe
     - lung lower lobe
@@ -51,6 +52,7 @@ whitelist:
     - prostate
     - retina
     - rib
+    - right ventricle
     - salivary gland
     - skeletal muscle
     - skin 
