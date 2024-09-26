@@ -29,6 +29,7 @@ whitelist:
     heart infarct zone: hrtIz
     intestine: int
     kidney: kdny
+    left ventricle: lv
     liver: lvr
     lung: lng
     lung upper lobe: lngUL
@@ -49,6 +50,7 @@ whitelist:
     pleura: plr
     prostate: prst
     retina: rtn
+    right ventricle: rv
     salivary gland: sagl
     skeletal muscle: skmu
     skin: skn
