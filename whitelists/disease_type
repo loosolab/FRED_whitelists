@@ -31,6 +31,7 @@ whitelist:
       - Tetralogy of Fallot
     other:
       - Atherosclerosis
+      - Autoantibody-positive normoglycemia
       - Brain metastasis
       - Breast cancer
       - Cancer of unknown primary
