@@ -2,3 +2,5 @@ whitelist_type: plain
 whitelist:
     - caucasian
     - asian
+    - hispanic
+    - african american
