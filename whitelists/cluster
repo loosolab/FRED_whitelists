@@ -1,8 +1,0 @@
-whitelist_type: plain
-whitelist:
-    - GI
-    - BN
-    - BN_public
-    - GWDG
-    - GWDGmanagt
-    - BN_public
