@@ -25,6 +25,7 @@ whitelist:
     Hypertrophic cardiomyopathy: HCM
     Hypoplastic left heart syndrome: HLHS
     Influenca: flu
+    Klebsiella pneumoniae: Kpn
     Lung adenocarcinoma: LUAD
     Lung cancer: LngCnc
     Melanoma: Mln
@@ -37,5 +38,6 @@ whitelist:
     Pulmonary embolus: PulmEmb
     Pulmonary fibrosis: PulFib
     Small cell lung cancer: SCLC
+    Streptococcus pneumoniae: Spn
     Tetralogy of Fallot: TOF
     Urigenital cancer: UroCnc
