@@ -1,10 +1,13 @@
 whitelist_type: group
 whitelist:
+    infections:
+      - Covid
+      - Klebsiella pneumoniae
+      - Streptococcus pneumoniae
     lung:
       - Asthma
       - Bronchitis
       - COPD
-      - Covid
       - CTEPH
       - Influenca
       - Lung adenocarcinoma
