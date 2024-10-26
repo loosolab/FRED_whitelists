@@ -1,0 +1,6 @@
+whitelist_type: abbrev
+whitelist:
+    static stress: ststr
+    shear stress: shstr
+    hypoxia: hox
+    normoxia: nox
