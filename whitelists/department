@@ -121,6 +121,8 @@ whitelist:
   - AG-yogeswaran
   BE:
   - AG-birchmeier
+  MR:
+  - AG-graumann
   MS:
   - AG-gunawan
   MZ:
