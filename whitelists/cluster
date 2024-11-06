@@ -4,5 +4,4 @@ whitelist:
     - BN
     - BN_public
     - GWDG
-    - GWDGmanagt
     - BN_public
