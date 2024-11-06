@@ -33,3 +33,4 @@ whitelist:
     - WGS
     - ChAR-seq
     - Mass Spectrometry
+    - other
