@@ -29,3 +29,4 @@ whitelist:
     DamID-seq: DamID
     ChAR-seq: ChAR
     Mass Spectrometry: MassSpec
+    Spatial Gene Expression: SGE
