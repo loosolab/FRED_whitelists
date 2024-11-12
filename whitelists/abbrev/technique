@@ -30,3 +30,4 @@ whitelist:
     ChAR-seq: ChAR
     Mass Spectrometry: MassSpec
     Spatial Gene Expression: SGE
+    Proteomics: Prot
