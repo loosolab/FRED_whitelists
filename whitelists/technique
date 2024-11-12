@@ -6,6 +6,7 @@ whitelist:
     - bulk ChIP-seq
     - sc RNA-seq
     - sc ATAC-seq
+    - Array
     - ACT-seq
     - HiC-seq
     - MapR
@@ -33,5 +34,6 @@ whitelist:
     - DamID-seq
     - WGS
     - ChAR-seq
+    - Proteomics
     - Mass Spectrometry
     - other
