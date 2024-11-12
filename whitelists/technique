@@ -4,6 +4,7 @@ whitelist:
     - bulk RNA array
     - bulk ATAC-seq
     - bulk ChIP-seq
+    - CITE-seq
     - sc RNA-seq
     - sc ATAC-seq
     - Array
