@@ -1,6 +1,7 @@
 whitelist_type: plain
 whitelist:
     - HAP1
+    - HDBEC
     - HEK293
     - HEK293T
     - C2C12
