@@ -10,6 +10,7 @@ whitelist:
     Atrial Cardiomyocytes: ACrdmct
     B-cells: BCll
     Beta cells: BetaCll
+    Bone marrow derived macrophages: BMDMs
     Bone Marrow Neutrophils: BMNtrph
     Bronchial smooth muscle cells: BSMCs
     Brain neuron: BrNeu
@@ -61,6 +62,7 @@ whitelist:
     Parafollicular cells: ParafllCll
     Pericytes: Perict
     Peritoneal cavity Neutrophils: PCNtrph
+    Peripheral blood mononuclear cells: PBMCs
     Peripheral blood Neutrophils: PeriBlNtrph
     Peritubular cells: PeritblCll
     Plasma cells: PlCll
@@ -80,4 +82,5 @@ whitelist:
     Splenocytes: Splct
     T-cells: TCll
     Tc17-cells: Tc17Cll
+    Tissue-resident alveolar macrophages: TRAMs
     Ventricular Cardiomyocytes: VCrdmct   

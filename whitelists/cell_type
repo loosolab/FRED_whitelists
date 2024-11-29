@@ -11,6 +11,7 @@ whitelist:
     - Atrial Cardiomyocytes
     - B-cells
     - Beta cells
+    - Bone marrow derived macrophages
     - Bone Marrow Neutrophils
     - Brain neuron
     - Bronchial smooth muscle cells
@@ -68,6 +69,7 @@ whitelist:
     - Parafollicular cells
     - Pericytes
     - Peritoneal cavity Neutrophils
+    - Peripheral blood mononuclear cells
     - Peripheral blood Neutrophils
     - Peritubular cells
     - Plasma cells
@@ -90,4 +92,5 @@ whitelist:
     - Splenocytes
     - T-cells
     - Tc17-cells
+    - Tissue-resident alveolar macrophages
     - Ventricular Cardiomyocytes
