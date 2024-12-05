@@ -1,1 +1,1 @@
-{"whitelist_type": "abbrev", "whitelist": {"nucleus": "nucl", "cytosol": "cyto", "mitochondrion": "mito"}}
+{"whitelist_type": "abbrev", "whitelist": {"nucleus": "nucl", "cytosol": "cyto", "mitochondrion": "mito", "crude mitochondrion": "cmito", "mitoplast": "mitopl"}}
