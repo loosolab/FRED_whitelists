@@ -26,6 +26,7 @@ whitelist:
     Lipoprotein A: LPA
     Medication: Med
     Prostaglandin E2: PGE2
+    ProteinaseK: PrtK
     Puromycin: Prmc
     Pyruvate: Pyr
     recombinant protein: rcpr

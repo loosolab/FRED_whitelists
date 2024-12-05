@@ -26,9 +26,11 @@ whitelist:
     - Medication
     - Placebo
     - Prostaglandin E2
+    - ProteinaseK
     - Puromycin
     - Pyruvate
     - Resolvin D5
+    - RNaseA
     - Saline
     - Serum
     - Solvent
