@@ -11,6 +11,9 @@ whitelist:
     - E0771
     - HUVEC
     - HUAEC
+    - HSMMVEC
+    - HATMVEC
+    - HCMVEC
     - iPS
     - H1299
     - HDLEC
