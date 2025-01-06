@@ -1,0 +1,6 @@
+whitelist_type: plain
+whitelist:
+    - nucleus
+    - cytosol
+    - mitochondrion
+    - rest
