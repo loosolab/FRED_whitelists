@@ -37,4 +37,5 @@ whitelist:
     - ChAR-seq
     - Proteomics
     - Mass Spectrometry
+    - Whole Exome Sequencing
     - other

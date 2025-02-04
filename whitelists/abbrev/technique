@@ -32,3 +32,4 @@ whitelist:
     Spatial Gene Expression: SGE
     Proteomics: Prot
     CITE-seq: CITE
+    Whole Exome Sequencing: Exome
