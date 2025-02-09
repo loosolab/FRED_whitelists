@@ -15,6 +15,7 @@ whitelist:
     delta Cystein: dCys
     Dimethylsulfoxid: DMSO
     Doxorubicin: Doxo
+    Ethanol: EtOH
     Ferostatin: Frst
     Gemcitabine: Gctb
     Insulin: Ins
