@@ -26,12 +26,14 @@ whitelist:
     - Lipopolysaccharide
     - Lipoprotein A
     - Medication
+    - P22077
     - Placebo
     - Prostaglandin E2
     - ProteinaseK
     - Puromycin
     - Pyruvate
     - Resolvin D5
+    - Retaspimycin Hydrochloride
     - RNaseA
     - Saline
     - Selonsertib
