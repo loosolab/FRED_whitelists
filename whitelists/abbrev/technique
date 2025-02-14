@@ -33,3 +33,9 @@ whitelist:
     Proteomics: Prot
     CITE-seq: CITE
     Whole Exome Sequencing: Exome
+    Redox proteomics: Redox
+    Complexome profiling: CP
+    Dynamic complexome profiling: DynamicCP
+    Interaction proteomics: Interaction
+    Q-PerS-SID: QSID
+    Phospho proteomics: Phospho

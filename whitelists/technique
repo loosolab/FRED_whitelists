@@ -36,6 +36,13 @@ whitelist:
     - WGS
     - ChAR-seq
     - Proteomics
+    - Redox proteomics
+    - Complexome profiling
+    - Dynamic complexome profiling
+    - Interaction proteomics
+    - Q-PerS-SID
+    - PTM
+    - Phospho proteomics
     - Mass Spectrometry
     - Whole Exome Sequencing
     - other
