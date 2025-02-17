@@ -28,6 +28,7 @@ whitelist:
     Lipopolysaccharide: LPS
     Lipoprotein A: LPA
     Medication: Med
+    Mitochondria: Mito
     Prostaglandin E2: PGE2
     ProteinaseK: PrtK
     Puromycin: Prmc
