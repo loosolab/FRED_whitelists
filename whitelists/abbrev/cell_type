@@ -51,6 +51,7 @@ whitelist:
     Mast cells: MstCll
     Melanocytes: Melanoct
     Mesoderm: Meso
+    Mesenchymal stem cells: MSCs
     Mitotic cells: MitoCll
     Muscle stem cells: MsSCll
     Neonatal Cardiomyocytes: NeoCrdmct

@@ -122,6 +122,8 @@ whitelist:
   - AG-wilkins
   - AG-wygrecka
   - AG-yogeswaran
+  FRA-NA:
+  - AG-barreto
   BE:
   - AG-birchmeier
   MR:
