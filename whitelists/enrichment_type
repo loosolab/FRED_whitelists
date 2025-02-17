@@ -25,6 +25,7 @@ whitelist:
         - H9K4me3
     proteins: gene
     other:
+        - CD3
         - dmR24
         - dmR24delta
         - GFP

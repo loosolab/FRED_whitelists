@@ -18,9 +18,11 @@ whitelist:
     - Ferostatin
     - Gemcitabine
     - Insulin
+    - Interferon
     - Interleukin-1beta
     - Interleukin-9
     - Jasplakinolide
+    - L1
     - Latrunculin
     - LIGHT / TNFSF14
     - Lipopolysaccharide
