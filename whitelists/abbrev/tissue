@@ -27,6 +27,9 @@ whitelist:
     heart atrium: hrtAtr
     heart remote zone: hrtRz
     heart infarct zone: hrtIz
+    heart right atrium: rAtr
+    heart left atrium: lAtr
+    heart apex: hrtApx
     intestine: int
     kidney: kdny
     left ventricle: lv
