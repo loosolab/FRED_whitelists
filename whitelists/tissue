@@ -26,6 +26,9 @@ whitelist:
     - heart
     - heart septum
     - heart atrium
+    - heart right atrium
+    - heart left atrium
+    - heart apex
     - heart remote zone
     - heart infarct zone
     - intestine
