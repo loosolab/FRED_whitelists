@@ -127,6 +127,8 @@ whitelist:
   - AG-barreto
   BE:
   - AG-birchmeier
+  BN:
+  - AG-gajawada
   MR:
   - AG-graumann
   MS:
