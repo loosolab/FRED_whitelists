@@ -1,1 +1,1 @@
-{"whitelist_type": "abbrev", "whitelist": {"treatment_status": "sts", "temperature": "temp", "treatment_duration": "dur"}}
+{"whitelist_type": "abbrev", "whitelist": {"temperature_status": "sts", "temperature": "temp", "temperature_duration": "dur"}}
