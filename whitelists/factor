@@ -8,6 +8,7 @@ whitelist:
     treatments:
         - medical_treatment
         - physical_treatment
+        - temperature_treatment
         - injury
     biological factors:
         - tissue

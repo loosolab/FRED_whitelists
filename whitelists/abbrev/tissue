@@ -62,6 +62,7 @@ whitelist:
     spinal cord: spCrd
     spleen: spln
     stomach: stm
+    stromal vascular fraction: svf
     testis: tsts
     thymus: thym
     thyroid: thyr
