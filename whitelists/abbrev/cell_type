@@ -67,6 +67,7 @@ whitelist:
     Peripheral blood Neutrophils: PeriBlNtrph
     Peritubular cells: PeritblCll
     Plasma cells: PlCll
+    Pluripotent Stem Cells: PSCs
     Podocytes: Podoct
     Primary myoblasts: PrMyo
     Prostate basal glandular cells: PrstBGlCll

@@ -13,11 +13,17 @@ whitelist:
     - calvaria
     - caudal fin
     - cartilage
+    - cerebellum
     - cervix
     - chorionic villus
     - colon
+    - colon ascending
+    - colon sigmoid
+    - colon transverse
     - cord blood
+    - duodenum
     - embryonic stem cell
+    - epityphlon
     - esophagus
     - eye
     - fallopian tube
@@ -31,7 +37,9 @@ whitelist:
     - heart apex
     - heart remote zone
     - heart infarct zone
+    - ileum
     - intestine
+    - jejunum
     - kidney    
     - liver
     - left ventricle
@@ -53,6 +61,7 @@ whitelist:
     - placenta
     - pleura
     - prostate
+    - rectum
     - retina
     - rib
     - right ventricle
@@ -63,7 +72,8 @@ whitelist:
     - smooth muscle
     - spinal cord
     - spleen
-    - stomach    
+    - stomach   
+    - temporal lobe 
     - testis
     - thymus
     - thyroid
