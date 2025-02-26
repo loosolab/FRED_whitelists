@@ -17,3 +17,6 @@ whitelist:
     - passages
     - ng/μl
     - '%'
+    - '°C'
+    - '°F'
+    - K
