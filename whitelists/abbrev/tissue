@@ -13,11 +13,17 @@ whitelist:
     calvaria: clv
     caudal fin: cf
     cartilage: crtl
+    cerebellum: cereb
     cervix: crvx
     chorionic villus: chorVil
     colon: col
+    colon ascending: colAs
+    colon sigmoid: colSig
+    colon transverse: colTrans
     cord blood: crdBl
+    duodenum: duo
     embryonic stem cell: esc
+    epityphlon: epitph
     esophagus: eso
     fallopian tube: fllTb
     fetal gonad: fetGnd
@@ -31,6 +37,7 @@ whitelist:
     heart left atrium: lAtr
     heart apex: hrtApx
     intestine: int
+    jejunum: jeju
     kidney: kdny
     left ventricle: lv
     liver: lvr
@@ -52,6 +59,7 @@ whitelist:
     placenta: plct
     pleura: plr
     prostate: prst
+    rectum: rec
     retina: rtn
     right ventricle: rv
     salivary gland: sagl
@@ -63,6 +71,7 @@ whitelist:
     spleen: spln
     stomach: stm
     stromal vascular fraction: svf
+    temporal lobe: tmpL
     testis: tsts
     thymus: thym
     thyroid: thyr
