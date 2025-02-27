@@ -19,6 +19,7 @@ whitelist:
     Ethanol: EtOH
     Ferostatin: Frst
     Gemcitabine: Gctb
+    GSK1120212: GSK
     Insulin: Ins
     Interferon: IFN
     Interleukin-1beta: Il1b
@@ -44,4 +45,5 @@ whitelist:
     SPiDER-βGal: SPiDER
     Stearoylcarnitine: C18Car
     Trichostatin A: TSA  
+    Ulixertinib: Ulx
     XMU-MP-1: XmuMp1
