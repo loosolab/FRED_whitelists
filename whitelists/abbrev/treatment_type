@@ -31,6 +31,7 @@ whitelist:
     Lipoprotein A: LPA
     Medication: Med
     Mitochondria: Mito
+    Oncostatin M: OSM
     Prostaglandin E2: PGE2
     ProteinaseK: PrtK
     Puromycin: Prmc
