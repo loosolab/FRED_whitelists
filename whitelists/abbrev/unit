@@ -12,3 +12,5 @@ whitelist:
     passages: psg
     ng/μl: ngmyL
     '%': pct
+    '°C': dgrC
+    '°F': dgrF
