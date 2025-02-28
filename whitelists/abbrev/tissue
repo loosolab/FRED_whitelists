@@ -10,6 +10,7 @@ whitelist:
     brain: brn
     brain microglia: brnMgl
     breast: brst
+    brown adipose tissue: badti
     calvaria: clv
     caudal fin: cf
     cartilage: crtl
@@ -83,4 +84,5 @@ whitelist:
     uterus: utr
     vasculature: vas
     ventricle: ven
+    white adipose tissue: wadti
 
