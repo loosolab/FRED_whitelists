@@ -10,6 +10,7 @@ whitelist:
     - brain
     - brain microglia
     - breast
+    - brown adipose tissue
     - calvaria
     - caudal fin
     - cartilage
@@ -86,4 +87,5 @@ whitelist:
     - uterus
     - vasculature
     - ventricle
+    - white adipose tissue
 
