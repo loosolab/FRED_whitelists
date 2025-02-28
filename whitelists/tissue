@@ -40,12 +40,14 @@ whitelist:
     - ileum
     - intestine
     - jejunum
-    - kidney    
+    - kidney 
+    - large intestine   
     - liver
     - left ventricle
     - lung
     - lung upper lobe
     - lung lower lobe
+    - lymph node
     - muscle
     - muscle Extensor Digitorum Longus
     - muscle Gastrocnemius
@@ -82,5 +84,6 @@ whitelist:
     - tongue
     - ureter
     - uterus
+    - vasculature
     - ventricle
 
