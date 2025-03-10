@@ -22,6 +22,7 @@ whitelist:
     colon sigmoid: colSig
     colon transverse: colTrans
     cord blood: crdBl
+    cranial neural crest: crNCr
     duodenum: duo
     embryonic stem cell: esc
     epityphlon: epitph
