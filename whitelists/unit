@@ -1,0 +1,22 @@
+whitelist_type: plain
+whitelist:
+    - seconds
+    - minutes
+    - hours
+    - days
+    - weeks
+    - months
+    - years
+    - ml
+    - l
+    - nl
+    - μM
+    - nM
+    - mol
+    - kg/m2
+    - passages
+    - ng/μl
+    - '%'
+    - '°C'
+    - '°F'
+    - K
