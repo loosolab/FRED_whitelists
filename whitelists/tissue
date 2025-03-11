@@ -1,6 +1,8 @@
 whitelist_type: plain
 whitelist:
     - adipose tissue
+    - adipose tissue subcutaneous
+    - adipose tissue visceral
     - adrenal gland
     - artery
     - bladder
@@ -8,14 +10,22 @@ whitelist:
     - brain
     - brain microglia
     - breast
+    - brown adipose tissue
     - calvaria
     - caudal fin
     - cartilage
+    - cerebellum
     - cervix
     - chorionic villus
     - colon
+    - colon ascending
+    - colon sigmoid
+    - colon transverse
     - cord blood
+    - cranial neural crest 
+    - duodenum
     - embryonic stem cell
+    - epityphlon
     - esophagus
     - eye
     - fallopian tube
@@ -23,12 +33,23 @@ whitelist:
     - gallbladder
     - heart
     - heart septum
+    - heart atrium
+    - heart right atrium
+    - heart left atrium
+    - heart apex
+    - heart remote zone
+    - heart infarct zone
+    - ileum
     - intestine
-    - kidney    
+    - jejunum
+    - kidney 
+    - large intestine   
     - liver
+    - left ventricle
     - lung
     - lung upper lobe
     - lung lower lobe
+    - lymph node
     - muscle
     - muscle Extensor Digitorum Longus
     - muscle Gastrocnemius
@@ -44,8 +65,10 @@ whitelist:
     - placenta
     - pleura
     - prostate
+    - rectum
     - retina
     - rib
+    - right ventricle
     - salivary gland
     - skeletal muscle
     - skin 
@@ -53,7 +76,9 @@ whitelist:
     - smooth muscle
     - spinal cord
     - spleen
-    - stomach    
+    - stomach  
+    - stromal vascular fraction    
+    - temporal lobe 
     - testis
     - thymus
     - thyroid
@@ -61,4 +86,6 @@ whitelist:
     - tongue
     - ureter
     - uterus
+    - vasculature
     - ventricle
+    - white adipose tissue

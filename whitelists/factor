@@ -8,6 +8,7 @@ whitelist:
     treatments:
         - medical_treatment
         - physical_treatment
+        - temperature_treatment
         - injury
     biological factors:
         - tissue
@@ -20,6 +21,7 @@ whitelist:
         - life_stage
         - age
         - ethnicity
+        - body_type
         - body_mass_index
     other:
         - concentration

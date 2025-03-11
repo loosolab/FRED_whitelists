@@ -27,3 +27,15 @@ whitelist:
     GLORI-seq: GLORI
     Quant-seq: Quant
     DamID-seq: DamID
+    ChAR-seq: ChAR
+    Mass Spectrometry: MassSpec
+    Spatial Gene Expression: SGE
+    Proteomics: Prot
+    CITE-seq: CITE
+    Whole Exome Sequencing: Exome
+    Redox proteomics: Redox
+    Complexome profiling: CP
+    Dynamic complexome profiling: DynamicCP
+    Interaction proteomics: Interaction
+    Q-PerS-SID: QSID
+    Phospho proteomics: Phospho

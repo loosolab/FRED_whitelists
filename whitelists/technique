@@ -4,10 +4,13 @@ whitelist:
     - bulk RNA array
     - bulk ATAC-seq
     - bulk ChIP-seq
+    - CITE-seq
     - sc RNA-seq
     - sc ATAC-seq
+    - Array
     - ACT-seq
     - HiC-seq
+    - MapR
     - MNase-seq
     - DART-seq
     - HyperTribe-seq
@@ -26,7 +29,20 @@ whitelist:
     - DRIP-seq
     - snRNA-seq
     - snATAC-seq
+    - Spatial Gene Expression
     - GLORI-seq
     - Quant-seq
     - DamID-seq
     - WGS
+    - ChAR-seq
+    - Proteomics
+    - Redox proteomics
+    - Complexome profiling
+    - Dynamic complexome profiling
+    - Interaction proteomics
+    - Q-PerS-SID
+    - PTM
+    - Phospho proteomics
+    - Mass Spectrometry
+    - Whole Exome Sequencing
+    - other

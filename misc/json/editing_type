@@ -1,1 +1,1 @@
-{"whitelist_type": "plain", "whitelist": ["WT", "knockdown", "knockout", "overexpression"]}
+{"whitelist_type": "plain", "whitelist": ["WT", "knockin", "knockdown", "knockout", "overexpression"]}

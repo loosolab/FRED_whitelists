@@ -1,11 +1,22 @@
 whitelist_type: plain
 whitelist:
-    - HAP1
-    - HEK293T
-    - C2C12
-    - NIH3T3
     - B16F10
-    - LLC1
+    - C2C12
     - E0771
-    - HUVEC
+    - H1299
+    - H9
+    - HAP1
+    - HATMVEC
+    - HCMVEC
+    - HDBEC
+    - HDLEC
+    - HEK293
+    - HEK293T
+    - HPAEC
+    - HSMMVEC
     - HUAEC
+    - HUVEC
+    - iPS
+    - LLC1
+    - NIH3T3
+    - RC11

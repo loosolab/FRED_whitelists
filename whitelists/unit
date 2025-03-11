@@ -16,3 +16,7 @@ whitelist:
     - kg/m2
     - passages
     - ng/μl
+    - '%'
+    - '°C'
+    - '°F'
+    - K

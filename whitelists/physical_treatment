@@ -2,5 +2,9 @@ whitelist_type: plain
 whitelist:
     - static stress
     - shear stress
+    - hyperoxia  
     - hypoxia
     - normoxia
+    - revovery
+    - high fat diet
+    - normal chow diet

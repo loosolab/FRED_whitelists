@@ -1,6 +1,8 @@
 whitelist_type: abbrev
 whitelist:
     adipose tissue: adti
+    adipose tissue subcutaneous: adtisub
+    adipose tissue visceral: adtivis
     adrenal gland: adgl
     artery: art
     bladder: bldr
@@ -8,26 +10,44 @@ whitelist:
     brain: brn
     brain microglia: brnMgl
     breast: brst
+    brown adipose tissue: badti
     calvaria: clv
     caudal fin: cf
     cartilage: crtl
+    cerebellum: cereb
     cervix: crvx
     chorionic villus: chorVil
     colon: col
+    colon ascending: colAs
+    colon sigmoid: colSig
+    colon transverse: colTrans
     cord blood: crdBl
+    cranial neural crest: crNCr
+    duodenum: duo
     embryonic stem cell: esc
+    epityphlon: epitph
     esophagus: eso
     fallopian tube: fllTb
     fetal gonad: fetGnd
     gallbladder: gllbl
     heart: hrt
     heart septum: hrtSep
+    heart atrium: hrtAtr
+    heart remote zone: hrtRz
+    heart infarct zone: hrtIz
+    heart right atrium: rAtr
+    heart left atrium: lAtr
+    heart apex: hrtApx
     intestine: int
+    jejunum: jeju
     kidney: kdny
+    large intestine: lgInt
+    left ventricle: lv
     liver: lvr
     lung: lng
     lung upper lobe: lngUL
     lung lower lobe: lngLL
+    lymph node: lymphN
     muscle: mu
     muscle extensor digitorum longus: muEDL
     muscle Gastrocnemius: muGstr
@@ -43,7 +63,9 @@ whitelist:
     placenta: plct
     pleura: plr
     prostate: prst
+    rectum: rec
     retina: rtn
+    right ventricle: rv
     salivary gland: sagl
     skeletal muscle: skmu
     skin: skn
@@ -52,6 +74,8 @@ whitelist:
     spinal cord: spCrd
     spleen: spln
     stomach: stm
+    stromal vascular fraction: svf
+    temporal lobe: tmpL
     testis: tsts
     thymus: thym
     thyroid: thyr
@@ -59,4 +83,7 @@ whitelist:
     tongue: tng
     ureter: urt
     uterus: utr
+    vasculature: vas
     ventricle: ven
+    white adipose tissue: wadti
+
