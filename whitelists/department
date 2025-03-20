@@ -85,6 +85,7 @@ whitelist:
   - AG-agha
   - AG-aguenther
   - AG-alcazar
+  - AG-alexopoulos
   - AG-bartkuhn
   - AG-baumgartvogt
   - AG-bellusci
@@ -131,8 +132,11 @@ whitelist:
   - AG-gajawada
   MR:
   - AG-graumann
+  - AG-skevaki
   MS:
   - AG-gunawan
+  SE-UPP:
+  - AG-juan
   MZ:
   - AG-kschaefer
   US-MI-AA:
