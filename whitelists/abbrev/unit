@@ -1,0 +1,16 @@
+whitelist_type: abbrev
+whitelist:
+    seconds: s
+    minutes: min
+    hours: h
+    days: d
+    weeks: wk
+    months: mo
+    years: y
+    kg/m2: kgm2
+    μM: miM
+    passages: psg
+    ng/μl: ngmyL
+    '%': pct
+    '°C': dgrC
+    '°F': dgrF
