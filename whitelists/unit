@@ -15,6 +15,7 @@ whitelist:
     - mol
     - kg/m2
     - passages
+    - U/kg
     - ng/μl
     - '%'
     - '°C'
