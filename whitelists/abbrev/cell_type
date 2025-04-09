@@ -35,6 +35,7 @@ whitelist:
     Exocrine glandular cells: ExoGlCll
     Fibroblasts: Fbrb
     Fibroblast-like synoviocytes: FLS
+    Fibrocytes: FCs
     Gastric enteroendocrine cells: GstrEntendCll
     Gastric mucous cells: GstrMucoCll
     Hair cortex cells: HairCrtxCll
