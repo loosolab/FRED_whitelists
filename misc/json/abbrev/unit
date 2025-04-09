@@ -1,1 +1,1 @@
-{"whitelist_type": "abbrev", "whitelist": {"seconds": "s", "minutes": "min", "hours": "h", "days": "d", "weeks": "wk", "months": "mo", "years": "y", "kg/m2": "kgm2", "\u03bcM": "miM", "passages": "psg", "ng/\u03bcl": "ngmyL", "%": "pct", "\u00b0C": "dgrC", "\u00b0F": "dgrF"}}
+{"whitelist_type": "abbrev", "whitelist": {"seconds": "s", "minutes": "min", "hours": "h", "days": "d", "weeks": "wk", "months": "mo", "years": "y", "kg/m2": "kgm2", "\u03bcM": "miM", "passages": "psg", "ng/\u03bcl": "ngmyL", "U/kg": "Ukg", "%": "pct", "\u00b0C": "dgrC", "\u00b0F": "dgrF"}}
