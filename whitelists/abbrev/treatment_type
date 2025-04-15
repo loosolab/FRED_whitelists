@@ -1,0 +1,52 @@
+whitelist_type: abbrev
+whitelist:
+    11,12-DHET: DHET
+    12,13-DiHOME: DiHOME
+    19,20-DiHDPA: DiHDPA
+    2-deoxyglucose: 2doxgl
+    Actinomycin-D: ActD
+    Antisense oligonucleotide: ASO
+    Antisense oligonucleotide non-targeting: nonASO
+    Blebbistatin: BlSt
+    Bleomycin: Blmy
+    Bovine Serum Albumine: BSA
+    C16 ceramide: C16cer
+    Cardiotoxin: Crdtxn
+    Catecholamine: Cat
+    Placebo: Plc
+    delta Cystein: dCys
+    Dexamethason: DEX
+    Dimethylsulfoxid: DMSO
+    Doxorubicin: Doxo
+    Ethanol: EtOH
+    Ferostatin: Frst
+    Gemcitabine: Gctb
+    GSK1120212: GSK
+    Insulin: Ins
+    Interferon: IFN
+    Interleukin-1beta: Il1b
+    Interleukin-9: Il9
+    Jasplakinolide: Jspl
+    Latrunculin: Latr
+    LIGHT / TNFSF14: LIGHT
+    Lipopolysaccharide: LPS
+    Lipoprotein A: LPA
+    Medication: Med
+    Mitochondria: Mito
+    Oncostatin M: OSM
+    Prostaglandin E2: PGE2
+    ProteinaseK: PrtK
+    Puromycin: Prmc
+    Pyruvate: Pyr
+    recombinant protein: rcpr
+    Resolvin D5: RvD5
+    Retaspimycin Hydrochloride: RspHCl
+    Selonsertib: Slnst
+    Saline: Sal
+    Serum: Ser
+    Solvent: Slvt
+    SPiDER-βGal: SPiDER
+    Stearoylcarnitine: C18Car
+    Trichostatin A: TSA  
+    Ulixertinib: Ulx
+    XMU-MP-1: XmuMp1
