@@ -13,6 +13,7 @@ whitelist:
     C16 ceramide: C16cer
     Cardiotoxin: Crdtxn
     Catecholamine: Cat
+    Clodronate Liposome: CloLip
     Placebo: Plc
     delta Cystein: dCys
     Dexamethason: DEX
@@ -34,6 +35,7 @@ whitelist:
     Medication: Med
     Mitochondria: Mito
     Oncostatin M: OSM
+    Phosphate-buffered saline: PBS
     Prostaglandin E2: PGE2
     ProteinaseK: PrtK
     Puromycin: Prmc
