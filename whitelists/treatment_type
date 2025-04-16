@@ -14,6 +14,7 @@ whitelist:
     - C16 ceramide
     - Cardiotoxin
     - Catecholamine
+    - Clodronate Liposome
     - delta Cystein
     - Dexamethason
     - Dimethylsulfoxid
@@ -36,6 +37,7 @@ whitelist:
     - Mitochondria
     - Oncostatin M
     - P22077
+    - Phosphate-buffered saline
     - Placebo
     - Prostaglandin E2
     - ProteinaseK
