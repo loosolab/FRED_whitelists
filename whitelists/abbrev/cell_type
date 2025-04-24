@@ -71,6 +71,7 @@ whitelist:
     Pluripotent Stem Cells: PSCs
     Podocytes: Podoct
     Primary myoblasts: PrMyo
+    Primary monocyte-derived macrophages: MDMs
     Prostate basal glandular cells: PrstBGlCll
     Prostate glandular cells: PrstGlCll
     Proximal tubular cells: ProxTblCll
@@ -85,5 +86,6 @@ whitelist:
     Splenocytes: Splct
     T-cells: TCll
     Tc17-cells: Tc17Cll
+    THP-1 derived macrophages: THP1Ms
     Tissue-resident alveolar macrophages: TRAMs
     Ventricular Cardiomyocytes: VCrdmct   
