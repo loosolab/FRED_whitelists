@@ -35,6 +35,7 @@ whitelist:
     - Lipoprotein A
     - Medication
     - Mitochondria
+    - MTC1/4 inhibitor
     - Oncostatin M
     - P22077
     - Phosphate-buffered saline
@@ -49,6 +50,7 @@ whitelist:
     - Saline
     - Selonsertib
     - Serum
+    - Sodium L-lactate
     - Solvent
     - SPiDER-βGal
     - Stearoylcarnitine
