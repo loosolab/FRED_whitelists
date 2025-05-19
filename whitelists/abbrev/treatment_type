@@ -34,6 +34,7 @@ whitelist:
     Lipoprotein A: LPA
     Medication: Med
     Mitochondria: Mito
+    MTC1/4 inhibitor: MTC14
     Oncostatin M: OSM
     Phosphate-buffered saline: PBS
     Prostaglandin E2: PGE2
@@ -46,6 +47,7 @@ whitelist:
     Selonsertib: Slnst
     Saline: Sal
     Serum: Ser
+    Sodium L-lactate: SLLact
     Solvent: Slvt
     SPiDER-βGal: SPiDER
     Stearoylcarnitine: C18Car
