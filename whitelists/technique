@@ -27,6 +27,7 @@ whitelist:
     - Cut&Tag
     - ChiRP-seq
     - DRIP-seq
+    - small RNA-seq
     - snRNA-seq
     - snATAC-seq
     - Spatial Gene Expression

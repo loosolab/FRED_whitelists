@@ -22,6 +22,7 @@ whitelist:
     Cut&Tag: CutnTag
     ChiRP-seq: CHiRP
     DRIP-seq: DRIP
+    small RNA-seq: smallRNA
     snRNA-seq: snRNA
     snATAC-seq: snATAC
     GLORI-seq: GLORI
