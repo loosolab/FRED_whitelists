@@ -22,6 +22,7 @@ whitelist:
     - Ethanol
     - Ferostatin
     - Gemcitabine
+    - Growth Factor
     - GSK1120212
     - Insulin
     - Interferon
@@ -33,6 +34,7 @@ whitelist:
     - LIGHT / TNFSF14
     - Lipopolysaccharide
     - Lipoprotein A
+    - M200
     - Medication
     - Mitochondria
     - MTC1/4 inhibitor
