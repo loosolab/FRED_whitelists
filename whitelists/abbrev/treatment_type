@@ -22,6 +22,7 @@ whitelist:
     Ethanol: EtOH
     Ferostatin: Frst
     Gemcitabine: Gctb
+    Growth Factor: GF
     GSK1120212: GSK
     Insulin: Ins
     Interferon: IFN
