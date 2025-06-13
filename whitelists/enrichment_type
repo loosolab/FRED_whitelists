@@ -34,3 +34,4 @@ whitelist:
         - Input
         - HA tag
         - Ribosome
+        - S9.6
