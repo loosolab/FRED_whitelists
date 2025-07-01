@@ -10,6 +10,7 @@ whitelist:
     Blebbistatin: BlSt
     Bleomycin: Blmy
     Bovine Serum Albumine: BSA
+    C-reactive protein: CRP
     C16 ceramide: C16cer
     Cardiotoxin: Crdtxn
     Catecholamine: Cat
@@ -24,6 +25,7 @@ whitelist:
     Gemcitabine: Gctb
     Growth Factor: GF
     GSK1120212: GSK
+    Immunosuppression: IS
     Insulin: Ins
     Interferon: IFN
     Interleukin-1beta: Il1b
