@@ -128,6 +128,8 @@ whitelist:
   - AG-barreto
   BE:
   - AG-birchmeier
+  GOE:
+  - AG-dihazi
   BN:
   - AG-gajawada
   - AG-mustermann
@@ -140,7 +142,11 @@ whitelist:
   - AG-juan
   MZ:
   - AG-kschaefer
+  FB:
+  - AG-pankratz
   US-MI-AA:
   - AG-perezmillan
   HAL:
   - AG-sedding
+  B:
+  - AG-wyler
