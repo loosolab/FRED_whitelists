@@ -149,5 +149,7 @@ whitelist:
   - AG-perezmillan
   HAL:
   - AG-sedding
+  HB:
+  - AG-thurner
   B:
   - AG-wyler
