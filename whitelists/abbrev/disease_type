@@ -4,6 +4,7 @@ whitelist:
     Asthma: Asth
     Atherosclerosis: ArtScl
     Autoantibody-positive normoglycemia: AABpos
+    Aortic Aneurysm: AAnrysm
     Blood pressure: BldPrs
     Brain metastasis: BrMts
     Breast cancer: BrstCnc
