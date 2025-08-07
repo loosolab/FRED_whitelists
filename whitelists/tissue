@@ -5,7 +5,9 @@ whitelist:
     - adipose tissue visceral
     - adrenal gland
     - artery
+    - axilla
     - bladder
+    - bone
     - bone marrow
     - brain
     - brain microglia
@@ -16,6 +18,7 @@ whitelist:
     - cartilage
     - cerebellum
     - cervix
+    - chest wall
     - chorionic villus
     - colon
     - colon ascending
@@ -57,6 +60,7 @@ whitelist:
     - muscle Quadriceps
     - muscle Soleus
     - muscle Tibialis
+    - neck
     - omentum
     - organoids
     - ovary   
