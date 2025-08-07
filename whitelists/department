@@ -78,7 +78,6 @@ whitelist:
   - AG-walther
   - AG-weigert
   - AG-wittig
-  - AG-zarnack
   - AG-zeiher
   GI:
   - AG-acker
@@ -153,3 +152,5 @@ whitelist:
   - AG-thurner
   B:
   - AG-wyler
+  WB:
+  - AG-zarnack
