@@ -5,6 +5,7 @@ whitelist:
     adipose tissue visceral: adtivis
     adrenal gland: adgl
     artery: art
+    axilla: axl
     bladder: bldr
     bone marrow: bm
     brain: brn
@@ -16,6 +17,7 @@ whitelist:
     cartilage: crtl
     cerebellum: cereb
     cervix: crvx
+    chest wall: chw
     chorionic villus: chorVil
     colon: col
     colon ascending: colAs
