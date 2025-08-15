@@ -21,6 +21,7 @@ whitelist:
         - H4K16Ac
         - H4K20me1
         - H4K20me2
+        - H4K20me3
         - H4K5
         - H9K4me3
     proteins: gene
