@@ -1,0 +1,7 @@
+whitelist_type: abbrev
+whitelist:
+    gene_name: gn
+    ensembl_id: embl
+    Ribosome: Ribo
+    HA tag: HA
+    S9.6: S9p6
