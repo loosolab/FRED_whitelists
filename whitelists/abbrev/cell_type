@@ -46,6 +46,7 @@ whitelist:
     Innate lymphoid cells: ILCs
     Keratinocyte (granular): granKrtnct
     Keratinocyte (other): othKrtnct
+    Leukocytes: leuko
     Langerhans cells: LnghnsCll
     Liver Neutrophils: LvrNtrph
     Macrophages: Mcrp
