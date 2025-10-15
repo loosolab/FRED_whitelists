@@ -23,6 +23,7 @@ whitelist:
     Glioblastoma: Gliob
     Heart failure: HrtFail
     Heart Failure with preserved Ejection Fraction: HFpEF
+    Heart Failure with reduced Ejection Fraction: HFrEF
     Hypertrophic cardiomyopathy: HCM
     Hypoplastic left heart syndrome: HLHS
     Influenca: flu
@@ -40,5 +41,6 @@ whitelist:
     Pulmonary fibrosis: PulFib
     Small cell lung cancer: SCLC
     Streptococcus pneumoniae: Spn
+    Suspected Myocardial Ischemia: sMIsch
     Tetralogy of Fallot: TOF
     Urigenital cancer: UroCnc
