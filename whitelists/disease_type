@@ -28,9 +28,11 @@ whitelist:
       - Dilated cardiomyopathy
       - Heart failure
       - Heart Failure with preserved Ejection Fraction
+      - Heart Failure with reduced Ejection Fraction
       - Hypertrophic cardiomyopathy
       - Hypoplastic left heart syndrome
       - Myocardial Infarction
+      - Suspected Myocardial Ischemia
       - Tetralogy of Fallot
     other:
       - Atherosclerosis
