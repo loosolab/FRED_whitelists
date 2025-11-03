@@ -5,6 +5,7 @@ whitelist:
     19,20-DiHDPA: DiHDPA
     2-deoxyglucose: 2doxgl
     Actinomycin-D: ActD
+    Alpha-ketoglutarate: aKG
     Antisense oligonucleotide: ASO
     Antisense oligonucleotide non-targeting: nonASO
     Blebbistatin: BlSt
