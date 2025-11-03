@@ -1,6 +1,7 @@
 whitelist_type: group
 whitelist:
     knockdown:
+        - shRNA 
         - siRNA
         - morpholino
         - CRISPR-Cas13

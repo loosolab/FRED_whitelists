@@ -5,6 +5,7 @@ whitelist:
     - 19,20-DiHDPA
     - 2-deoxyglucose
     - A549 
+    - Alpha-ketoglutarate
     - Actinomycin-D
     - Antisense oligonucleotide
     - Antisense oligonucleotide non-targeting
