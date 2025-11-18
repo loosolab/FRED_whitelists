@@ -3,8 +3,7 @@
 import os
 import sys
 import json
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'metadata-organizer'))
-import src.utils as utils
+import fred.src.utils as utils
 
 
 def convert_folder(folder_path, json_path):

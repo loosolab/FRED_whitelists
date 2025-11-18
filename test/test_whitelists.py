@@ -3,8 +3,7 @@
 import os
 import sys
 import collections
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'metadata-organizer'))
-import src.utils as utils
+import fred.src.utils as utils
 
 def test_whitelists():
     whitelist_path = os.path.join(os.path.dirname(__file__), '..', 'whitelists')
