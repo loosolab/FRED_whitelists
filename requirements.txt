@@ -9,3 +9,4 @@ pytz~=2022.2.1
 python-dateutil~=2.8.2
 GitPython>=3.1.18
 auth0-python
+fred-metadata

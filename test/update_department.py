@@ -5,8 +5,7 @@ import auth0.management as amng
 import argparse
 import os
 import sys
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'metadata-organizer'))
-import src.utils as utils
+import fred.src.utils as utils
 
 
 
