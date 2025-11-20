@@ -62,6 +62,8 @@ whitelist:
     - muscle Tibialis
     - neck
     - omentum
+    - organoid G06
+    - organoid W78.9
     - organoids
     - ovary   
     - pancreas

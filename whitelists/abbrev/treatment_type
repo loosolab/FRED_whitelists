@@ -15,6 +15,7 @@ whitelist:
     C16 ceramide: C16cer
     Cardiotoxin: Crdtxn
     Catecholamine: Cat
+    Cigarette smoke exposure: CigEx
     Clodronate Liposome: CloLip
     Placebo: Plc
     delta Cystein: dCys
