@@ -58,6 +58,8 @@ whitelist:
     muscle Soleus: muSol
     muscle Tibialis: muTib
     omentum: omnt
+    organoid G06: orgG06
+    organoid W78.9: orgW78p9
     organoids: org
     ovary: ovr
     pancreas: pncr
