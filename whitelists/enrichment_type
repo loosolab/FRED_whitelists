@@ -29,6 +29,7 @@ whitelist:
         - CD3
         - dmR24
         - dmR24delta
+        - FLAG tag
         - GFP
         - IgG
         - m6A
