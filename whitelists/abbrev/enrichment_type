@@ -5,3 +5,4 @@ whitelist:
     Ribosome: Ribo
     HA tag: HA
     S9.6: S9p6
+    FLAG tag: FLAG
