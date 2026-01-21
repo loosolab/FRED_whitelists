@@ -13,6 +13,8 @@ whitelist:
   - Abt-M
   - Abt-N
   - Abt-O
+  - Abt-P
+  - Abt-Q
   - AG-aianni
   - AG-aschnei
   - AG-DeepSeq
@@ -130,6 +132,9 @@ whitelist:
   - AG-barreto
   BE:
   - AG-birchmeier
+  HB:
+  - AG-dieterich
+  - AG-thurner
   GOE:
   - AG-dihazi
   BN:
@@ -137,6 +142,7 @@ whitelist:
   - AG-mustermann
   - AG-sossalla
   MR:
+  - AG-garn
   - AG-graumann
   - AG-skevaki
   MS:
@@ -151,8 +157,6 @@ whitelist:
   - AG-perezmillan
   HAL:
   - AG-sedding
-  HB:
-  - AG-thurner
   B:
   - AG-wyler
   WB:
