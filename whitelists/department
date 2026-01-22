@@ -134,6 +134,7 @@ whitelist:
   - AG-birchmeier
   HB:
   - AG-dieterich
+  - AG-mizik
   - AG-thurner
   GOE:
   - AG-dihazi
@@ -144,6 +145,7 @@ whitelist:
   MR:
   - AG-garn
   - AG-graumann
+  - AG-helker
   - AG-skevaki
   MS:
   - AG-gunawan
