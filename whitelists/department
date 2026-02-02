@@ -132,6 +132,8 @@ whitelist:
   - AG-barreto
   BE:
   - AG-birchmeier
+  NL-AD:
+  - AG-buikema
   HB:
   - AG-dieterich
   - AG-mizik
@@ -146,6 +148,7 @@ whitelist:
   - AG-garn
   - AG-graumann
   - AG-helker
+  - AG-pogge
   - AG-skevaki
   MS:
   - AG-gunawan
