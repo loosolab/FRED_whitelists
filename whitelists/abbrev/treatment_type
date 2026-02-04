@@ -25,6 +25,7 @@ whitelist:
     Ethanol: EtOH
     Extracellular vesicles: EVs
     Ferostatin: Frst
+    GDC-0623: GDC0623
     Gemcitabine: Gctb
     Growth Factor: GF
     GSK1120212: GSK
