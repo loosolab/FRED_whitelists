@@ -45,6 +45,7 @@ whitelist:
     kidney: kdny
     large intestine: lgInt
     left ventricle: lv
+    Lewis lung carcinoma tumor: LLC1
     liver: lvr
     lung: lng
     lung upper lobe: lngUL
