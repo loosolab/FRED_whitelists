@@ -1,6 +1,0 @@
-whitelist_type: abbrev
-whitelist:
-    treatment_status: sts
-    temperature: temp
-    treatment_duration: dur
-    
