@@ -26,6 +26,10 @@ whitelist:
         - H9K4me3
     proteins: gene
     other:
+        - 5-carboxylcytosin
+        - 5-hydroxymethylcytosine
+        - 5-methylcytosine
+        - 5-formylcytosine
         - Biotin
         - CD3
         - dmR24
