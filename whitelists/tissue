@@ -16,6 +16,7 @@ whitelist:
     - calvaria
     - caudal fin
     - cartilage
+    - carotid artery
     - cerebellum
     - cervix
     - chest wall
@@ -25,6 +26,7 @@ whitelist:
     - colon sigmoid
     - colon transverse
     - cord blood
+    - coronary artery
     - cranial neural crest 
     - duodenum
     - embryonic stem cell
@@ -32,6 +34,7 @@ whitelist:
     - esophagus
     - eye
     - fallopian tube
+    - femoral artery
     - fetal gonad
     - gallbladder
     - heart
