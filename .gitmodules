@@ -1,0 +1,4 @@
+[submodule "metadata-organizer"]
+	path = metadata-organizer
+	url = ../metadata-organizer.git
+	branch = main
