@@ -6,6 +6,7 @@ whitelist:
     2-deoxyglucose: 2doxgl
     Actinomycin-D: ActD
     Alpha-ketoglutarate: aKG
+    Amiodarone: AMD
     Antisense oligonucleotide: ASO
     Antisense oligonucleotide non-targeting: nonASO
     Blebbistatin: BlSt
