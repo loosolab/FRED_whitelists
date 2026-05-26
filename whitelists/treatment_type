@@ -7,6 +7,7 @@ whitelist:
     - A549 
     - Alpha-ketoglutarate
     - Actinomycin-D
+    - Amiodarone 
     - Antisense oligonucleotide
     - Antisense oligonucleotide non-targeting
     - Blebbistatin
@@ -25,6 +26,7 @@ whitelist:
     - Ethanol
     - Extracellular vesicles
     - Ferostatin
+    - GDC-0623
     - Gemcitabine
     - Growth Factor
     - GSK1120212
@@ -45,6 +47,7 @@ whitelist:
     - MTC1/4 inhibitor
     - Oncostatin M
     - P22077
+    - PD184
     - Phosphate-buffered saline
     - Placebo
     - Prostaglandin E2
@@ -54,6 +57,7 @@ whitelist:
     - Resolvin D5
     - Retaspimycin Hydrochloride
     - RNaseA
+    - RNaseH
     - Saline
     - Selonsertib
     - Serum

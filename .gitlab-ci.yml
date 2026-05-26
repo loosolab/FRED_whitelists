@@ -41,6 +41,7 @@ variables:
 
 
 .push_merge_public: &push_merge_public |
+  git pull --allow-unrelated-histories --strategy-option theirs
   git checkout public
   git pull --allow-unrelated-histories --strategy-option theirs
   git merge --allow-unrelated-histories origin/$BRANCH_NAME --strategy-option theirs

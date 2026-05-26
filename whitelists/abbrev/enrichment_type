@@ -6,3 +6,7 @@ whitelist:
     HA tag: HA
     S9.6: S9p6
     FLAG tag: FLAG
+    5-carboxylcytosin: 5caC
+    5-hydroxymethylcytosine: 5hmC
+    5-methylcytosine: 5mC
+    5-formylcytosine: 5fC

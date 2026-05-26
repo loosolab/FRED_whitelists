@@ -4,6 +4,7 @@ whitelist:
     - adipose tissue subcutaneous
     - adipose tissue visceral
     - adrenal gland
+    - aorta
     - artery
     - axilla
     - bladder
@@ -16,6 +17,7 @@ whitelist:
     - calvaria
     - caudal fin
     - cartilage
+    - carotid artery
     - cerebellum
     - cervix
     - chest wall
@@ -25,6 +27,7 @@ whitelist:
     - colon sigmoid
     - colon transverse
     - cord blood
+    - coronary artery
     - cranial neural crest 
     - duodenum
     - embryonic stem cell
@@ -32,6 +35,7 @@ whitelist:
     - esophagus
     - eye
     - fallopian tube
+    - femoral artery
     - fetal gonad
     - gallbladder
     - heart
@@ -49,6 +53,7 @@ whitelist:
     - large intestine   
     - liver
     - left ventricle
+    - Lewis lung carcinoma tumor
     - lung
     - lung upper lobe
     - lung lower lobe

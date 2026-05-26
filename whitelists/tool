@@ -22,4 +22,5 @@ whitelist:
     - s3downloadfolder
     - scl
     - ti2d
+    - vda
     - wilson

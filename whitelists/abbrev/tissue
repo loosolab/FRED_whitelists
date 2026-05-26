@@ -15,6 +15,7 @@ whitelist:
     calvaria: clv
     caudal fin: cf
     cartilage: crtl
+    carotid artery: carArt
     cerebellum: cereb
     cervix: crvx
     chest wall: chw
@@ -24,12 +25,14 @@ whitelist:
     colon sigmoid: colSig
     colon transverse: colTrans
     cord blood: crdBl
+    coronary artery: corArt
     cranial neural crest: crNCr
     duodenum: duo
     embryonic stem cell: esc
     epityphlon: epitph
     esophagus: eso
     fallopian tube: fllTb
+    femoral artery: femArt
     fetal gonad: fetGnd
     gallbladder: gllbl
     heart: hrt
@@ -45,6 +48,7 @@ whitelist:
     kidney: kdny
     large intestine: lgInt
     left ventricle: lv
+    Lewis lung carcinoma tumor: LLC1
     liver: lvr
     lung: lng
     lung upper lobe: lngUL

@@ -6,6 +6,7 @@ whitelist:
     2-deoxyglucose: 2doxgl
     Actinomycin-D: ActD
     Alpha-ketoglutarate: aKG
+    Amiodarone: AMD
     Antisense oligonucleotide: ASO
     Antisense oligonucleotide non-targeting: nonASO
     Blebbistatin: BlSt
@@ -25,6 +26,7 @@ whitelist:
     Ethanol: EtOH
     Extracellular vesicles: EVs
     Ferostatin: Frst
+    GDC-0623: GDC0623
     Gemcitabine: Gctb
     Growth Factor: GF
     GSK1120212: GSK
