@@ -1,15 +1,21 @@
 whitelist_type: plain
 headers: organism_name taxonomy_id
 whitelist:
-    - human 9606
-    - mouse 10090
-    - zebrafish 7955
-    - rat 10114
-    - pig 9823
-    - medaka 8090
-    - chicken 9031
-    - drosophila 7215
-    - yeast 4932
-    - caenorhabditis_elegans 6239
-    - ascomycota 367110
-    - neurospora_crassa 5141
+    - Homo_sapiens 9606
+    - Mus_musculus 10090
+    - Danio_rerio 7955
+    - Rattus_norvegicus 10116
+    - Sus_scrofa 9823
+    - Oryzias_latipes 8090
+    - Gallus_gallus 9031
+    - Drosophila_melanogaster 7227 
+    - Saccharomyces_cerevisiae 4932
+    - Caenorhabditis_elegans 6239
+    - Neurospora_crassa 5141
+
+#   - Bos_taurus 9913 
+#   - Canis_lupus_familiaris l9615 
+#   - Escherichia_coli 511145
+#   - Naumovozyma_castellii 27288     
+#   - Schizosaccharomyces_pombe 4896 
+#   - Xenopus_tropicalis 8364
