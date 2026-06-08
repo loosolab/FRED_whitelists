@@ -178,3 +178,12 @@ merge_public_branch:
     - git config --global user.email "${BOT_EMAIL}"
     - *delete_private_files
     - *push_merge_public
+
+
+mirror-to-github:
+  rules:
+    - if: $CI_COMMIT_BRANCH == "public"
+  script:
+    - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/loosolab/FRED_whitelists.git
+    - git push github public:main --force
+    
