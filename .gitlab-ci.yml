@@ -181,6 +181,8 @@ merge_public_branch:
 
 
 mirror-to-github:
+  variables:
+    GIT_DEPTH: 0
   rules:
     - if: $CI_COMMIT_BRANCH == "public"
   script:
