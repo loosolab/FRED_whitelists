@@ -185,5 +185,5 @@ mirror-to-github:
     - if: $CI_COMMIT_BRANCH == "public"
   script:
     - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/loosolab/FRED_whitelists.git
-    - git push github public:main --force
+    - git push github HEAD:main --force
     
