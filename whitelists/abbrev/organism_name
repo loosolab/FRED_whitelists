@@ -1,14 +1,21 @@
 whitelist_type: abbrev
 whitelist:
-    human: hum
-    mouse: mouse
-    zebrafish: zbrf
-    rat: rat
-    pig: pig
-    medaka: mdka
-    chicken: chick
-    drosophila: drsph
-    yeast: yeast
-    caenorhabditis_elegans: cele
-    ascomycota: ascmc
-    neurospora_crassa: nscra
+    Homo_sapiens: hsa
+    Mus_musculus: mmu
+    Danio_rerio: dre
+    Rattus_norvegicus: rno
+    Sus_scrofa: ssc
+    Oryzias_latipes: ola
+    Gallus_gallus: gga
+    Drosophila_melanogaster: dme
+    Saccharomyces_cerevisiae: sce
+    Caenorhabditis_elegans: cel
+    Neurospora_crassa: ncr
+
+
+#   Bos_taurus: bta
+#   Canis_lupus_familiaris: cfa  
+#   Escherichia_coli: eco
+#   Naumovozyma_castellii: ncs
+#   Schizosaccharomyces_pombe: spo
+#   Xenopus tropicalis: xtr
