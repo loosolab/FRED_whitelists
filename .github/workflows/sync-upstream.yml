@@ -1,0 +1,121 @@
+name: Sync Upstream
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # every Monday 08:00 UTC
+  workflow_dispatch:      # can also be triggered manually via Actions tab
+
+# ── User configuration ─────────────────────────────────────────────────────────
+env:
+  UPSTREAM_REPO:   "https://github.com/loosolab/whitelists.git"
+  UPSTREAM_BRANCH: "main"
+  # "true"  → automatically merge the PR if there are no conflicts
+  # "false" → always open a PR for manual review (recommended if unsure)
+  AUTOMERGE: "false"
+# ───────────────────────────────────────────────────────────────────────────────
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git identity
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch upstream
+        run: |
+          git remote add upstream "$UPSTREAM_REPO"
+          git fetch upstream "$UPSTREAM_BRANCH"
+
+      - name: Check for new upstream commits
+        id: check
+        run: |
+          COUNT=$(git rev-list HEAD..upstream/$UPSTREAM_BRANCH --count)
+          echo "new_commits=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "$COUNT new commit(s) found upstream."
+
+      - name: Create sync branch and merge
+        if: steps.check.outputs.new_commits != '0'
+        id: merge
+        run: |
+          BRANCH="sync/upstream"
+
+          # Remove any existing sync branch (and its open PR) before recreating
+          git push origin --delete "$BRANCH" 2>/dev/null || true
+          git checkout -b "$BRANCH"
+
+          if git merge "upstream/$UPSTREAM_BRANCH" --no-edit; then
+            echo "conflicts=false" >> "$GITHUB_OUTPUT"
+          else
+            # Commit the conflicted state so the PR can be opened.
+            # The user resolves conflicts locally, then pushes.
+            echo "conflicts=true" >> "$GITHUB_OUTPUT"
+            git add -A
+            git commit -m "sync: upstream merge — please resolve conflicts before merging"
+          fi
+
+          git push origin "$BRANCH"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Open pull request
+        if: steps.check.outputs.new_commits != '0'
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COUNT="${{ steps.check.outputs.new_commits }}"
+          CONFLICTS="${{ steps.merge.outputs.conflicts }}"
+          BRANCH="${{ steps.merge.outputs.branch }}"
+          BASE="${{ github.event.repository.default_branch }}"
+
+          if [ "$CONFLICTS" = "true" ]; then
+            TITLE="sync: $COUNT upstream commit(s) — conflicts need resolution"
+            BODY="## Upstream Sync
+
+**$COUNT new commit(s)** from the upstream repository.
+
+> :warning: **Merge conflicts detected.** Please resolve them before merging this PR.
+
+**How to resolve locally:**
+\`\`\`bash
+git fetch origin
+git checkout $BRANCH
+# edit conflicting files, then:
+git add .
+git commit
+git push
+\`\`\`"
+          else
+            TITLE="sync: $COUNT upstream commit(s)"
+            BODY="## Upstream Sync
+
+**$COUNT new commit(s)** from the upstream repository.
+
+No conflicts detected — safe to merge."
+          fi
+
+          PR=$(gh pr create \
+            --title "$TITLE" \
+            --body  "$BODY" \
+            --base  "$BASE" \
+            --head  "$BRANCH")
+          echo "url=$PR" >> "$GITHUB_OUTPUT"
+
+      - name: Auto-merge if conflict-free
+        if: |
+          steps.check.outputs.new_commits != '0' &&
+          steps.merge.outputs.conflicts == 'false' &&
+          env.AUTOMERGE == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr merge "${{ steps.pr.outputs.url }}" --merge --delete-branch
