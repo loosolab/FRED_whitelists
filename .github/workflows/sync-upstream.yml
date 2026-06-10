@@ -16,6 +16,7 @@ env:
 
 jobs:
   sync:
+    if: github.repository != 'loosolab/whitelists'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -79,35 +80,34 @@ jobs:
 
           if [ "$CONFLICTS" = "true" ]; then
             TITLE="sync: $COUNT upstream commit(s) — conflicts need resolution"
-            BODY="## Upstream Sync
-
-**$COUNT new commit(s)** from the upstream repository.
-
-> :warning: **Merge conflicts detected.** Please resolve them before merging this PR.
-
-**How to resolve locally:**
-\`\`\`bash
-git fetch origin
-git checkout $BRANCH
-# edit conflicting files, then:
-git add .
-git commit
-git push
-\`\`\`"
+            printf '%s\n' \
+              "## Upstream Sync" "" \
+              "**$COUNT new commit(s)** from the upstream repository." "" \
+              "> :warning: **Merge conflicts detected.** Please resolve them before merging this PR." "" \
+              "**How to resolve locally:**" \
+              '```bash' \
+              "git fetch origin" \
+              "git checkout $BRANCH" \
+              "# edit conflicting files, then:" \
+              "git add ." \
+              "git commit" \
+              "git push" \
+              '```' \
+              > /tmp/pr-body.md
           else
             TITLE="sync: $COUNT upstream commit(s)"
-            BODY="## Upstream Sync
-
-**$COUNT new commit(s)** from the upstream repository.
-
-No conflicts detected — safe to merge."
+            printf '%s\n' \
+              "## Upstream Sync" "" \
+              "**$COUNT new commit(s)** from the upstream repository." "" \
+              "No conflicts detected — safe to merge." \
+              > /tmp/pr-body.md
           fi
 
           PR=$(gh pr create \
-            --title "$TITLE" \
-            --body  "$BODY" \
-            --base  "$BASE" \
-            --head  "$BRANCH")
+            --title      "$TITLE" \
+            --body-file  /tmp/pr-body.md \
+            --base       "$BASE" \
+            --head       "$BRANCH")
           echo "url=$PR" >> "$GITHUB_OUTPUT"
 
       - name: Auto-merge if conflict-free
