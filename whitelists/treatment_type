@@ -20,6 +20,7 @@ whitelist:
     - Cigarette smoke exposure
     - Clodronate Liposome
     - delta Cystein
+    - CHIR99021
     - Dexamethason
     - Dimethylsulfoxid
     - Doxorubicin
@@ -69,6 +70,7 @@ whitelist:
     - TNF
     - Th9CM
     - Trichostatin A
+    - TRULI
     - Ulixertinib
     - recombinant protein 
     - XMU-MP-1
