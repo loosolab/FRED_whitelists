@@ -103,11 +103,14 @@ jobs:
               > /tmp/pr-body.md
           fi
 
-          PR=$(gh pr create \
-            --title      "$TITLE" \
-            --body-file  /tmp/pr-body.md \
-            --base       "$BASE" \
-            --head       "$BRANCH")
+          PR=$(gh api \
+            --method POST \
+            "/repos/${{ github.repository }}/pulls" \
+            -f title="$TITLE" \
+            -f body="$(cat /tmp/pr-body.md)" \
+            -f head="$BRANCH" \
+            -f base="$BASE" \
+            --jq '.html_url')
           echo "url=$PR" >> "$GITHUB_OUTPUT"
 
       - name: Auto-merge if conflict-free
