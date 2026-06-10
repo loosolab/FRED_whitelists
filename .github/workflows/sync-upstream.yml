@@ -7,7 +7,7 @@ on:
 
 # ── User configuration ─────────────────────────────────────────────────────────
 env:
-  UPSTREAM_REPO:   "https://github.com/loosolab/whitelists.git"
+  UPSTREAM_REPO:   "https://github.com/loosolab/FRED_whitelists.git"
   UPSTREAM_BRANCH: "main"
   # "true"  → automatically merge the PR if there are no conflicts
   # "false" → always open a PR for manual review (recommended if unsure)
@@ -16,7 +16,7 @@ env:
 
 jobs:
   sync:
-    if: github.repository != 'loosolab/whitelists'
+    if: github.repository != 'loosolab/FRED_whitelists'
     runs-on: ubuntu-latest
     permissions:
       contents: write
