@@ -1,12 +1,12 @@
 whitelist_type: group
 whitelist:
-    human:
+    Homo_sapiens:
       - hg38
       - hg19
-    mouse:
+    Mus_musculus:
       - mm10
       - mm9
       - mm38
-    zebrafish:
+    Danio_rerio:
       - danrer11
       - danrer10
